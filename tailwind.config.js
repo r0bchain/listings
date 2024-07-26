@@ -3,7 +3,9 @@ export default {
   content: [
     "./storage/framework/views/*.php",
     "./resources/views/**/*.blade.php",
-    "./resources/views/**/{vue,js,ts,jsx,tsx}",
+    // "./resources/js/**/{vue,js,ts,jsx,tsx}",
+    "./resources/js/**/*.vue",
+
   ],
   theme: {
     extend: {},
