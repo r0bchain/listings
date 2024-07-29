@@ -29,7 +29,6 @@
 <script setup>
     import { Link, usePage } from '@inertiajs/vue3'
     import { computed } from 'vue'
-    import DarkModeSwitcher from '@/Components/Buttons/DarkModeSwitcher.vue'
     
     // Page props 
     const page = usePage()
