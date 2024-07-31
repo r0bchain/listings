@@ -29,4 +29,5 @@ class UserAccountController extends Controller
         return redirect()->route('listing.index')
             ->with('success', 'Account created!');
     }
+    
 }

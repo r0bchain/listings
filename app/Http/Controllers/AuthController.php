@@ -50,7 +50,7 @@ class AuthController extends Controller
 
     }
 
-    public function destroy() 
+    public function destroy(Request $request) 
     {
         Auth::logout();
 
@@ -59,7 +59,7 @@ class AuthController extends Controller
         // Regenerate the CSRF token after logout
         $request->session()->regenerateToken();
 
-        return redirect->route('listing.index');
+        return redirect()->route('listing.index');
 
     }
 }
