@@ -7,6 +7,16 @@ use App\Models\Listing;
 
 class ListingController extends Controller
 {
+
+    /*
+    * ALTERNATIVE WAY TO PROTECT THE ROUTES
+    * Middleware to protect the routes from unauthorized access.
+    */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth')->except(['index', 'show']);
+    // }
+
     /**
      * Display a listing of the resource.
      */

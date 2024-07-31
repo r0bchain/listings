@@ -9,8 +9,19 @@
                 <div class="text-xl text-indigo-600 dark:text-indigo-300">        
                     <Link :href="route('listing.index')">Crytpo Bazar</Link>
                 </div>
-                <div class="dark:text-indigo-300 bg-indigo-600 hover:bg-indigo:500 text-white font-medium p-2 rounded-md">        
+
+                <div v-if="user" class="flex items-center gap-4">
+                    <div class="text-sm text-gray-500">{{ user.name }}</div>
                     <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
+                    <div class="text-sm text-gray-500">
+                        <Link :href="route('logout')" method="DELETE" as="button">Logout</Link>
+                        <!-- <Link :href="route('logout')" @click.prevent="$inertia.post(route('logout'))">Logout</Link> -->
+                    </div>
+                </div>
+                <div v-else class="flex items-center gap-2 text-sm text-gray-500 flex ">
+                    <Link :href="route('login')">Sign-In</Link> |
+                    <Link :href="route('user-account.create')">Register</Link>
+
                 </div>
 
             </nav>
@@ -19,7 +30,7 @@
     <!-- <div>The page with time {{timer}}</div> -->
     <!-- <div v-if="$page.props.flash.success  " v-text="$page.props.flash.success" class="success" > -->
     
-    <main class="container mx-auto p-4">
+    <main class="container mx-auto p-4 w-full">
         <div v-if="flashSuccess" v-text="flashSuccess" class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2"></div>        
         <slot>Default content </slot>
     </main>
@@ -36,6 +47,8 @@
     const flashSuccess = computed(
         () => page.props.flash.success 
     )
+
+    const user = computed(() => page.props.user)
 
     defineProps({ message: String })
 

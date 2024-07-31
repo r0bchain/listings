@@ -36,12 +36,14 @@
                 </div>
             </Box>                
 
-            <div>
-                <Link :href="route('listing.edit', listing.id)">Edit listing</Link>
-            </div>
-            <div>
-                <Link :href="route('listing.destroy', listing.id)" method="DELETE" as="button">Remove listing</Link>
+            <div class="flex justify-between pt-5">
+                <div v-if="user" class="btn-listing-actions">
+                    <Link :href="route('listing.edit', listing.id)">Edit listing</Link>
+                </div>
+                <div v-if="user" class="btn-listing-actions">
+                    <Link :href="route('listing.destroy', listing.id)" method="DELETE" as="button">Remove listing</Link>
 
+                </div>
             </div>
             
            
