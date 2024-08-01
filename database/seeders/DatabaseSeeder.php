@@ -20,8 +20,25 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        \App\Models\Listing::factory(20)->create([
+        User::factory()->create([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'is_admin' => true,
+        ]);
+
+        User::factory()->create([
+            'name' => 'Admin 2 User',
+            'email' => 'admin2@example.com',
+            'is_admin' => true,
+
+        ]);
+
+        \App\Models\Listing::factory(10)->create([
             'owner_id' => 1,
+        ]);
+
+        \App\Models\Listing::factory(10)->create([
+            'owner_id' => 2,
         ]);
     }
 }

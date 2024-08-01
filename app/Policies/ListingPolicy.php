@@ -40,7 +40,7 @@ class ListingPolicy
      */
     public function update(User $user, Listing $listing): Response
     {
-        return $user->id === $listing->owner_id
+        return ($user->id === $listing->owner_id) || $user->is_admin
         ? Response::allow()
         : Response::deny('You do not own this listing!');
 
@@ -51,7 +51,7 @@ class ListingPolicy
      */
     public function delete(User $user, Listing $listing): Response
     {
-        return $user->id === $listing->owner_id
+        return $user->id === $listing->owner_id  || $user->is_admin
         ? Response::allow()
         : Response::deny('You do not own this listing, so you cannot delete it!');
     }
