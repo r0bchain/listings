@@ -8,6 +8,13 @@ use Illuminate\Auth\Access\Response;
 
 class ListingPolicy
 {
+    public function before(User $user, $ability): ?bool
+
+    {
+        if ($user->is_admin) {
+            return true;
+        }
+    }
     /**
      * Determine whether the user can view any models.
      */
@@ -40,7 +47,7 @@ class ListingPolicy
      */
     public function update(User $user, Listing $listing): Response
     {
-        return ($user->id === $listing->owner_id) || $user->is_admin
+        return ($user->id === $listing->owner_id)
         ? Response::allow()
         : Response::deny('You do not own this listing!');
 
@@ -51,7 +58,7 @@ class ListingPolicy
      */
     public function delete(User $user, Listing $listing): Response
     {
-        return $user->id === $listing->owner_id  || $user->is_admin
+        return $user->id === $listing->owner_id
         ? Response::allow()
         : Response::deny('You do not own this listing, so you cannot delete it!');
     }
