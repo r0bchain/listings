@@ -11,6 +11,8 @@ class ListingPolicy
     public function before(?User $user, $ability): ?bool
 
     {
+        // Previous to PHP 8.0       
+        // if ($user $$ $user->is_admin) {
         // Null coalescing operator (if null it won't throw an error)
         if ($user?->is_admin) {
             return true;
