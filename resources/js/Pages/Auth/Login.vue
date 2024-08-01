@@ -14,6 +14,10 @@
             </div>            
             <div class="mt-4">
                 <button type="submit" class="btn-primary w-full">Login</button>
+
+                <div class="mt-2 text-center">
+                    <Link :href="route('user-account.create')" class="text-sm text-gray-500">Create an account?</Link>
+                </div>
             </div>
 
         </div>
@@ -21,13 +25,13 @@
 </template>
 
 <script setup>
-import { useForm } from '@inertiajs/vue3'
+import { useForm, Link } from '@inertiajs/vue3'
 
 // userForm will catch all the validation errors coming from the backend
 // form.erros.email, form.errors.password ...
 
 const form = useForm({
-    email: '',
+    email: 'test@example.com',
     password: ''
 })
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use Illuminate\Support\Facades\Gate;
 
 class ListingController extends Controller
 {
@@ -30,10 +31,37 @@ class ListingController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    // public function show(string $id)
+
+    // Route model binding. Laravel will automatically fetch the model for the given id parameter passed
+    public function show(Listing $listing)
+    {    
+        return inertia('Listing/Show',
+        [
+            // 'listing' => Listing::find($id)
+            'listing' => $listing
+
+        ]
+      );
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
+        $response = Gate::inspect('create', Listing::class);
+        if (!$response->allowed()) {
+            // The action is authorized...
+            echo $response->message();
+            return redirect()->route('listing.index')
+            ->with('error', $response->message());
+            // ->with('error', 'Listing not accesible.');
+
+        }
+
         return inertia('Listing/Create');
     }
 
@@ -51,6 +79,7 @@ class ListingController extends Controller
         //     'street_nr' => 'required',
         // ]);
 
+
         // Listing::create($request->all());
         $validatedData = $request->validate([
             'beds' => 'required|integer|min:1|max:20',
@@ -64,29 +93,12 @@ class ListingController extends Controller
 
         ]);
 
-        Listing::create($validatedData);
+        //Listing::create($validatedData);
 
+        $request->user()->listings()->create($validatedData);
 
         return redirect()->route('listing.index')
             ->with('success', 'Listing created successfully.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-   // public function show(string $id)
-
-    // Route model binding. Laravel will automatically fetch the model for the given id parameter passed
-    public function show(Listing $listing)
-
-    {
-        return  inertia('Listing/Show',
-        [
-            // 'listing' => Listing::find($id)
-            'listing' => $listing
-
-        ]
-      );
     }
 
     /**
@@ -94,6 +106,16 @@ class ListingController extends Controller
      */
     public function edit(Listing $listing)
     {
+        $response = Gate::inspect('update', $listing, Listing::class);
+        if (!$response->allowed()) {
+            // The action is authorized...
+            echo $response->message();
+            return redirect()->route('listing.show', $listing->id)
+            ->with('error', $response->message());
+            // ->with('error', 'Listing not accesible.');
+
+        } 
+
         return inertia('Listing/Edit',
         [
             'listing' => $listing
@@ -106,6 +128,17 @@ class ListingController extends Controller
      */
     public function update(Request $request, Listing $listing)
     {
+
+        $response = Gate::inspect('update', $listing, Listing::class);
+        if (!$response->allowed()) {
+            // The action is authorized...
+            echo $response->message();
+            return redirect()->route('listing.show', $listing->id)
+            ->with('error', $response->message());
+            // ->with('error', 'Listing not accesible.');
+
+        } 
+        
         $validatedData = $request->validate([
             'beds' => 'required|integer|min:1|max:20',
             'baths' => 'required|integer|min:1|max:20',

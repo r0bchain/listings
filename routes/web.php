@@ -21,6 +21,8 @@ Route::resource('listing', ListingController::class)
     
 Route::resource('listing', ListingController::class)
 ->except(['create', 'store', 'edit', 'update', 'destroy']);
+// ->can('index', 'view');
+
 
 Route::get('login', [AuthController::class, 'create'])
 ->name('login');

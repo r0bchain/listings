@@ -38,9 +38,10 @@
 
                     <div class="mt-2 text-gray-500">
                         <div class="flex justify-between">
-                            <div>Total paid</div>
+                            <div>Total paid </div>
                             
                             <div>
+                                
                                 <Price :price="totalPaid" class="font-medium"></Price>
                             </div>
 
@@ -82,18 +83,20 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
 import ListingAddress from '@/Components/ListingAddress.vue'
 import ListingSpace from '@/Components/ListingSpace.vue'
 import Price from '@/Components/Price.vue'
 import Box from '@/Components/UI/Box.vue'
 import { useMonthlyPayments } from '@/Composables/useMonthlyPayments'
-import { defineProps } from 'vue'
-
-import {ref} from 'vue'
+import { defineProps, ref, computed } from 'vue'
+import { Link, usePage } from '@inertiajs/vue3'
 
 const interestRate = ref(2.5)
 const duration = ref(25)
+
+const page = usePage()
+const user = computed(() => page.props.user)
+console.log('user', user)
 
 const props = defineProps( {
     listing: Object,

@@ -32,6 +32,8 @@
     
     <main class="container mx-auto p-4 w-full">
         <div v-if="flashSuccess" v-text="flashSuccess" class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2"></div>        
+        <div v-if="flashError" v-text="flashError" class="mb-4 border rounded-md shadow-sm border-white-800 dark:border-black-800 bg-green-50 dark:bg-red-900 p-2"></div>        
+
         <slot>Default content </slot>
     </main>
 </template>
@@ -46,6 +48,10 @@
     console.log('success', page.props.flash)
     const flashSuccess = computed(
         () => page.props.flash.success 
+    )
+
+    const flashError = computed(
+        () => page.props.flash.error 
     )
 
     const user = computed(() => page.props.user)
