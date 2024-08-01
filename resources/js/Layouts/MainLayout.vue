@@ -14,7 +14,7 @@
                     <div class="text-sm text-gray-500">{{ user.name }}</div>
                     <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
                     <div class="text-sm text-gray-500">
-                        <Link :href="route('logout')" method="DELETE" as="button">Logout</Link>
+                        <Link :href="route('logout')" method="POST" as="button">Logout</Link>
                         <!-- <Link :href="route('logout')" @click.prevent="$inertia.post(route('logout'))">Logout</Link> -->
                     </div>
                 </div>
