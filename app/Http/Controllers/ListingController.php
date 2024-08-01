@@ -70,16 +70,7 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'beds' => 'required',
-        //     'baths' => 'required',
-        //     'price' => 'required',
-        //     'city' => 'required',
-        //     'street' => 'required',
-        //     'street_nr' => 'required',
-        // ]);
-
-
+       
         // Listing::create($request->all());
         $validatedData = $request->validate([
             'beds' => 'required|integer|min:1|max:20',
@@ -93,7 +84,6 @@ class ListingController extends Controller
 
         ]);
 
-        //Listing::create($validatedData);
 
         $request->user()->listings()->create($validatedData);
 
