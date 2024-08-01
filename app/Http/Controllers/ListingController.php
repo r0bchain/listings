@@ -84,6 +84,7 @@ class ListingController extends Controller
 
         ]);
 
+        //Listing::create($validatedData);
 
         $request->user()->listings()->create($validatedData);
 
@@ -119,7 +120,9 @@ class ListingController extends Controller
     public function update(Request $request, Listing $listing)
     {
 
-        $response = Gate::inspect('update', $listing, Listing::class);
+        // $response = Gate::inspect('update', $listing, Listing::class);
+        $response = Gate::inspect('update-listing', $listing, Listing::class);
+
         if (!$response->allowed()) {
             // The action is authorized...
             echo $response->message();
@@ -153,6 +156,19 @@ class ListingController extends Controller
      */
     public function destroy(Listing $listing)
     {
+
+          // $response = Gate::inspect('update', $listing, Listing::class);
+        $response = Gate::inspect('delete-listing', $listing, Listing::class);
+
+        if (!$response->allowed()) {
+            // The action is authorized...
+            echo $response->message();
+            return redirect()->route('listing.show', $listing->id)
+            ->with('error', $response->message());
+            // ->with('error', 'Listing not accesible.');
+
+        } 
+
         $listing->delete();
 
         // Return to the current page, bad idea to use this for the show page.

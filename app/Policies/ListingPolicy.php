@@ -19,7 +19,7 @@ class ListingPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Listing $listing): bool
+    public function view(?User $user, Listing $listing): bool
     {
        return true;
 
@@ -42,16 +42,18 @@ class ListingPolicy
     {
         return $user->id === $listing->owner_id
         ? Response::allow()
-        : Response::deny('You do not own this listing.');
+        : Response::deny('You do not own this listing!');
 
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Listing $listing): bool
+    public function delete(User $user, Listing $listing): Response
     {
-        //
+        return $user->id === $listing->owner_id
+        ? Response::allow()
+        : Response::deny('You do not own this listing, so you cannot delete it!');
     }
 
     /**
