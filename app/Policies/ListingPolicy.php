@@ -8,10 +8,11 @@ use Illuminate\Auth\Access\Response;
 
 class ListingPolicy
 {
-    public function before(User $user, $ability): ?bool
+    public function before(?User $user, $ability): ?bool
 
     {
-        if ($user->is_admin) {
+        // Null coalescing operator (if null it won't throw an error)
+        if ($user?->is_admin) {
             return true;
         }
     }
