@@ -16,6 +16,10 @@
         @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium w-auto p-2 rounded-md;
     }
 
+    .btn-normal{
+        @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium w-auto p-2 rounded-md;
+    }
+
     .btn-listing-actions {
         @apply bg-red-900 hover:bg-red-500 text-white font-medium  p-2 rounded-md gap-2;
     }
@@ -26,5 +30,19 @@
 
     .range_slide {
         @apply w-full h-4 bg-gray-200 rounded-lg  appearance-none cursor-pointer dark:bg-gray-700;
+    }
+
+    .input-filter-l {
+        @apply  placeholder:text-gray-400 dark:text-gray-600 border
+         border-gray-200 dark:border-gray-700 rounded-t-md 
+        rounded-l-md rounded-b-md rounded-r-none text-sm font-medium
+         text-gray-600 dark:text-gray-400 dark:bg-gray-800
+    }
+
+    .input-filter-r {
+        @apply  placeholder:text-gray-400 dark:text-gray-600 border border-l-0
+         border-gray-200 dark:border-gray-700 rounded-t-md 
+        rounded-r-md rounded-b-md rounded-l-none text-sm font-medium
+         text-gray-600 dark:text-gray-400 dark:bg-gray-800
     }
 }
