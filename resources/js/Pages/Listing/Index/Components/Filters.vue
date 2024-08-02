@@ -45,7 +45,7 @@ const props = defineProps( {
 console.log('filters props', props.filters);
 const filterForm = useForm({
     priceFrom: props.filters.priceFrom ?? null,
-    proceTo: props.filters.priceTo ?? null,
+    priceTo: props.filters.priceTo ?? null,
     beds: props.filters.beds ?? null,
     baths: props.filters.baths ?? null,
     areaFrom: props.filters.areaFrom ?? null,

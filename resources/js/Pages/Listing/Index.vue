@@ -19,7 +19,5 @@ import Filters from '@/Pages/Listing/Index/Components/Filters.vue';
 defineProps( {
     listings: Object,
     filters: Object,
-
-
 })
 </script>
