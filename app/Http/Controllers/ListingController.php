@@ -64,6 +64,7 @@ class ListingController extends Controller
     public function create()
     {
         $response = Gate::inspect('create', Listing::class);
+       
         if (!$response->allowed()) {
             // The action is authorized...
             echo $response->message();

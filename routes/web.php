@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\UserAccountController;
 
 Route::get('/', function () {
@@ -35,3 +36,10 @@ Route::post('logout', [AuthController::class, 'destroy'])
 
 Route::resource('user-account', UserAccountController::class)
   ->only(['create', 'store']);
+
+Route::prefix('realtor')
+  ->name('realtor.')
+  ->middleware('auth')
+  ->group(function () {
+    Route::resource('listing', RealtorListingController::class);
+});

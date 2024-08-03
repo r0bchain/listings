@@ -14,9 +14,11 @@ class ListingPolicy
         // Previous to PHP 8.0       
         // if ($user $$ $user->is_admin) {
         // Null coalescing operator (if null it won't throw an error)
-        if ($user?->is_admin) {
+        if ($user?->is_admin /*&& $ability === 'update'*/) {
             return true;
         }
+
+        return null;
     }
     /**
      * Determine whether the user can view any models.

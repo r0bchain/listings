@@ -15,12 +15,4 @@
 
 <!-- Added to app.js by default -->
 
-<!-- <script>
-
-import MainLayout from '../../Layouts/MainLayout.vue';
-export default {
-    layout: MainLayout   
-}
-
-</script> -->
 
