@@ -32,32 +32,8 @@ class ListingController extends Controller
             // 'listings' => Listing::all()
             // Returns an object with the listings and the pagination links
             'listings' => 
-            Listing::orderByDesc('created_at')
-            ->when(
-                $filters['priceFrom'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('price', '>=', $value)
-            )->when(
-                $filters['priceTo'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('price', '<=', $value)
-            )->when(
-                $filters['beds'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('beds', (int)$value < 6 ? '=' : '>=', $value)
-            )->when(
-                $filters['baths'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('baths', (int)$value < 6 ? '=' : '>=', $value)
-            )->when(
-                $filters['areaFrom'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('area', '>=', $value)
-            )->when(
-                $filters['areaTo'] ?? false, 
-                // Only executed in the first expression is TRUE.
-                fn ($query, $value) => $query->where('area', '<=', $value)
-            )->paginate(10)->withQueryString(),
+            Listing::mostRecent()
+            ->filter($filters)->paginate(10)->withQueryString(),
 
             'filters' => $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo']),
 
