@@ -12,6 +12,33 @@ class ListingControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+
+    /**
+     * Create a listing
+     *
+     * Returns 302 (not found), and redirects user to login form if not logged in
+     */
+    public function test_create_listing_returns_a_302_response_and_redirect_to_login_for_not_logged_user(): void
+    {
+        $response = $this->get('/listing/create');
+        $response->assertStatus(302);
+        $response->assertRedirect(route('login'));
+    }
+
+    /**
+     * Create a listing
+     *
+     * Returns 302 (not found), and redirects user to login form if not logged in
+     */
+    public function test_edit_listing_returns_a_302_response_and_redirect_to_login_for_not_logged_user(): void
+    {
+        $user = User::factory()->create();
+        $listing = Listing::factory()->create(['owner_id' => $user->id]);
+        $response = $this->get('/listing/' . $listing->id . '/edit');
+        $response->assertStatus(302);
+        $response->assertRedirect(route('login'));
+    }
+
     /*
     * Positive test case, a user can delete a listing that they own
     */
