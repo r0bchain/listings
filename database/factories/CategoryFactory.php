@@ -17,11 +17,8 @@ class CategoryFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-    {
-        $this->faker->addProvider(new CategoryFakerProvider($this->faker));
-       
+    {       
         return [
-            'name' => $this->faker->category(),
             'description' => $this->faker->sentence(),
             'cover_image' => $this->faker->imageUrl(),
         ];

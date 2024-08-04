@@ -44,20 +44,117 @@ class DatabaseSeeder extends Seeder
             'owner_id' => 2,
         ]);
 
-        Category::factory(10)->create();
-        Category::factory(2)->create([
-            'parent_id' => 1
-        ]);
-        Category::factory(2)->create([
-            'parent_id' => 2
-        ]);
-        Category::factory(2)->create([
-            'parent_id' => 3
-        ]);
-        Category::factory(2)->create([
-            'parent_id' => 4
-        ]);
+        // First add the parent categories to the database
+        $categories = $this->get_categories(null);
+        foreach($categories as $category) {
+            Category::factory()->create([
+                'name' => $category
+            ]);
+
+        }
+
+        $categoriesDb = Category::all();
+
+        // Add the children categories to the database
+        foreach($categoriesDb as $category) {
+            $newCategory = Category::factory()->create([
+                'name' => $category
+            ]);
+
+            $childrenCategories = $this->get_categories($newCategory->name);
+ 
+            foreach($childrenCategories as $children) {
+                foreach( $children as $children_categories) {
+
+                    Category::factory()->create([
+                        'name' => $children_categories,
+                        'parent_id' => $newCategory->id
+                    ]);
+                }
+            }
+
+            $childrenCategories = [];
+            $newCategory = null;
+            
+        }
+      
 
         
+    }
+
+    public function get_categories($categoryName = null): array
+    {
+
+        // Categories
+        if(is_null($categoryName)) {
+            return [
+                'Real State',
+                'Bussines for sell or rent',
+                'Cars & Vehicles',
+                'Jobs',
+                'Boats',
+                'Services',
+                'Sport equipment',
+                'Other'
+            ];
+        }
+
+        // Children categories
+        return [
+            'Real State' => [
+                'Houses',
+                'Apartments',
+                'Commercial',
+                'Land',
+                'Garages',
+                'Other'
+            ],
+            'Bussines for sell or rent' => [
+                'Restaurants',
+                'Shops',
+                'Offices',
+                'Warehouses',
+                'Other'
+            ],
+            'Cars & Vehicles' => [
+                'Cars',
+                'Motorcycles',
+                'Trucks',
+                'Boats',
+                'Other'
+            ],
+
+            'Jobs' => [
+                'Full time',
+                'Part time',
+                'Freelance',
+                'Internship',
+                'Other'
+            ],
+            'Boats' => [
+                'Sailboats',
+                'Motorboats',
+                'Yachts',
+                'Other'
+            ],
+            'Services' => [
+                'Cleaning',
+                'Gardening',
+                'Plumbing',
+                'Electricity',
+                'Other'
+            ],
+            'Sport equipment' => [
+                'Bicycles',
+                'Skateboards',
+                'Surfboards',
+                'Other'
+            ],
+            'Other' => [
+                'Other'
+            ]
+            
+
+        ];
     }
 }
