@@ -34,4 +34,8 @@
   .btn-outline {
     @apply p-2 rounded-md border shadow-sm border-gray-300 dark:border-gray-800 hover:border-gray-400 hover:bg-gray-50 dark:hover:border-gray-700 dark:hover:bg-gray-800
   }
+
+  .checkbox-custom {
+    @apply h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500
+  }
 }

@@ -6,8 +6,8 @@
                 <div class="text-lg font-medium">
                     <Link :href="route('listing.index')">Listings</Link> &nbsp;
                 </div>
-                <div class="text-xl text-indigo-600 dark:text-indigo-300">        
-                    <Link :href="route('listing.index')">Crytpo Bazar</Link>
+                <div v-if="user" class="text-xl text-indigo-600 dark:text-indigo-300">        
+                    <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
                 </div>
 
                 <div v-if="user" class="flex items-center gap-4">

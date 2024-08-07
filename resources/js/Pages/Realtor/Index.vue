@@ -1,8 +1,14 @@
 
 <template>
-    Say hello!
+    Listings 
+    <span class="trash"> 
+      <Link :href="route('realtor.listing.index', { trash: true })">Trash</Link> &nbsp;
+
+    </span>
     <h1 class="text-3xl mb-4">Your Listings</h1>
-    <section class="mb-8">Filters</section>
+    <section>
+      <RealtorFilters  :filters="filters"/>
+    </section>
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-2">
       <Box v-for="listing in listings" :key="listing.id">
         <div class="flex flex-col md:flex-row gap-2 md:items-center justify-between">
@@ -15,9 +21,11 @@
             <ListingAddress :listing="listing" />
           </div>
           <div class="flex items-center gap-1 text-gray-600 dark:text-gray-300">
-            <Link class="btn-outline text-xs font-medium">Preview</Link>
-            <Link class="btn-outline text-xs font-medium">Edit</Link>
-            <Link class="btn-outline text-xs font-medium">Delete</Link>
+            <Link v-if="!trash" class="btn-outline text-xs font-medium">Preview</Link>
+            <Link v-else class="btn-outline text-xs font-medium">Restore</Link>
+            <Link v-if="!trash"  class="btn-outline text-xs font-medium">Edit</Link>
+            <Link v-if="!trash" class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete</Link>
+            <Link v-else class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete forever</Link>
           </div>
         </div>
       </Box>
@@ -30,7 +38,12 @@
     import Price from '@/Components/Price.vue'
     import Box from '@/Components/UI/Box.vue'
     import { Link } from '@inertiajs/vue3'
+    import RealtorFilters from '@/Pages/Realtor/Index/Components/RealtorFilters.vue'
     
-    defineProps({listings: Array})
+    defineProps(
+      {
+        listings: Array, 
+        filters: Object,
+      })
 
 </script>

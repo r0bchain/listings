@@ -68,6 +68,16 @@ class ListingPolicy
         : Response::deny('You do not own this listing, so you cannot delete it!');
     }
 
+     /**
+     * Determine whether the user can delete the model.
+     */
+    public function hard_delete(User $user, Listing $listing): Response
+    {
+        return $user->id === $listing->owner_id
+        ? Response::allow()
+        : Response::deny('You do not own this listing, so you cannot hard delete it!');
+    }
+
     /**
      * Determine whether the user can restore the model.
      */
