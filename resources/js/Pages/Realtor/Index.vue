@@ -20,11 +20,14 @@
   
             <ListingAddress :listing="listing" />
           </div>
+          <h3 v-if="listing.deleted">Active {{  listing.deleted }}</h3>
           <div class="flex items-center gap-1 text-gray-600 dark:text-gray-300">
-            <Link v-if="!trash" class="btn-outline text-xs font-medium">Preview</Link>
+            <a v-if="!listing.deleted_at" :href="route('listing.show', listing.id)" 
+            class="btn-outline text-xs font-medium"
+            target="_blank">Preview</a>
             <Link v-else class="btn-outline text-xs font-medium">Restore</Link>
-            <Link v-if="!trash"  class="btn-outline text-xs font-medium">Edit</Link>
-            <Link v-if="!trash" class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete</Link>
+            <Link v-if="!listing.deleted_at" :href="route('realtor.listing.edit', listing.id)"  class="btn-outline text-xs font-medium">Edit</Link>
+            <Link v-if="!listing.deleted_at" class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete</Link>
             <Link v-else class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete forever</Link>
           </div>
         </div>

@@ -73,10 +73,10 @@
     <div class="flex md:grid md:grid-cols-12 gap-4 text-center">
         <Box class="flex items-center md:col-span-12 text-center justify-between">
             <div v-if="user" class="btn-listing-actions md:col-span-6 grid text-left m-auto gap-2">
-                <Link :href="route('listing.destroy', listing.id)" method="DELETE">Remove listing</Link>
+                <Link :href="route('realtor.listing.destroy', listing.id)" method="DELETE">Remove listing</Link>
             </div>
             <div v-if="user" class="btn-listing-actions md:col-span-6 grid text-left  m-auto gap-2">
-                <Link :href="route('listing.edit', listing.id)" as="button">Update listing</Link>
+                <Link :href="route('realtor.listing.edit', listing.id)" as="button">Update listing</Link>
             </div>
         </Box>
     </div>

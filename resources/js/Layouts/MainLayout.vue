@@ -6,13 +6,10 @@
                 <div class="text-lg font-medium">
                     <Link :href="route('listing.index')">Listings</Link> &nbsp;
                 </div>
-                <div v-if="user" class="text-xl text-indigo-600 dark:text-indigo-300">        
-                    <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
-                </div>
-
+              
                 <div v-if="user" class="flex items-center gap-4">
                     <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
-                    <Link :href="route('listing.create')" class="btn-primary">+ New Listing</Link>
+                    <Link :href="route('realtor.listing.create')" class="btn-primary">+ New Listing</Link>
                     <div class="text-sm text-gray-500">
                         <Link :href="route('logout')" method="POST" as="button">Logout</Link>
                         <!-- <Link :href="route('logout')" @click.prevent="$inertia.post(route('logout'))">Logout</Link> -->

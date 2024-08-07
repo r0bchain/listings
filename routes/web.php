@@ -16,12 +16,12 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/hello', [IndexController::class, 'show'])
   ->middleware('auth'); 
 
-Route::resource('listing', ListingController::class)
-  ->only(['create', 'store', 'edit', 'update'])
-    ->middleware('auth');
+// Route::resource('listing', ListingController::class)
+//   ->only(['create', 'store'])
+//     ->middleware('auth');
     
 Route::resource('listing', ListingController::class)
-->except(['create', 'store', 'edit', 'update']);
+->only(['index', 'show']);
 // ->can('index', 'view');
 
 
@@ -42,6 +42,6 @@ Route::prefix('realtor')
   ->middleware('auth')
   ->group(function () {
     Route::resource('listing', RealtorListingController::class)
-      ->only(['index', 'destroy']);
+      ->only(['index', 'destroy', 'edit', 'update', 'create', 'destroy']);
     // Route::get('listing/trash', [RealtorListingController::class, 'trash'])->name('listing.trash');
 });

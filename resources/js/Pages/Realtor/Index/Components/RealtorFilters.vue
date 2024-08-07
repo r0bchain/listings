@@ -64,6 +64,7 @@
 
     const sortOptions = computed(() => sortLabels[filterForm.by])
 
+    console.log(' props.filters.deleted ',  props.filters.deleted );
     const filterForm = reactive({
         deleted: props.filters.deleted ?? false,
         by: props.filters.by ?? 'created_at',
