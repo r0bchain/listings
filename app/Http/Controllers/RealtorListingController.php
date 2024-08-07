@@ -113,7 +113,7 @@ class RealtorListingController extends Controller
 
         $listing->update($validatedData);
 
-        return redirect()->route('realtor.listing.show', $listing->id)
+        return redirect()->route('realtor.listing.index', $listing->id)
         ->with('success', 'Listing updated successfully.');
 
     }
@@ -179,5 +179,12 @@ class RealtorListingController extends Controller
         $listing->forceDelete();
 
     }
+
+    public function restore(Listing $listing)
+    {
+        $listing->restore();
+        return redirect()->route('listing.show', $listing->id)
+        ->with('success', 'Listing restored successfully.');
+    }   
 
 }
