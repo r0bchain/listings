@@ -16,26 +16,25 @@ class RealtorListingController extends Controller
         'deleted' => $request->boolean('deleted'),
         ...$request->only(['by', 'order'])
     ];
-
-        if($request->boolean('deleted')) {
-            return inertia(
-                'Realtor/Index',
-                
-                [
-                    'filters' => $filters,
-                    'listings' => Auth::user()
-                    ->listings() 
-                    // ->mostRecent()
-                    ->filter($filters)->get(),
-                 'deleted' => true
-                ]
-            );
-        }
+   
+    return inertia(
+        'Realtor/Index',
         
-        return inertia(
-            'Realtor/Index',
-            ['listings' => Auth::user()->listings]
-        );
+        [
+        'filters' => $filters,
+        'listings' => Auth::user()
+            ->listings() 
+            ->filter($filters)
+            ->paginate(1)
+            ->withQueryString()
+        ]
+    );
+    
+    
+    return inertia(
+        'Realtor/Index',
+        ['listings' => Auth::user()->listings]
+    );
     }
 
     public function show() {}

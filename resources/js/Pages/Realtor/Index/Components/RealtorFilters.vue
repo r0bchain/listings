@@ -68,6 +68,7 @@
         deleted: props.filters.deleted ?? false,
         by: props.filters.by ?? 'created_at',
         order: props.filters.order ?? 'desc',
+
     })
 
     // reactive / ref / computed // only watched for changes in the deleted property
