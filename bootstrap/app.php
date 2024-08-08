@@ -3,7 +3,6 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Middleware\HandleInertiaRequests;
 
 return Application::configure(basePath: dirname(__DIR__))
@@ -16,7 +15,11 @@ return Application::configure(basePath: dirname(__DIR__))
         //
         $middleware->web(append: [
             HandleInertiaRequests::class,
-            VerifyCsrfToken::class,
+        ]);
+
+        $middleware->validateCsrfTokens(except: [
+           '/logout',
+            '/realtor/listing/*',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

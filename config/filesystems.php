@@ -56,6 +56,18 @@ return [
             'throw' => false,
         ],
 
+        'pinata' => [
+            'driver' => 'pinata',
+            'key' => env('PINATA_ACCESS_KEY_ID'),
+            'secret' => env('PINATA_SECRET_ACCESS_KEY'),
+            'region' => env('PINATA_DEFAULT_REGION'),
+            'bucket' => env('PINATAS_BUCKET'),
+            'url' => env('PINATA_URL'),
+            'endpoint' => env('PINATA_ENDPOINT'),
+            'use_path_style_endpoint' => env('PINATA_USE_PATH_STYLE_ENDPOINT', false),
+            'throw' => false,
+        ]
+
     ],
 
     /*

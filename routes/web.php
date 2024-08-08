@@ -6,6 +6,7 @@ use App\Http\Controllers\ListingController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\UserAccountController;
+use App\Http\Controllers\RealtorListingImageController;
 
 Route::get('/', function () {
     // return view('welcome');
@@ -48,4 +49,7 @@ Route::prefix('realtor')
       ->only(['index', 'destroy', 'edit', 'update', 'create', 'destroy', 'restore'])
       ->withTrashed();
     // Route::get('listing/trash', [RealtorListingController::class, 'trash'])->name('listing.trash');
+
+    Route::resource('listing.image', RealtorListingImageController::class)
+      ->only(['create', 'store']);
 });
