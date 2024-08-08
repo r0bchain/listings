@@ -31,7 +31,7 @@ This project is a web application built using Laravel 11, Vue 3, and Inertia.js.
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/your-username/listings-bids-app.git
+    git clone https://git@github.com:r0bchain/listings.git
     cd listings-bids-app
     ```
 
