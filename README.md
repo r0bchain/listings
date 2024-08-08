@@ -58,6 +58,7 @@ This project is a web application built using Laravel 11, Vue 3, and Inertia.js.
     php artisan migrate
     ```
 
+
 6. **Build Frontend Assets**
     ```bash
     npm run build
@@ -74,6 +75,16 @@ This project is a web application built using Laravel 11, Vue 3, and Inertia.js.
 
 9. **Access the Application**
     - Open your browser and navigate to `http://localhost:8000`.
+  
+10. ## Running the Seeders
+
+To populate your database with initial data, you can run the seeders provided in this project. Follow these steps:
+
+1. **Navigate to your project directory**:
+   Open your terminal and navigate to the root directory of your project.
+
+   ```sh
+   cd /path/to/your/project
 
 ## Usage
 
