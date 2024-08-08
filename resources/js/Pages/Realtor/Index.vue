@@ -1,13 +1,13 @@
 
 <template>
     Listings 
-    <span class="trash"> 
+    <!-- <span class="trash"> 
       <Link :href="route('realtor.listing.index', { trash: true })">Trash</Link> &nbsp;
 
-    </span>
+    </span> -->
     <h1 class="text-3xl mb-4">Your Listings</h1>
     <section>
-      <RealtorFilters :filters="filters"/>
+      <RealtorFilters :filters="filters" />
     </section>
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-2">
       <Box v-for="listing in listings.data" :key="listing.id" :class="{'border-dashed': listing.deleted_at}">
@@ -25,7 +25,7 @@
             <a v-if="!listing.deleted_at" :href="route('listing.show', listing.id)" 
             class="btn-outline text-xs font-medium"
             target="_blank">Preview</a>
-            <Link v-else :href="route('realtor.listing.restore', listing.id)" class="btn-outline text-xs font-medium" method="PUT" as="button">Restore</Link>
+            <Link v-else :href="route('realtor.listing.restore', listing.id)" class="btn-outline text-xs font-medium" method="PUT" as="button" @click="handleRestoreEvent(listing.deleted_at)">Restore</Link>
             <Link :href="route('realtor.listing.edit', listing.id)"  class="btn-outline text-xs font-medium">Edit</Link>
             <Link v-if="!listing.deleted_at" class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete</Link>
             <Link v-else class="btn-outline text-xs font-medium" :href="route('realtor.listing.destroy', listing.id)" as="button" method="DELETE">Delete forever</Link>
@@ -39,6 +39,7 @@
   </template>
   
 <script setup>
+    import { ref, watch } from 'vue'
     import ListingAddress from '@/Components/ListingAddress.vue'
     import ListingSpace from '@/Components/ListingSpace.vue'
     import Price from '@/Components/Price.vue'
@@ -47,10 +48,23 @@
     import RealtorFilters from '@/Pages/Realtor/Index/Components/RealtorFilters.vue'
     import Pagination from '@/Components/UI/Pagination.vue';
 
-    defineProps(
+    const restored = ref(false)
+
+
+    const props = defineProps(
     {
       listings: Object, 
       filters: Object,
-    })
+    });
+
+
+    // Update the deleted property when "restore listing" is clicked
+    function handleRestoreEvent(deleted) {
+      console.log('deleted', deleted)
+      props.filters.deleted = (deleted) ? true : false;
+
+    }
+
+ 
 
 </script>

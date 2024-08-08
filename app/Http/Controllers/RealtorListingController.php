@@ -12,31 +12,25 @@ class RealtorListingController extends Controller
     public function index(Request $request) 
     {
 
-    $filters = [
-        'deleted' => $request->boolean('deleted'),
-        ...$request->only(['by', 'order'])
-    ];
-   
-    return inertia(
-        'Realtor/Index',
-        
-        [
-        'filters' => $filters,
-        'listings' => Auth::user()
-            ->listings() 
-            ->filter($filters)
-            ->paginate(10)
-            ->withQueryString()
-        ]
-    );
+        $filters = [
+            'deleted' => $request->boolean('deleted'),
+            ...$request->only(['by', 'order'])
+        ];
     
+        return inertia(
+            'Realtor/Index',
+            
+            [
+            'filters' => $filters,
+            'listings' => Auth::user()
+                ->listings() 
+                ->filter($filters)
+                ->paginate(10)
+                ->withQueryString()
+            ],
+        );
     
-    return inertia(
-        'Realtor/Index',
-        ['listings' => Auth::user()->listings]
-    );
     }
-
     public function show() {}
 
 
@@ -183,7 +177,7 @@ class RealtorListingController extends Controller
     public function restore(Listing $listing)
     {
         $listing->restore();
-        return redirect()->route('listing.show', $listing->id)
+        return redirect()->route('realtor.listing.index', $listing->id)
         ->with('success', 'Listing restored successfully.');
     }   
 

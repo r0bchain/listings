@@ -35,9 +35,27 @@
     import { router } from '@inertiajs/vue3'
     import { debounce } from 'lodash';
 
+
+   // Define props
     const props = defineProps({
         filters: Object,
-    })
+    });
+
+
+    const filterForm = reactive({
+        by: props.filters.by ?? 'created_at',
+        order: props.filters.order ?? 'desc',
+        deleted: props.filters.deleted ?? false,
+
+
+    });
+
+    // Check changes in the deleted property
+    watch(() => props.filters.deleted , (newValue) => {
+        filterForm.deleted = newValue;
+        console.log('isChecked', filterForm.deleted);
+    });
+
 
     const sortLabels = {
         created_at: [
@@ -64,24 +82,21 @@
 
     const sortOptions = computed(() => sortLabels[filterForm.by])
 
-    console.log(' props.filters.deleted ',  props.filters.deleted );
-    const filterForm = reactive({
-        deleted: props.filters.deleted ?? false,
-        by: props.filters.by ?? 'created_at',
-        order: props.filters.order ?? 'desc',
-
-    })
 
     // reactive / ref / computed // only watched for changes in the deleted property
     // 1 second delay to avoid multiple backend queries
     watch( filterForm, debounce(() => {
+        // console.log('deleted', props.filters.deleted);
         router.get(
             route('realtor.listing.index'),
             filterForm,
             {preserveState: true, preserveScroll: true},
-        )
-    }, 1000), {deep: true}
-)
+            )
+        }
+    ));
+ 
+
+
  </script>
 
  
