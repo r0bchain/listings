@@ -80,11 +80,32 @@ This project is a web application built using Laravel 11, Vue 3, and Inertia.js.
 
 To populate your database with initial data, you can run the seeders provided in this project. Follow these steps:
 
-1. **Navigate to your project directory**:
-   Open your terminal and navigate to the root directory of your project.
+    1. **Navigate to your project directory**:
+       Open your terminal and navigate to the root directory of your project.
+    
+       ```sh
+       cd /path/to/your/project
+        ```bash
+       php artisan migrate:refresh --seed
+       ```
 
-   ```sh
-   cd /path/to/your/project
+---
+
+### Image Storage Using IPFS and Pinata
+
+This application utilizes the [Pinata](https://pinata.cloud/) service to leverage the InterPlanetary File System (IPFS) protocol for storing images. IPFS is a decentralized storage system that allows files to be stored and shared across a distributed network. By using IPFS, the application ensures that images related to listings and bids are securely stored in a way that is both resilient and accessible.
+
+**Why Pinata?**  
+Pinata is a service that provides an easy-to-use interface for uploading and managing files on the IPFS network. It abstracts away much of the complexity involved in interacting with IPFS directly, offering a reliable API for our application to handle image uploads seamlessly.
+
+**How It Works:**  
+- When a user uploads an image (for example, as part of a new listing), the application sends the image to Pinata.
+- Pinata uploads the image to the IPFS network and returns a unique IPFS hash.
+- This IPFS hash is stored in the application's database and is used to retrieve the image from the IPFS network whenever needed.
+
+By using Pinata and IPFS, the application benefits from decentralized and persistent storage, ensuring that the images remain accessible and unaltered over time.
+
+---
 
 ## Usage
 
