@@ -33,6 +33,7 @@ class ListingController extends Controller
             // Returns an object with the listings and the pagination links
             'listings' => 
             Listing::mostRecent()
+            ->withCount('images')
             ->filter($filters)->paginate(10)->withQueryString(),
 
             'filters' => $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo']),
@@ -49,13 +50,15 @@ class ListingController extends Controller
     // Route model binding. Laravel will automatically fetch the model for the given id parameter passed
     public function show(Listing $listing)
     {    
-        return inertia('Listing/Show',
-        [
-            // 'listing' => Listing::find($id)
-            'listing' => $listing
+      $listing->load('images');
+    
+      return inertia('Listing/Show',
+      [
+          // 'listing' => Listing::find($id)
+          'listing' => $listing
 
-        ]
-      );
+      ]
+    );
     }
 
  

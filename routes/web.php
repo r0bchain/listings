@@ -51,5 +51,5 @@ Route::prefix('realtor')
     // Route::get('listing/trash', [RealtorListingController::class, 'trash'])->name('listing.trash');
 
     Route::resource('listing.image', RealtorListingImageController::class)
-      ->only(['create', 'store']);
+      ->only(['create', 'store', 'destroy']);
 });

@@ -12,6 +12,7 @@ class RealtorListingController extends Controller
     public function index(Request $request) 
     {
 
+
         $filters = [
             'deleted' => $request->boolean('deleted'),
             ...$request->only(['by', 'order'])
@@ -25,6 +26,7 @@ class RealtorListingController extends Controller
             'listings' => Auth::user()
                 ->listings() 
                 ->filter($filters)
+                ->withCount('images')
                 ->paginate(10)
                 ->withQueryString()
             ],
