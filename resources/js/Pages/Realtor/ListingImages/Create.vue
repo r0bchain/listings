@@ -16,8 +16,20 @@
 import Box from '@/Components/UI/Box.vue';
 import { useForm } from '@inertiajs/vue3';
 import { computed } from 'vue';
+import { Inertia } from '@inertiajs/inertia';
+import NProgress from 'nprogress';
 
 const props = defineProps({ listing: Object })
+
+// We limit the progress here to 90%, since we still need to wait for a response from the server.
+// @dev: https://inertiajs.com/progress-indicators
+
+Inertia.on('progress', (event) => {
+    if (event.detail.progress.percentage) {
+        console.log('event.detail.progress.percentage ', event.detail.progress.percentage )
+        NProgress.set(event.detail.progress.percentage / 100 * 0.9)
+    } 
+})
 
 const canUpload = computed(() => {
     return form.images.length > 0
