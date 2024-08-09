@@ -23,6 +23,10 @@
     @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 border border-l-0 border-gray-200 dark:border-gray-700 rounded-t-md rounded-l-none rounded-b-none rounded-r-md text-sm font-medium text-gray-600 dark:text-gray-400 dark:bg-gray-800
   }
 
+  .input-file {
+    @apply border rounded-md file:px-4 file:py-2 border-gray-200 dark:border-gray-700 file:text-gray-700 file:dark:text-white file:border-0 file:bg-gray-100 file:dark:bg-gray-800 file:font-medium file:hover:bg-gray-200 file:dark:hover:text-black
+  }
+
   .btn-normal {
     @apply bg-gray-600 hover:bg-gray-500 text-white font-medium p-2 rounded-md
   }
