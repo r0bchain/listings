@@ -47,6 +47,16 @@ class Listing extends Model
         return $query->latest();
     }
 
+    /*
+    * Scope a query to only include listings that have not been sold.
+    */
+    public function scopeWithOutSold(Builder $query): Builder
+    {
+        return $query->doesntHave('offers')->orWhereHas('offers', function ($query) {
+            $query->whereNull('accepted_at')->whereNull('rejected_at');
+        });
+    }
+
     public function scopeFilter(Builder $query, array $filters): Builder
     {
         // Useful for a search bar

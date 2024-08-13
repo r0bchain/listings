@@ -34,7 +34,10 @@ class ListingController extends Controller
             'listings' => 
             Listing::mostRecent()
             ->withCount('images')
-            ->filter($filters)->paginate(10)->withQueryString(),
+            ->withOutSold()
+            ->filter($filters)
+            ->paginate(10)
+            ->withQueryString(),
 
             'filters' => $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo']),
 
