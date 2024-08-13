@@ -39,7 +39,8 @@ class RealtorListingController extends Controller
 
         return inertia(
             'Realtor/Show', 
-            ['listing' => $listing->load('offers')]
+            // Load listing with its offers and the bidder of each offer
+            ['listing' => $listing->load('offers', 'offers.bidder')]
         );
     }
 

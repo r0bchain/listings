@@ -8,7 +8,7 @@ use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\UserAccountController;
 use App\Http\Controllers\RealtorListingImageController;
 use App\Http\Controllers\ListingOfferController;
-
+use App\Http\Controllers\RealtorListingAcceptController;
 
 Route::get('/', function () {
     // return view('welcome');
@@ -48,6 +48,9 @@ Route::prefix('realtor')
     Route::resource('listing', RealtorListingController::class)
       // ->only(['index', 'destroy', 'edit', 'update', 'create', 'store', 'destroy', 'restore'])
       ->withTrashed();
+
+    Route::name('offer.accept')
+      ->put('offer/{offer}/accept', [RealtorListingAcceptController::class, '__invoke']);
 
     Route::resource('listing.image', RealtorListingImageController::class)
       ->only(['create', 'store', 'destroy']);
