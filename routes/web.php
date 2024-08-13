@@ -16,15 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/hello', [IndexController::class, 'show'])
-  ->middleware('auth'); 
 
-// Route::resource('listing', ListingController::class)
-//   ->only(['create', 'store'])
-//     ->middleware('auth');
-    
+
 Route::resource('listing', ListingController::class)
-->only(['index', 'show']);
+  ->only(['index', 'show']);
 // ->can('index', 'view');
 
 Route::resource('listing.offer', ListingOfferController::class)
@@ -51,9 +46,8 @@ Route::prefix('realtor')
       ->put('listing/{listing}/restore', [RealtorListingController::class, 'restore'])
       ->withTrashed();
     Route::resource('listing', RealtorListingController::class)
-      ->only(['index', 'destroy', 'edit', 'update', 'create', 'store', 'destroy', 'restore'])
+      // ->only(['index', 'destroy', 'edit', 'update', 'create', 'store', 'destroy', 'restore'])
       ->withTrashed();
-    // Route::get('listing/trash', [RealtorListingController::class, 'trash'])->name('listing.trash');
 
     Route::resource('listing.image', RealtorListingImageController::class)
       ->only(['create', 'store', 'destroy']);

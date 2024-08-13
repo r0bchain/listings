@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Gate;
-
+use Illuminate\Support\Facades\Auth;
 class ListingController extends Controller
 {
 
@@ -51,11 +51,16 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {    
       $listing->load('images');
-    
+      // $offer = !Auth::user() ? null : $listing->offers()->where('bidder_id', Auth::user()->id)->first();
+      $offer = !Auth::user() ? 
+        null : 
+        $listing->offers()->byMe()->first();
+
       return inertia('Listing/Show',
       [
           // 'listing' => Listing::find($id)
-          'listing' => $listing
+          'listing' => $listing,
+          'offerMade' => $offer
 
       ]
     );
