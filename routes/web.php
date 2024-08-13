@@ -7,6 +7,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RealtorListingController;
 use App\Http\Controllers\UserAccountController;
 use App\Http\Controllers\RealtorListingImageController;
+use App\Http\Controllers\ListingOfferController;
+
 
 Route::get('/', function () {
     // return view('welcome');
@@ -25,6 +27,9 @@ Route::resource('listing', ListingController::class)
 ->only(['index', 'show']);
 // ->can('index', 'view');
 
+Route::resource('listing.offer', ListingOfferController::class)
+  ->only(['store'])
+  ->middleware('auth');
 
 Route::get('login', [AuthController::class, 'create'])
 ->name('login');

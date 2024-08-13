@@ -1,7 +1,7 @@
 
 import {computed, isRef} from 'vue'
 
-export const useMonthlyPayments = (total, interestRate, duration) => {
+export const useMonthlyPayment = (total, interestRate, duration) => {
 
     const monthlyPayment = computed(() => {
 

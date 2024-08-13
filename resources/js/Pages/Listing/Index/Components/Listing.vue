@@ -53,7 +53,7 @@ import ListingAddress from '@/Components/ListingAddress.vue'
 import ListingSpace from '@/Components/ListingSpace.vue'
 import Price from '@/Components/Price.vue'
 import Box from '@/Components/UI/Box.vue'
-import { useMonthlyPayments } from '@/Composables/useMonthlyPayments'
+import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'
 
 import {ref} from 'vue'
 
@@ -65,7 +65,7 @@ const props = defineProps( {
 
 })
 
-const { monthlyPayment } = useMonthlyPayments(props.listing.price, interestRate, duration)
+const { monthlyPayment } = useMonthlyPayment(props.listing.price, interestRate, duration)
 
 </script>
 
