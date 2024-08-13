@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Listing::factory(10)->create([
-            'owner_id' => 1,
+            'owner_id' => 11,
         ]);
 
         Listing::factory(10)->create([

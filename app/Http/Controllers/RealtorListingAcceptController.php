@@ -13,6 +13,9 @@ class RealtorListingAcceptController extends Controller
     {
         // Accept selected offer
         $offer->update(['accepted_at' => now()]);
+
+        $offer->listing->sold_at = now();
+        $offer->listing->save();
         
         $offer->listing->offers()
             ->whereKeyNot($offer->id)

@@ -52,9 +52,12 @@ class Listing extends Model
     */
     public function scopeWithOutSold(Builder $query): Builder
     {
-        return $query->doesntHave('offers')->orWhereHas('offers', function ($query) {
-            $query->whereNull('accepted_at')->whereNull('rejected_at');
-        });
+        // return $query->doesntHave('offers')->orWhereHas('offers', function ($query) {
+        //     $query->whereNull('accepted_at')->whereNull('rejected_at');
+        // });
+        
+        // Adding sold_at to the listing table simplifies the query
+        return $query->whereNull('sold_at');
     }
 
     public function scopeFilter(Builder $query, array $filters): Builder
