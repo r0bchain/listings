@@ -15,7 +15,7 @@ Route::get('/', function () {
     return inertia('index/index');
 });
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [ListingController::class, 'index']);
 
 
 Route::resource('listing', ListingController::class)
