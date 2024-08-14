@@ -31,9 +31,17 @@ class ListingPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(?User $user, Listing $listing): bool
-    {
-       return true;
+    public function view(?User $user, Listing $listing): Response
+    {   
+        if($listing->owner_id === $user->id) {
+            return Response::allow();
+        }
+
+       // dd($listing->sold_at );
+       // Users different than the owner can only see listings that are not sold
+       return ($listing->sold_at === null) 
+            ? Response::allow()  
+            : Response::denyWithStatus(404);
 
     }
 
@@ -57,6 +65,18 @@ class ListingPolicy
         : Response::deny('You do not own this listing!');
 
     }
+ 
+    /**
+     * Determine whether the user can update the model.
+     */
+    public function updateAccepted(User $user, Listing $listing): Response
+    {
+        return ($listing->sold_at === null)
+        ? Response::allow()
+        : Response::deny('An offer was already chosen!');
+
+    }
+
 
     /**
      * Determine whether the user can delete the model.

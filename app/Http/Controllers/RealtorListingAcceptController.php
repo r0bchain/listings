@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class RealtorListingAcceptController extends Controller
 {
@@ -11,6 +12,15 @@ class RealtorListingAcceptController extends Controller
     */
     public function __invoke(\App\Models\Offer $offer)
     {
+
+        $response = Gate::inspect('update-accepted', $offer->listing, Listing::class);
+
+        if (!$response->allowed()) {
+            // The action is authorized...
+            echo $response->message();
+            return redirect()->back()->with('error', $response->message());
+
+        } 
         // Accept selected offer
         $offer->update(['accepted_at' => now()]);
 

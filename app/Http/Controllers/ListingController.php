@@ -53,6 +53,19 @@ class ListingController extends Controller
     // Route model binding. Laravel will automatically fetch the model for the given id parameter passed
     public function show(Listing $listing)
     {    
+
+      $response = Gate::inspect('view-listing', $listing, Listing::class);
+      
+      if (!$response->allowed()) {
+        
+        // The action is authorized...
+        return redirect()->route('listing.index')
+        ->with('error', 'Listing not available.');
+
+
+      }
+      
+
       $listing->load('images');
       // $offer = !Auth::user() ? null : $listing->offers()->where('bidder_id', Auth::user()->id)->first();
       $offer = !Auth::user() ? 

@@ -36,7 +36,7 @@ class RealtorListingController extends Controller
     }
     public function show(Listing $listing) 
     {
-
+      
         return inertia(
             'Realtor/Show', 
             // Load listing with its offers and the bidder of each offer
