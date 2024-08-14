@@ -10,10 +10,9 @@ use App\Http\Controllers\RealtorListingImageController;
 use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\RealtorListingAcceptController;
 
-Route::get('/', function () {
-    // return view('welcome');
-    return inertia('index/index');
-});
+// Route::get('/', function () {
+//     return inertia('index/index');
+// });
 
 Route::get('/', [ListingController::class, 'index']);
 
