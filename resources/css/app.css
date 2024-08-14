@@ -46,4 +46,8 @@
   .accepted {
     @apply dark:text-green-900 bg-green-200 text-green-900 p-1 rounded-md uppercase ml-1
   }
+
+  .sold {
+    @apply text-xs font-bold uppercase border border-dashed p-1 border-green-300 text-green-500 dark:border-green-600 dark:text-green-600 inline-block rounded-md mb-2
+  }
 }
