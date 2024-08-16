@@ -33,7 +33,7 @@ class ListingPolicy
      */
     public function view(?User $user, Listing $listing): Response
     {   
-        if($listing->owner_id === $user->id) {
+        if($listing->owner_id === $user?->id) {
             return Response::allow();
         }
 
