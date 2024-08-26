@@ -9,7 +9,9 @@ class NotificationController extends Controller
     public function index(Request $request)
     {
         return inertia('Notification/Index', [
-            'notifications' => $request->user()->notifications()->paginate(10),
+            'notifications' => $request->user()->notifications()
+            ->orderByRaw('read_at IS NULL DESC, read_at ASC')
+            ->paginate(10),
         ]);
     }
 

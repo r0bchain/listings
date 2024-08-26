@@ -10,6 +10,7 @@ use App\Http\Controllers\RealtorListingImageController;
 use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\RealtorListingAcceptController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\NotificationSeenController;
 
 // Route::get('/', function () {
 //     return inertia('index/index');
@@ -27,8 +28,13 @@ Route::resource('listing.offer', ListingOfferController::class)
   ->middleware('auth');
 
 Route::resource('notification', NotificationController::class)
-  ->only(['index', 'markAsRead'])
+  ->only(['index'])
   ->middleware('auth');
+
+Route::put(
+  'notification/{notification}/seen',
+  NotificationSeenController::class
+)->middleware('auth')->name('notification.seen');
 
 Route::get('login', [AuthController::class, 'create'])
 ->name('login');

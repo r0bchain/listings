@@ -14,9 +14,16 @@
                 </span>
             </div>
             <div> 
-                <button @click="markAsRead(notification.id)" class="btn-outline text-xs font-medium" >
+                <Link v-if="!notification.read_at" 
+                :href="route('notification.seen', { notification: notification.id })" 
+                method="PUT"
+                as="button"
+                class="btn-outline text-xs font-medium uppercase" >
                     Mark as read
-                </button>
+                </Link>
+                <div v-else>
+                    <span class="btn-outline text-xs font-medium uppercase">Read</span>
+                </div>
             </div>
         </div>
     </section>

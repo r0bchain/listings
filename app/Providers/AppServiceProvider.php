@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Policies\ListingPolicy;
+use App\Policies\NotificationPolicy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -25,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('update-listing', [ListingPolicy::class, 'update']);
         Gate::define('delete-listing', [ListingPolicy::class, 'delete']);
         Gate::define('update-accepted', [ListingPolicy::class, 'update-accepted']);
+        Gate::define('mark-as-read', [NotificationPolicy::class, 'update']);
 
 
         
