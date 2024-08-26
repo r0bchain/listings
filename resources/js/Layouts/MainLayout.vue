@@ -9,7 +9,7 @@
               
                 <div v-if="user" class="flex items-center gap-4">
                     <Link class="text-gray-500 relative pr-2 py-2 text-lg"
-                      :ref="route('notification.index')">
+                      :href="route('notification.index')">
                     🔔
                         <div  v-if="notificationCount" class="absolute bell">
                         {{ notificationCount }}
