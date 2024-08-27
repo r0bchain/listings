@@ -7,7 +7,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use App\Notifications\VerifyEmail;
 class UserAccountController extends Controller
 {
     public function create()
@@ -23,8 +23,9 @@ class UserAccountController extends Controller
             'password' => 'required|min:8|confirmed'
         ]));
         // $user->save();
-        Auth::login($user);
+        //Auth::login($user);
         event(new Registered($user));
+        $user->notify(new VerifyEmail($user));
 
         return redirect()->route('listing.index')
             ->with('success', 'Account created!');

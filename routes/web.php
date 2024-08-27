@@ -11,6 +11,7 @@ use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\RealtorListingAcceptController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\NotificationSeenController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 // Route::get('/', function () {
 //     return inertia('index/index');
@@ -25,11 +26,11 @@ Route::resource('listing', ListingController::class)
 
 Route::resource('listing.offer', ListingOfferController::class)
   ->only(['store'])
-  ->middleware('auth');
+  ->middleware('auth', 'verified');
 
 Route::resource('notification', NotificationController::class)
   ->only(['index'])
-  ->middleware('auth');
+  ->middleware('auth', 'verified');
 
 Route::put(
   'notification/{notification}/seen',
@@ -50,7 +51,7 @@ Route::resource('user-account', UserAccountController::class)
 
 Route::prefix('realtor')
   ->name('realtor.')
-  ->middleware('auth')
+  ->middleware('auth', 'verified')
   ->group(function () {
     Route::name('listing.restore')
       ->put('listing/{listing}/restore', [RealtorListingController::class, 'restore'])
@@ -65,3 +66,10 @@ Route::prefix('realtor')
     Route::resource('listing.image', RealtorListingImageController::class)
       ->only(['create', 'store', 'destroy']);
 });
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+  $request->fulfill();
+
+  return  inertia('Index/Index', ['message' => 'Welcome on board!']);
+
+})->middleware(['auth', 'signed'])->name('verification.verify');
