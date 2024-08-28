@@ -12,13 +12,9 @@ use App\Http\Controllers\RealtorListingAcceptController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\NotificationSeenController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
-
-// Route::get('/', function () {
-//     return inertia('index/index');
-// });
+use Illuminate\Http\Request;
 
 Route::get('/', [ListingController::class, 'index']);
-
 
 Route::resource('listing', ListingController::class)
   ->only(['index', 'show']);
@@ -67,9 +63,28 @@ Route::prefix('realtor')
       ->only(['create', 'store', 'destroy']);
 });
 
+//his view will be displayed to users when they 
+//try to access other parts of the application without verifying their email address first.
+Route::get('/email/verify', function () {
+  return inertia('Auth/VerifyEmail');
+})
+  ->middleware('auth')->name('verification.notice');
+
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
   $request->fulfill();
 
-  return  inertia('Index/Index', ['message' => 'Welcome on board!']);
+  return redirect()->route('listing.index')
+    ->with('success', 'Email was verified!');
+  // return  inertia('Index/Index', ['message' => 'Welcome on board!']);
 
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+// throttle limit the number of requests to the route in a given time, 
+// it use the cache to perform the check (in this example, 6 requests per minute)
+Route::post('/email/verification-notification', function (Request $request) {
+  $request->user()->sendEmailVerificationNotification();
+  return redirect()->route('listing.index')
+  ->with('success', 'Verification link sent!');
+
+  // return back()->with('success', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
