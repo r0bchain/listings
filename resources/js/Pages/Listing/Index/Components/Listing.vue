@@ -1,21 +1,30 @@
 <template>
       <Box>
+            <template #image>
+                    <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80"
+                    class="h-50 w-full object-cover border border-white-500"
+                    />
+                
+            </template>
             <div class="flex items-center gap-1">
                 
-                <Price :price="listing.price" class="text-2xl font-bold" />
+                <Price :price="listing.price" class="text-1xl font-bold" />
                 <div class="text-xs text-gray-500"></div>
             </div>
+            
                 <Link :href="route('listing.show',{listing: listing.id})">
-                    <ListingSpace :listing="listing" class="text-xl" />
+                    <ListingSpace :listing="listing" class="text-1xl" />
                     <ListingAddress :listing="listing" class="text-gray"  />
                 </Link>
 
             <Box>
-                <template #header>
+                <template #header  v-if="category_id">
                     Montly payment
                 </template>
 
-                <div>
+                <div  v-if="category_id">
                     <label class="label">Interest rate ( {{ interestRate }}%)</label>
                     <input v-model.number="interestRate"
                     type="range" 

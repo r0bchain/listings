@@ -1,5 +1,5 @@
 <template>
-    <Box>
+    <BoxDetails>
       <template #header>Make an Offer</template>
       <div>
         <form @submit.prevent="makeOffer">
@@ -22,12 +22,12 @@
           <Price :price="difference" />
         </div>
       </div>
-    </Box>
+    </BoxDetails>
   </template>
   
   <script setup>
   import Price from '@/Components/Price.vue'
-  import Box from '@/Components/UI/Box.vue'
+  import BoxDetails from '@/Components/UI/BoxDetails.vue'
   import { useForm } from '@inertiajs/vue3'
   import { computed, watch } from 'vue'
   import { debounce } from 'lodash'

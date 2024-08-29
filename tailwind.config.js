@@ -6,13 +6,25 @@ export default {
     // "./resources/js/**/{vue,js,ts,jsx,tsx}",
     "./resources/js/**/*.vue",
 
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
+    ],
+    theme: {
+      extend: {
+        colors:{
+          'primary':'#FF6363',
+          'secondary':{
+            100:'#E2E2D5',
+            200:'#888883'
+          },
+          'thai-blue':'#3A599A',
+          'thai-red':'#A61932', 
+      },
+     
 
-  ],
+    },
+    plugins: [
+      require('@tailwindcss/forms'),
+
+    ],
+  }
 }
 

@@ -1,10 +1,14 @@
 <template>
 
-    <header class="border-b-2 border-gey-600 dark:border-gray-600 bg-white dark:bg-gray-900 w-full">
+    <header class="header-container">
         <div class="container mx-auto">
             <nav class="p-4 flex items-center justify-between">
                 <div class="text-lg font-medium">
-                    <Link :href="route('listing.index')">Listings</Link> &nbsp;
+                    <Link :href="route('listing.index')">
+                        
+                    <img :src="page.props.logo" alt="thai advertisments && listings"  class="logo" />
+
+                    </Link> 
                 </div>
               
                 <div v-if="user" class="flex items-center gap-4">
@@ -16,16 +20,16 @@
                         </div>
                     </Link>
 
-                    <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
+                    <Link class="link" :href="route('realtor.listing.index')">{{ user.name }}</Link>
                     <Link :href="route('realtor.listing.create')" class="btn-primary">+ New Listing</Link>
                     <div class="text-sm text-gray-500">
-                        <Link :href="route('logout')" method="POST" as="button">Logout</Link>
+                        <Link :href="route('logout')" method="POST" as="button" class="link">Logout</Link>
                         <!-- <Link :href="route('logout')" @click.prevent="$inertia.post(route('logout'))">Logout</Link> -->
                     </div>
                 </div>
                 <div v-else class="flex items-center gap-2 text-sm text-gray-500 flex ">
-                    <Link :href="route('login')">Sign-In</Link> |
-                    <Link :href="route('user-account.create')">Register</Link>
+                    <Link :href="route('login')" class="link">Sign-In</Link> |
+                    <Link :href="route('user-account.create')" class="link">Register</Link>
 
                 </div>
 
@@ -35,7 +39,7 @@
     <!-- <div>The page with time {{timer}}</div> -->
     <!-- <div v-if="$page.props.flash.success  " v-text="$page.props.flash.success" class="success" > -->
     
-    <main class="container mx-auto p-4 w-full">
+    <main class="container">
         <div v-if="flashSuccess" v-text="flashSuccess" class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2"></div>        
         <div v-if="flashError" v-text="flashError" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"></div>        
 

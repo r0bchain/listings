@@ -1,26 +1,26 @@
 <template>
     <div class="flex flex-col-reverse md:grid md:grid-cols-12 gap-4">
-      <Box v-if="listing.images.length" class="md:col-span-7 flex items-center">
+      <BoxDetails v-if="listing.images.length" class="md:col-span-7 flex items-center">
         <div  class="grid grid-cols-2 gap-1">
           <img
             v-for="image in listing.images" :key="image.id"
             :src="image.src"
           />
         </div>
-      </Box>
+      </BoxDetails>
 
       <EmptyState v-else class="md:col-span-7 flex items-center">No Images</EmptyState>
       <div class="md:col-span-5 flex flex-col gap-4">
-        <Box>
+        <BoxDetails>
           <template #header>
             Basic info
           </template>
           <Price :price="listing.price" class="text-2xl font-bold" />
           <ListingSpace :listing="listing" class="text-lg" />
           <ListingAddress :listing="listing" class="text-gray-500" />
-        </Box>
+        </BoxDetails>
   
-        <Box>
+        <BoxDetails>
           <template #header>
             Monthly Payment
           </template>
@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-        </Box>
+        </BoxDetails>
   
         <MakeOffer 
             v-if="user && !offerMade" 
@@ -85,7 +85,7 @@
   import ListingAddress from '@/Components/ListingAddress.vue'
   import ListingSpace from '@/Components/ListingSpace.vue'
   import Price from '@/Components/Price.vue'
-  import Box from '@/Components/UI/Box.vue'
+  import BoxDetails from '@/Components/UI/Box.vue'
   import MakeOffer from '@/Pages/Listing/Show/Components/MakeOffer.vue'
   import OfferMade from '@/Pages/Listing/Show/Components/OfferMade.vue'
   import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'

@@ -1,6 +1,8 @@
 <template>
-    <Filters :filters="filters"/>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+    <Filters :filters="filters" />
+    
+    <Categories   @category-changed="defaultCategoryId = $event"/>
+    <div class="listing-container">
         <Listing v-for="listing in listings.data" :key="listing.id" :listing="listing" />
 
     </div>
@@ -10,14 +12,28 @@
 </template>
 
 <script setup>
-
+import { ref, computed } from 'vue'
 import Listing from '@/Pages/Listing/Index/Components/Listing.vue'
 import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
 import Pagination from '@/Components/UI/Pagination.vue';
 import Filters from '@/Pages/Listing/Index/Components/Filters.vue';
+import Categories from '@/Pages/Listing/Index/Components/Categories.vue';
+import { Link, usePage } from '@inertiajs/vue3'
 
-defineProps( {
+// Page props 
+const page = usePage()
+
+const categories = computed(
+    () => page.props.categories 
+)
+
+
+const props = defineProps( {
     listings: Object,
     filters: Object,
+
 })
+
+const category = ref(props.filters.categoryId)
+
 </script>

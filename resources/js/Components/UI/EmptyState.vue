@@ -1,9 +1,9 @@
 <template>
- <Box>
+ <BoxDetails>
     <div class="w-full text-center font-medium text-gray-500">
         <slot /> 
     </div>
- </Box>   
+ </BoxDetails>   
 </template>
 
 <script setup>

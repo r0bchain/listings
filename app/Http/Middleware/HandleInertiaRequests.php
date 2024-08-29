@@ -36,6 +36,7 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
+            'logo' => fn() => asset('storage/images/logo.png'),
             'flash'=> [
                 'success' => fn() => $request->session()->get('success'),
                 'error'   => fn() => $request->session()->get('error'),
@@ -50,6 +51,8 @@ class HandleInertiaRequests extends Middleware
                 ]
                 // ? $request->user()->only('id', 'name', 'email')
                 : null,
+
+            'categories' => fn() => \App\Models\Category::whereNull('parent_id')->get(),
         ]);
     }
 }

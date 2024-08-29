@@ -42,6 +42,11 @@ class Listing extends Model
         return $this->hasMany(Offer::class, 'listing_id');
     }
 
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function scopeMostRecent(Builder $query): Builder
     {   
         return $query->latest();
@@ -103,6 +108,10 @@ class Listing extends Model
             !in_array($value, $this->sortable)
                 ? $query :
                 $query->orderBy($value, $filters['order'] ?? 'desc')
+        )->when(
+            $filters['categoryId'] ?? 1,
+            fn ($query, $value) => $query->where('category_id', '=',  $value)
+
         );
 
     }

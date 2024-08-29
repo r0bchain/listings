@@ -23,7 +23,9 @@ class ListingController extends Controller
      */
     public function index(Request $request)
     {
-        $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo']);
+     
+        $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId']);
+       // dd($filters);
         //$query = Listing::orderByDesc('created_at');
         // dd(  $filters);
         return  inertia('Listing/Index',
@@ -38,8 +40,9 @@ class ListingController extends Controller
             ->filter($filters)
             ->paginate(10)
             ->withQueryString(),
+            
 
-            'filters' => $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo']),
+            'filters' => $filters,
 
         ]
       );
@@ -71,7 +74,7 @@ class ListingController extends Controller
       $offer = !Auth::user() ? 
         null : 
         $listing->offers()->byMe()->first();
-
+     // dd($listing);
       return inertia('Listing/Show',
       [
           // 'listing' => Listing::find($id)
