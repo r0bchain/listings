@@ -41,6 +41,8 @@ class ListingController extends Controller
             
 
             'filters' => $filters,
+            'pexelKey'=> env('RANDOM_IMAGED_KEY')
+
 
         ]
       );
