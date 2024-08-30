@@ -19,7 +19,7 @@
                     <ListingAddress :listing="listing" class="text-gray"  />
                 </Link>
 
-            <Box>
+            <!-- <Box>
                 <template #header  v-if="listing.category_id">
                     Montly payment
                 </template>
@@ -43,14 +43,14 @@
                     </div>
 
                 </div>
-            </Box>                
+            </Box>                 -->
 
-            <div class="flex justify-between pt-5">
+            <!-- <div class="flex justify-between pt-5">
                 <div v-if="user" class="btn-listing-actions">
                     <Link :href="route('realtor.listing.edit', listing.id)">Edit listing</Link>
                 </div>
              
-            </div>
+            </div> -->
             
            
         </Box>

@@ -1,41 +1,14 @@
 <template>
-    <form @submit.prevent="login">
-        <div class="w-1/2 mx-auto">
-            <div class="mt-4">
-                <label for="email" class="label">E-mail (username)</label>
-                <input v-model="form.email" type="text" class="input"/>
-            </div>
-            <div v-if="form.errors.email" class="input-error">{{  form.errors.email }}</div>
-            <div class="mt-4">
-                <label for="password" class="label">Password</label>
-                <input v-model="form.password" type="password" class="input mt-2" />
-                <div v-if="form.errors.password" class="input-error">{{  form.errors.password }}</div>
+    <div><LoginBox/></div>
 
-            </div>            
-            <div class="mt-4">
-                <button type="submit" class="btn-primary w-full">Login</button>
-
-                <div class="mt-2 text-center">
-                    <Link :href="route('user-account.create')" class="text-sm text-gray-500">Create an account?</Link>
-                </div>
-            </div>
-
-        </div>
-    </form>
 </template>
 
 <script setup>
-import { useForm, Link } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
+import LoginBox from '@/Pages/Auth/Components/LoginBox.vue';
 
 // userForm will catch all the validation errors coming from the backend
 // form.erros.email, form.errors.password ...
 
-const form = useForm({
-    email: 'test@example.com',
-    password: ''
-})
 
-const login = () => {
-    form.post(route('login'))
-}
 </script>

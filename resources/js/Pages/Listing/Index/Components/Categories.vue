@@ -1,6 +1,6 @@
 <template>
     <div :style="{ backgroundImage: `url(${props.headerBg})` }" class="w-full opacity-80 bg-gray-100 dark:bg-gray-800 m-auto bg-center">
-        <div class="w-full pt-2 pl-4 grid text-center" v-if="props.selectedCategory">
+        <div class="w-full pt-2 pl-4 grid text-center title-category" v-if="props.selectedCategory">
             <h2>{{  props.selectedCategory.name  }}</h2>
             <span>{{ props.selectedCategory.description }}</span>
         </div>

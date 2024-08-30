@@ -1,13 +1,13 @@
 <template>
- 
+
     <div class="filter-wrapper">
         <form @submit.prevent="filter">
             <div class="filter-container">
-                <div class="flex flex-nowrap items-center">
+                <div v-if="filterForm.categoryId == 1" class="flex flex-nowrap items-center">
                     <input v-model="filterForm.priceFrom" type="text" class="input-filter w-28"  placeholder="Price from" />
                     <input v-model="filterForm.priceTo" type="text" class="input-filter w-28"  placeholder="Price to"/>
                 </div>
-                <div class="flex flex-nowrap items-center">
+                <div v-if="filterForm.categoryId == 1"  class="flex flex-nowrap items-center">
                    <select v-model="filterForm.beds" class="input-filter w-22">
                      <option :value="null">Beds</option>
                      <option v-for="n in 5" :key="n" :value="n" v-text="n" />
@@ -23,7 +23,7 @@
                    </select>
                 </div>
     
-                <div class="flex flex-nowrap items-center">
+                <div v-if="filterForm.categoryId == 1"  class="flex flex-nowrap items-center">
                     <input v-model="filterForm.areaFrom" type="text" class="input-filter w-28" placeholder="Area from" />
                     <input v-model="filterForm.areaTo"   type="text" class="input-filter w-28" placeholder="Area to"/>
                 </div>

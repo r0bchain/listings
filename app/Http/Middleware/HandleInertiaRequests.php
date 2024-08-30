@@ -42,6 +42,12 @@ class HandleInertiaRequests extends Middleware
                 'error'   => fn() => $request->session()->get('error'),
             ],
 
+            'site' => fn() => [
+                'APP_NAME' => env('APP_NAME'),
+                'APP_SLOGAN' => env('APP_SLOGAN'),
+                'APP_REGISTER_TITLE' => env('APP_REGISTER_TITLE'),
+            ],
+
             'user' => fn() => $request->user()
                 ? [
                     'id' => $request->user()->id,
