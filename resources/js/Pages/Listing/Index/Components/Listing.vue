@@ -20,11 +20,11 @@
                 </Link>
 
             <Box>
-                <template #header  v-if="category_id">
+                <template #header  v-if="listing.category_id">
                     Montly payment
                 </template>
 
-                <div  v-if="category_id">
+                <div  v-if="listing.category_id">
                     <label class="label">Interest rate ( {{ interestRate }}%)</label>
                     <input v-model.number="interestRate"
                     type="range" 
@@ -63,14 +63,19 @@ import ListingSpace from '@/Components/ListingSpace.vue'
 import Price from '@/Components/Price.vue'
 import Box from '@/Components/UI/Box.vue'
 import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'
+import { usePage } from '@inertiajs/vue3'
 
 import {ref} from 'vue'
+
+const page = usePage()
 
 const interestRate = ref(2.5)
 const duration = ref(25)
 
+const user = page.props.user
+
 const props = defineProps( {
-    listing: Object,
+    listing: Object
 
 })
 

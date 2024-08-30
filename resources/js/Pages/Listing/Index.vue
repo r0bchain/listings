@@ -1,7 +1,18 @@
-<template>
-    <Filters :filters="filters" />
+<template> 
+   
+    <h3 v-if="currentCategory" class="title w-full text-left p-4">{{ currentCategory.name }} || {{ currentCategory.description }}</h3> 
+  
+    <Filters :filters="filters"  
+    @category-filter-changed="updateCategory = $event"
+    :selectedCategoryId="updateCategory" 
+   />
+    <!-- hanged name for the variable recibed to "selectedCategory" instead of "categoryId" 
+    to avoid conflicts with the binding categoryId in the Filters component form 
+    -->
+  <Categories 
+    @category-clicked="updateCategory = $event" 
+    :selectedCategoryName="currentCategory ? currentCategory.name : null"/> 
     
-    <Categories   @category-changed="defaultCategoryId = $event"/>
     <div class="listing-container">
         <Listing v-for="listing in listings.data" :key="listing.id" :listing="listing" />
 
@@ -12,28 +23,30 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, defineProps } from 'vue'
 import Listing from '@/Pages/Listing/Index/Components/Listing.vue'
 import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
 import Pagination from '@/Components/UI/Pagination.vue';
 import Filters from '@/Pages/Listing/Index/Components/Filters.vue';
 import Categories from '@/Pages/Listing/Index/Components/Categories.vue';
-import { Link, usePage } from '@inertiajs/vue3'
+import { usePage } from '@inertiajs/vue3'
 
 // Page props 
 const page = usePage()
 
-const categories = computed(
-    () => page.props.categories 
-)
-
-
 const props = defineProps( {
     listings: Object,
     filters: Object,
-
+    
 })
 
-const category = ref(props.filters.categoryId)
+const updateCategory = ref(props.filters.categoryId)
+
+const currentCategory = computed(() => {
+  
+    // Ojo con la comparacion de tipos!!! , hacer casting a Number para evitar errores
+  return page.props.categories.find(category => Number(category.id) === Number(updateCategory.value))
+})
+
 
 </script>

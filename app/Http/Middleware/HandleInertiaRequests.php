@@ -53,6 +53,7 @@ class HandleInertiaRequests extends Middleware
                 : null,
 
             'categories' => fn() => \App\Models\Category::whereNull('parent_id')->get(),
+            // 'defaultCategory' => fn() => \App\Models\Category::whereNull('parent_id')->first(),
         ]);
     }
 }

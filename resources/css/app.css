@@ -4,6 +4,14 @@
 
 @layer components {
 
+  body {
+    @apply font-sans text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-900
+  }
+
+  .title {
+    @apply text-2xl text-gray-800 dark:text-gray-200
+  }
+
   .container {
     @apply  w-full mx-auto p-0  bg-transparent  
   }

@@ -25,9 +25,7 @@ class ListingController extends Controller
     {
      
         $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId']);
-       // dd($filters);
-        //$query = Listing::orderByDesc('created_at');
-        // dd(  $filters);
+       
         return  inertia('Listing/Index',
         [
             // Returns an array with the listings

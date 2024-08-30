@@ -1,7 +1,5 @@
 <template>
-          
-    <h1>{{ defaultCategory.name }}</h1>
-
+ 
     <div class="filter-wrapper">
         <form @submit.prevent="filter">
             <div class="filter-container">
@@ -31,11 +29,11 @@
                 </div>
 
                 <div class="flex flex-nowrap items-center">
-                    <select v-model="defaultCategory.id" class="input-filter w-22" @change="updateCategoryFilter">
+                    <select v-model="filterForm.categoryId" class="input-filter w-22">
                         <option 
                         v-for="category in categories" :key="category.id" 
                         :value="category.id" 
-                        :selected="category.id == defaultCategory.id"
+                        :selected="category.id == filterForm.categoryId"
                         
                         >{{ category.name }}
                         
@@ -56,7 +54,8 @@
 
 import { useForm } from '@inertiajs/vue3'
 import { usePage } from '@inertiajs/vue3'
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
+import { debounce } from 'lodash'
 
 // Page props 
 const page = usePage()
@@ -65,30 +64,18 @@ const categories = computed(
     () => page.props.categories 
 )
 
+
 const props = defineProps( {
     filters: Object,
-    defaultCategory: Object,
-    
+    selectedCategoryId: Number
 })
-
-const defaultCategory = computed(
-    () =>   categories.value.find(category => {
-        return category.id === Number(props.filters.categoryId)
-
-    }) 
-)
-const defaultCategoryId = ref(1)
-
 const emit = defineEmits(['categoryFilterChanged'])
 
-const updateCategoryFilter = (event) => {
-    defaultCategory.id = event.target.value
-    emit('categoryFilterChanged',  defaultCategory.id )
-    console.log('value',  defaultCategory.id )
-}
+const updateCategory = debounce(() => {
+    emit('categoryFilterChanged', filterForm.categoryId)
+}, 200)
 
 
-// console.log('defaultCategory', defaultCategory);
 const filterForm = useForm({
     priceFrom: props.filters.priceFrom ?? null,
     priceTo: props.filters.priceTo ?? null,
@@ -96,11 +83,11 @@ const filterForm = useForm({
     baths: props.filters.baths ?? null,
     areaFrom: props.filters.areaFrom ?? null,
     areaTo: props.filters.areaTo ?? null,
+    categoryId: props.selectedCategoryId ?? 3, // Real state by default
 })
 
 
 const filter = () => {
-    console.log(filterForm)
     filterForm.get(
         route('listing.index'),
         {
@@ -108,9 +95,8 @@ const filter = () => {
             preserveScroll: true,
         }
     )
-
+    updateCategory()
     // filterForm.reset()
-
 }
 
 const clear = () => {
