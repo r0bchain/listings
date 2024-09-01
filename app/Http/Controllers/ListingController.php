@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use App\Models\Category;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 class ListingController extends Controller
@@ -25,7 +26,7 @@ class ListingController extends Controller
     {
      
         $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId', 'city']);
-       
+      
         return  inertia('Listing/Index',
         [
             // Returns an array with the listings
@@ -42,6 +43,7 @@ class ListingController extends Controller
 
             'filters' => $filters,
             'cities' => Listing::select('city')->distinct()->get(),
+            'category' => ($filters && $filters['categoryId']) ? Category::select('name')->where('id', $filters['categoryId'])->get() : null,
             'defaultCity' => env('DEFAULT_CITY'),
             'pexelKey'=> env('RANDOM_IMAGED_KEY')
 

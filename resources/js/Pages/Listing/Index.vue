@@ -1,5 +1,4 @@
 <template> 
- 
     <h3 v-if="currentCategory" class="title w-full text-left p-4">{{ currentCategory.name }} || {{ currentCategory.description }}</h3> 
     <Filters 
     :filters="filters"
@@ -13,6 +12,7 @@
     <!-- hanged name for the variable recibed to "selectedCategory" instead of "categoryId" 
     to avoid conflicts with the binding categoryId in the Filters component form 
     -->
+   
   <Categories 
     @category-clicked="updateCategory = $event" 
     :selectedCategory="currentCategory ?? {}"
@@ -29,6 +29,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { debounce } from 'lodash'
 import Listing from '@/Pages/Listing/Index/Components/Listing.vue'
 import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
 import Pagination from '@/Components/UI/Pagination.vue';
@@ -36,7 +37,7 @@ import Filters from '@/Pages/Listing/Index/Components/Filters.vue';
 import Categories from '@/Pages/Listing/Index/Components/Categories.vue';
 import { usePage } from '@inertiajs/vue3'
 import { createClient } from 'pexels';
-import { debounce } from 'lodash'
+import { randomImages } from '@/Composables/randomImages';
 
 
 // Page props 
@@ -47,26 +48,23 @@ const props = defineProps( {
     filters: Object,
     cities: Array,
     defaultCity: String,
-    pexelKey: String
-    
+    category: Object    
 })
 
 const updateCategory = ref(props.filters.categoryId ?? 1)
 const imageUrl = ref('')
 
+const topics = (props.category && props.category[0].name) ? [props.category[0].name] : page.props.site.TOPICS_IMAGE
 
 // Fetch the image URL on component mount
-const fetchImageUrl = () => {
-    const client = createClient(props.pexelKey)
-    const words = ['Beach-thailand', 'Buddha-Thailand', 'Hua-Hin', 'Bangkok', 'Ayutaya']
-    const query =  currentCategory.value ? currentCategory.value.name : words[Math.floor(Math.random() * words.length)];
-    console.log(query);
-    client.photos.search({ query, per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }).then(photos => {
-        imageUrl.value = photos.photos[0].src.landscape
-    }).catch(err => {
-        console.log('error', err)
-    })
-}
+
+const { randomImage, location } = randomImages(
+    imageUrl,
+    page.props.site.RANDOM_IMAGED_KEY, 
+    topics,
+    {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
+)
+
 
 const currentCategory = computed(() => {
   
@@ -76,7 +74,8 @@ const currentCategory = computed(() => {
 
 // Fetch the image URL on component mount
 onMounted(() => {
-    fetchImageUrl()
+    imageUrl.value = randomImage
+  
 })
 
 

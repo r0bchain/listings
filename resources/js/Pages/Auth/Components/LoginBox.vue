@@ -1,10 +1,10 @@
 <!-- component -->
  <template>
     <form @submit.prevent="login">
-        <div> {{  location  }}</div>
+        <div> {{  imageUpdated.query  }}</div>
 
         <div 
-         :style="{ backgroundImage: `url(${imageUpdated})` }"
+        :style="{ backgroundImage: `url(${imageUpdated.imageUrl})` }"
          class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
             <div class="relative py-3 sm:max-w-xl sm:mx-auto">
                 
@@ -62,13 +62,11 @@ const props = defineProps({
     randomImage: {
         type: Object,
         Required: true
-    },
-    location: {
-        type: String
     }
+
 })
 
-const imageUpdated = ref(props.randomImage ?? "https://images.pexels.com/photos/9394657/pexels-photo-9394657.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200")
+const imageUpdated = ref(props.randomImage)
 
 
 </script>

@@ -1,5 +1,5 @@
 <template>
-  Location  {{  defaultCity }}
+ 
     <div class="filter-wrapper">
         <form @submit.prevent="filter">
             <div class="filter-container">
@@ -43,6 +43,7 @@
 
                 <div class="flex flex-nowrap items-center">
                     <select v-model="filterForm.city" class="input-filter w-22">
+                        <option :value="null">All location</option>
                         <option 
                         v-for="element in props.cities" :key="element.city" 
                         :value="element.city" 

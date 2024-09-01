@@ -1,7 +1,11 @@
 <!-- component -->
  <template>
     <form @submit.prevent="register">
-        <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+        <div> {{  imageUpdated.query  }}</div>
+        <div
+        
+        :style="{ backgroundImage: `url(${imageUpdated.imageUrl})` }"
+        class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
             <div class="relative py-3 sm:max-w-xl sm:mx-auto">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-300 to-red-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
                 </div>
@@ -59,10 +63,20 @@
  </template>
 
  <script setup>
-import { Link, usePage } from '@inertiajs/vue3'
-import { useForm } from '@inertiajs/vue3'
+
+import { useForm, Link, usePage  } from '@inertiajs/vue3'
+import { ref} from 'vue'
 
 const page = usePage()
+const props = defineProps({
+    randomImage: {
+        type: Object,
+        Required: true
+    },
+    
+})
+
+const imageUpdated = ref(props.randomImage)
 
 const form = useForm({
     name: null,
