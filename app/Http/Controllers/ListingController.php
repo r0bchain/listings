@@ -24,7 +24,7 @@ class ListingController extends Controller
     public function index(Request $request)
     {
      
-        $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId']);
+        $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId', 'city']);
        
         return  inertia('Listing/Index',
         [
@@ -41,6 +41,8 @@ class ListingController extends Controller
             
 
             'filters' => $filters,
+            'cities' => Listing::select('city')->distinct()->get(),
+            'defaultCity' => env('DEFAULT_CITY'),
             'pexelKey'=> env('RANDOM_IMAGED_KEY')
 
 

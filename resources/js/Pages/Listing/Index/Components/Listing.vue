@@ -11,11 +11,10 @@
             <div class="flex items-center gap-1">
                 
                 <Price :price="listing.price" class="text-1xl font-bold" />
-                <div class="text-xs text-gray-500"></div>
             </div>
             
                 <Link :href="route('listing.show',{listing: listing.id})">
-                    <ListingSpace :listing="listing" class="text-1xl" />
+                    <ListingSpace :listing="listing" class="text-xs" />
                     <ListingAddress :listing="listing" class="text-gray"  />
                 </Link>
 

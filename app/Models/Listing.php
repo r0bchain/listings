@@ -112,6 +112,10 @@ class Listing extends Model
             $filters['categoryId'] ?? 1,
             fn ($query, $value) => $query->where('category_id', '=',  $value)
 
+        )->when(
+            $filters['city'] ?? null,
+            fn ($query, $value) => $query->where('city', '=',  $value)
+
         );
 
     }

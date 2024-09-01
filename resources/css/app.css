@@ -112,6 +112,10 @@
   }
 
   .listing-container {
-    @apply grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4
+    @apply grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-4 p-4
+  }
+
+  .box {
+    @apply bg-white dark:bg-white border border-gray-200 dark:border-gray-800  p-4 pt-2 shadow-sm dark:text-gray-300
   }
 }

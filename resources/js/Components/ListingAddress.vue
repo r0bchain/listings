@@ -1,10 +1,10 @@
 <template>
-    <span>
-        {{ listing.title }}
-        {{ listing.street }}
-        {{ listing.street_nr }}
-        {{ listing.city }}         
-    </span>
+    <ul>
+        <li class="line-clamp-1">{{ listing.title }}</li>
+        <li>{{ listing.street }}</li>
+        <li>{{ listing.city }}</li>         
+    </ul> 
+    </br>
 </template>
 
 <script setup>

@@ -9,13 +9,13 @@
   <article class="overflow-hidden  shadow transition hover:shadow-lg">
   
     <slot name="image" />
-    <div class="bg-white p-4 sm:p-6">
+    <div class="box">
 
       <a href="#">
         <h3 class="mt-0.5 text-lg text-gray-900"><slot name="header" /></h3>
       </a>
 
-      <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+      <p class="mt-2 line-clamp-5 text-sm/relaxed text-gray-500">
         <slot />
       </p>
     </div>

@@ -91,22 +91,22 @@
   import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'
   import EmptyState from '@/Components/UI/EmptyState.vue'
   
-  const interestRate = ref(2.5)
-  const duration = ref(25)
-  
+  // Page props 
+  const page = usePage()
+
   const props = defineProps({
     listing: Object,
     offerMade: Object,
   })
 
+  const interestRate = ref(2.5)
+  const duration = ref(25)
   const offer = ref(props.listing.price)
-  
+
   const { monthlyPayment, totalPaid, totalInterest } = useMonthlyPayment(
     offer, interestRate, duration,
   )
 
-// Page props 
-const page = usePage()
-const user = computed(() => page.props.user)
+  const user = computed(() => page.props.user)
 
   </script>

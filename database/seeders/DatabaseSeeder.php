@@ -36,15 +36,9 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-        Listing::factory(10)->create([
-            'owner_id' => 11,
-        ]);
-
-        Listing::factory(10)->create([
-            'owner_id' => 2,
-        ]);
-
-        // First add the parent categories to the database
+        $categories = ['Real State', 'Bussines for sell or rent', 'Cars & Vehicles', 'Home $$ Furniture', 'Jobs', 'Boats', 'Services', 'Sport equipment', 'Other'];
+      
+        // Second add the parent categories to the database
         $categories = $this->get_categories(null);
         foreach($categories as $category) {
             Category::factory()->create([
@@ -58,7 +52,8 @@ class DatabaseSeeder extends Seeder
         // Add the children categories to the database
         foreach($categoriesDb as $category) {
             $newCategory = Category::factory()->create([
-                'name' => $category
+                'name' => $category->name,
+                'parent_id' => $category->id
             ]);
 
             $childrenCategories = $this->get_categories($newCategory->name);
@@ -77,6 +72,15 @@ class DatabaseSeeder extends Seeder
             $newCategory = null;
             
         }
+
+        Listing::factory(10)->create([
+            'owner_id' => 11,
+        ]);
+
+        Listing::factory(10)->create([
+            'owner_id' => 2,
+        ]);
+
       
 
         
@@ -90,6 +94,7 @@ class DatabaseSeeder extends Seeder
             return [
                 'Real State',
                 'Bussines for sell or rent',
+                'Home && Furniture',
                 'Cars & Vehicles',
                 'Jobs',
                 'Boats',

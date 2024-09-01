@@ -1,5 +1,5 @@
 <template>
-
+  Location  {{  defaultCity }}
     <div class="filter-wrapper">
         <form @submit.prevent="filter">
             <div class="filter-container">
@@ -40,6 +40,19 @@
                     </option>
                     </select>
                 </div>
+
+                <div class="flex flex-nowrap items-center">
+                    <select v-model="filterForm.city" class="input-filter w-22">
+                        <option 
+                        v-for="element in props.cities" :key="element.city" 
+                        :value="element.city" 
+                        :selected="element.city == filterForm.city"
+                        
+                        >{{ element.city }}
+                        
+                    </option>
+                    </select>
+                </div>
     
                 <button type="submit" class="btn-normal">Filters</button>
                 <button type="reset" @click="clear" class="btn-danger">Clear</button>
@@ -67,7 +80,9 @@ const categories = computed(
 
 const props = defineProps( {
     filters: Object,
-    selectedCategoryId: Number
+    selectedCategoryId: Number,
+    cities: Array,
+    defaultCity: String,
 })
 const emit = defineEmits(['categoryFilterChanged'])
 
@@ -84,6 +99,7 @@ const filterForm = useForm({
     areaFrom: props.filters.areaFrom ?? null,
     areaTo: props.filters.areaTo ?? null,
     categoryId: props.selectedCategoryId ?? 3, // Real state by default
+    city: props.filters.city ?? null,
 })
 
 

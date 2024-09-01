@@ -1,9 +1,13 @@
 <template> 
-   
+ 
     <h3 v-if="currentCategory" class="title w-full text-left p-4">{{ currentCategory.name }} || {{ currentCategory.description }}</h3> 
-    <Filters :filters="filters"  
-    @category-filter-changed="updateCategory = $event"
+    <Filters 
+    :filters="filters"
     :selectedCategoryId="updateCategory"
+    :cities="cities"  
+    :defaultCity="defaultCity"
+    @category-filter-changed="updateCategory = $event"
+   
      />
 
     <!-- hanged name for the variable recibed to "selectedCategory" instead of "categoryId" 
@@ -41,6 +45,8 @@ const page = usePage()
 const props = defineProps( {
     listings: Object,
     filters: Object,
+    cities: Array,
+    defaultCity: String,
     pexelKey: String
     
 })
@@ -56,7 +62,6 @@ const fetchImageUrl = () => {
     const query =  currentCategory.value ? currentCategory.value.name : words[Math.floor(Math.random() * words.length)];
     console.log(query);
     client.photos.search({ query, per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }).then(photos => {
-        console.log('imagen index', photos.photos[0].src.portrait);
         imageUrl.value = photos.photos[0].src.landscape
     }).catch(err => {
         console.log('error', err)
