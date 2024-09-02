@@ -11,11 +11,23 @@
 
 
   .title {
-    @apply text-2xl text-gray-800 dark:text-gray-200
+    @apply text-2xl  text-gray-800 dark:text-gray-200
   }
 
-  .title-category {
-    @apply text-3xl text-gray-900 dark:text-white font-light 
+
+  .topic-title {
+    @apply  absolute z-50 mb-4 mt-5 pl-10 text-3xl font-extrabold text-thai-red dark:text-thai-red md:text-3xl lg:text-4xl
+  }
+
+  .categories-header {
+    @apply w-full opacity-100 bg-gray-100 dark:bg-gray-800 m-auto bg-center
+  }
+  .container-header-category {
+    @apply w-full pt-2 pl-4 grid text-center  text-white text-2xl font-light 
+  }
+
+  .category-header-title {
+    @apply  uppercase text-6xl  
   }
 
   .container {
@@ -115,7 +127,27 @@
     @apply grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-4 p-4
   }
 
-  .box {
-    @apply bg-white dark:bg-white border border-gray-200 dark:border-gray-800  p-4 pt-2 shadow-sm dark:text-gray-300
+  .title-show {
+    @apply text-2xl text-gray-900 dark:text-thai-blue font-light  border-2 p-2 border-thai-blue
   }
+
+  .description-show {
+    @apply text-lg text-gray-900 dark:text-thai-blue font-light 
+  }
+
+  .box {
+    @apply  md:grid p-4  bg-white dark:bg-white border pt-2 shadow-sm dark:text-gray-300
+  }
+
+  .box-details {
+    @apply grid md:col-span-7 grid-rows-8 grid-flow-col gap-1  text-black bg-white dark:bg-white opacity-80 p-4 pt-4 shadow-sm 
+  }
+
+  .box-container {
+    @apply md:grid md:grid-cols-12 gap-1 mt-2 border-8 border-thai-blue
+  }
+
+
+  
 }
+

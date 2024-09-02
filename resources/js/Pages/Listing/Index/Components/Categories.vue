@@ -1,7 +1,7 @@
 <template>
-    <div :style="{ backgroundImage: `url(${props.headerBg})` }" class="w-full opacity-80 bg-gray-100 dark:bg-gray-800 m-auto bg-center">
-        <div class="w-full pt-2 pl-4 grid text-center title-category" v-if="props.selectedCategory">
-            <h2>{{  props.selectedCategory.name  }}</h2>
+    <div :style="{ backgroundImage: `url(${props.headerBg})` }" class="categories-header">
+        <div class="container-header-category" v-if="props.selectedCategory">
+            <h2 class="category-header-title">{{  props.selectedCategory.name  }}</h2>
             <span>{{ props.selectedCategory.description }}</span>
         </div>
         <section class="w-full flex items-center mr-auto text-center bg-transparent">
@@ -34,13 +34,15 @@ const page = usePage()
 
 const props = defineProps( {
     headerBg: {
-        type: String
+        type: String,
+        default: ''
     },
     selectedCategory: {
         type: Object
     }
 })
 
+// console.log('headerBg', props.headerBg.value)
 const emit = defineEmits(['categoryClicked'])
 
 const updateCategory = debounce((id) => {
@@ -51,8 +53,6 @@ const updateCategory = debounce((id) => {
 const categories = computed(
     () => page.props.categories 
 )
-
-
 
 </script>
 

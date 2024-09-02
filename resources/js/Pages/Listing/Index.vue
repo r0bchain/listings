@@ -1,5 +1,6 @@
 <template> 
-    <h3 v-if="currentCategory" class="title w-full text-left p-4">{{ currentCategory.name }} || {{ currentCategory.description }}</h3> 
+    <MenuNav />
+    <!-- <h3 v-if="currentCategory" class="title w-full text-left p-4">{{ currentCategory.name }} || {{ currentCategory.description }}</h3>  -->
     <Filters 
     :filters="filters"
     :selectedCategoryId="updateCategory"
@@ -29,14 +30,16 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { debounce } from 'lodash'
+import axios from 'axios';
+// import { debounce } from 'lodash'
 import Listing from '@/Pages/Listing/Index/Components/Listing.vue'
-import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
+// import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
 import Pagination from '@/Components/UI/Pagination.vue';
+import MenuNav from '@/Components/UI/MenuNav.vue';
+
 import Filters from '@/Pages/Listing/Index/Components/Filters.vue';
 import Categories from '@/Pages/Listing/Index/Components/Categories.vue';
 import { usePage } from '@inertiajs/vue3'
-import { createClient } from 'pexels';
 import { randomImages } from '@/Composables/randomImages';
 
 
@@ -52,18 +55,35 @@ const props = defineProps( {
 })
 
 const updateCategory = ref(props.filters.categoryId ?? 1)
-const imageUrl = ref('')
+
+const totalImages = page.props.site.DEFAULT_CATEGORY_IMAGE.length
+const randomImageIndex = Math.floor(Math.random() * totalImages)
+
+const imageUrl = ref((props.category && props.category.cover_image) ?
+ props.category.cover_image : page.props.site.DEFAULT_CATEGORY_IMAGE[randomImageIndex])
 
 const topics = (props.category && props.category[0].name) ? [props.category[0].name] : page.props.site.TOPICS_IMAGE
 
 // Fetch the image URL on component mount
+// console.log('category', props.category[0].cover_image)
 
-const { randomImage, location } = randomImages(
-    imageUrl,
-    page.props.site.RANDOM_IMAGED_KEY, 
-    topics,
-    {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
-)
+const getRandomImageIfNotExists = (currentImageUrl, topics) => {
+
+    if (currentImageUrl === null) {
+        const { randomImage, location } = randomImages(
+            null,
+            page.props.site.RANDOM_IMAGE_KEY, 
+            topics,
+            {per_page: 20, size: 'small', locale: 'en-US', orientation: 'landscape' }
+        )
+
+        console.log('location', location)
+
+        return { randomImage, location }
+
+    }
+
+}
 
 
 const currentCategory = computed(() => {
@@ -73,8 +93,26 @@ const currentCategory = computed(() => {
 })
 
 // Fetch the image URL on component mount
-onMounted(() => {
-    imageUrl.value = randomImage
+// We only call the async external API to fetch the image URL if the category image is null
+onMounted(async() => {
+    if(props.category === null) {
+        const data = getRandomImageIfNotExists(props.category[0].cover_image, topics)
+        console.log('data', data)
+        console.log('randomImage ', data.randomImage.value.imageUrl )
+        imageUrl.value = data.randomImage.value.imageUrl
+    } else {
+        imageUrl.value = props.category[0].cover_image
+    }
+    // const categoryId = currentCategory.value.id
+    // try {
+    // const response = await axios.put('https://category/' + categoryId, {
+    //   cover_image: imageUrl.value 
+    // });
+    // console.log('URLs sent successfully:', response.data);
+    // } catch (error) {
+    //     console.log('currentCategory', currentCategory.value.id)
+    //     console.error('Error sending URLs:', error);
+    // }
   
 })
 

@@ -1,7 +1,7 @@
 <!-- component -->
  <template>
     <form @submit.prevent="register">
-        <div> {{  imageUpdated.query  }}</div>
+        <div class="topic-title "> {{  imageUpdated.query  }}</div>
         <div
         
         :style="{ backgroundImage: `url(${imageUpdated.imageUrl})` }"

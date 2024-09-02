@@ -1,26 +1,33 @@
 <template>
-    <div class="flex flex-col-reverse md:grid md:grid-cols-12 gap-4">
-      <BoxDetails v-if="listing.images.length" class="md:col-span-7 flex items-center">
-        <div  class="grid grid-cols-2 gap-1">
-          <img
-            v-for="image in listing.images" :key="image.id"
-            :src="image.src"
-          />
-        </div>
-      </BoxDetails>
+    <div class="box-container">
+      <BoxDetails>
+          <template #header>
+            <h3 class="title-show">{{ listing.title }}</h3>
+          </template>
 
-      <EmptyState v-else class="md:col-span-7 flex items-center">No Images</EmptyState>
+          <div class="description-show">{{ listing.description }}</div>
+        <Box v-if="listing.images.length" >
+        
+          <div class="grid grid-cols-2 gap-1">
+            <img
+              v-for="image in listing.images" :key="image.id"
+              :src="image.src"/>
+          </div>
+        </Box>
+        <EmptyState v-else class="md:col-span-7 flex items-center">No Images</EmptyState>
+
+      </BoxDetails>
       <div class="md:col-span-5 flex flex-col gap-4">
-        <BoxDetails>
+        <Box class="box">
           <template #header>
             Basic info
           </template>
           <Price :price="listing.price" class="text-2xl font-bold" />
           <ListingSpace :listing="listing" class="text-lg" />
           <ListingAddress :listing="listing" class="text-gray-500" />
-        </BoxDetails>
+        </Box>
   
-        <BoxDetails>
+        <Box class="box">
           <template #header>
             Monthly Payment
           </template>
@@ -65,7 +72,7 @@
               </div>
             </div>
           </div>
-        </BoxDetails>
+        </Box>
   
         <MakeOffer 
             v-if="user && !offerMade" 
@@ -73,7 +80,7 @@
             :price="listing.price" 
             @offer-updated="offer = $event"
             />
-   
+  
     <OfferMade v-if="user && offerMade" :offer="offerMade" />
       </div>
     </div>
@@ -85,7 +92,9 @@
   import ListingAddress from '@/Components/ListingAddress.vue'
   import ListingSpace from '@/Components/ListingSpace.vue'
   import Price from '@/Components/Price.vue'
-  import BoxDetails from '@/Components/UI/Box.vue'
+  import BoxDetails from '@/Components/UI/BoxDetails.vue'
+  import Box from '@/Components/UI/Box.vue'
+
   import MakeOffer from '@/Pages/Listing/Show/Components/MakeOffer.vue'
   import OfferMade from '@/Pages/Listing/Show/Components/OfferMade.vue'
   import { useMonthlyPayment } from '@/Composables/useMonthlyPayment'

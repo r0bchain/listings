@@ -18,7 +18,7 @@ const topics = page.props.site.TOPICS_IMAGE
 
 const { randomImage, location } = randomImages(
     imageUrl,
-    page.props.site.RANDOM_IMAGED_KEY, 
+    page.props.site.RANDOM_IMAGE_KEY, 
     topics,
     {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
 )
