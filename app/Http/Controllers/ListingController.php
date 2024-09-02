@@ -26,7 +26,15 @@ class ListingController extends Controller
     {
      
         $filters = $request->only(['priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo', 'categoryId', 'city']);
-      
+        $category   =  
+        ($filters && $filters['categoryId']) ? 
+        Category::select('name', 'cover_image', 'id', 'parent_id')->where('id', $filters['categoryId'])->first() 
+        : Category::select('name', 'cover_image', 'id', 'parent_id')->first();
+        
+        $categoriesChildren = ($filters && isset($filters['categoryId'])) ? 
+        Category::where('parent_id', $filters['categoryId'])->get() : null;
+
+        // dd($category );
         return  inertia('Listing/Index',
         [
             // Returns an array with the listings
@@ -43,9 +51,10 @@ class ListingController extends Controller
 
             'filters' => $filters,
             'cities' => Listing::select('city')->distinct()->get(),
-            'category' => ($filters && $filters['categoryId']) ? Category::select('name')->where('id', $filters['categoryId'])->get() : null,
+            'category' => $category,
+            'categoriesChildren' => $categoriesChildren,
             'defaultCity' => env('DEFAULT_CITY'),
-            'pexelKey'=> env('RANDOM_IMAGED_KEY')
+            'pexelKey'=> env('RANDOM_IMAGE_KEY')
 
 
         ]

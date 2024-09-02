@@ -20,8 +20,8 @@ class CategoryFactory extends Factory
     {       
         return [
             'description' => $this->faker->sentence(),
-            'cover_image' => $this->faker->imageUrl(),
-            'icon' => 'fa fa-automobile',
+            // 'cover_image' => $this->faker->imageUrl(),
+            // 'icon' => 'fa fa-automobile',
 
         ];
     }

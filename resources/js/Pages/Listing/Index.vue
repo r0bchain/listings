@@ -4,8 +4,10 @@
     <Filters 
     :filters="filters"
     :selectedCategoryId="updateCategory"
+    :selectedCategory="category"
     :cities="cities"  
     :defaultCity="defaultCity"
+    :categoriesChildren="props.categoriesChildren ?? null"
     @category-filter-changed="updateCategory = $event"
    
      />
@@ -16,8 +18,9 @@
    
   <Categories 
     @category-clicked="updateCategory = $event" 
-    :selectedCategory="currentCategory ?? {}"
-    :headerBg="imageUrl"/> 
+    :selectedCategory="category"
+    :headerBg="imageUrl"
+    :categoriesChildren="props.categoriesChildren ?? null"/> 
     
     <div class="listing-container">
         <Listing v-for="listing in listings.data" :key="listing.id" :listing="listing" />
@@ -51,10 +54,14 @@ const props = defineProps( {
     filters: Object,
     cities: Array,
     defaultCity: String,
-    category: Object    
+    category: {
+        Type: Object,
+      
+    },
+    categoriesChildren: Object 
 })
 
-const updateCategory = ref(props.filters.categoryId ?? 1)
+const updateCategory = ref(props.filters.categoryId ?? props.category.id)
 
 const totalImages = page.props.site.DEFAULT_CATEGORY_IMAGE.length
 const randomImageIndex = Math.floor(Math.random() * totalImages)
@@ -62,7 +69,7 @@ const randomImageIndex = Math.floor(Math.random() * totalImages)
 const imageUrl = ref((props.category && props.category.cover_image) ?
  props.category.cover_image : page.props.site.DEFAULT_CATEGORY_IMAGE[randomImageIndex])
 
-const topics = (props.category && props.category[0].name) ? [props.category[0].name] : page.props.site.TOPICS_IMAGE
+const topics = (props.category && props.category.name) ? [props.category.name] : page.props.site.TOPICS_IMAGE
 
 // Fetch the image URL on component mount
 // console.log('category', props.category[0].cover_image)
@@ -101,7 +108,7 @@ onMounted(async() => {
         console.log('randomImage ', data.randomImage.value.imageUrl )
         imageUrl.value = data.randomImage.value.imageUrl
     } else {
-        imageUrl.value = props.category[0].cover_image
+        imageUrl.value = props.category.cover_image
     }
     // const categoryId = currentCategory.value.id
     // try {

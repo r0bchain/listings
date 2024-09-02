@@ -47,8 +47,9 @@ class HandleInertiaRequests extends Middleware
                 'APP_SLOGAN' => env('APP_SLOGAN'),
                 'APP_REGISTER_TITLE' => env('APP_REGISTER_TITLE'),
                 'RANDOM_IMAGE_VENDOR' => env('RANDOM_IMAGE_VENDOR'),
-                'RANDOM_IMAGED_KEY' => env('RANDOM_IMAGED_KEY'),
+                'RANDOM_IMAGE_KEY' => env('RANDOM_IMAGE_KEY'),
                 'TOPICS_IMAGE' => explode(',', env('TOPICS_IMAGE')),
+                'DEFAULT_CATEGORY_IMAGE' => explode(';', env('DEFAULT_CATEGORY_IMAGE'))
             ],
 
             'user' => fn() => $request->user()

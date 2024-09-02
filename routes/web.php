@@ -11,6 +11,7 @@ use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\RealtorListingAcceptController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\NotificationSeenController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -88,3 +89,6 @@ Route::post('/email/verification-notification', function (Request $request) {
 
   // return back()->with('success', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::resource('category', CategoryController::class)
+  ->only(['update']);

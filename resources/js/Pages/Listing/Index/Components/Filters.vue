@@ -1,5 +1,5 @@
 <template>
- 
+
     <div class="filter-wrapper">
         <form @submit.prevent="filter">
             <div class="filter-container">
@@ -31,13 +31,19 @@
                 <div class="flex flex-nowrap items-center">
                     <select v-model="filterForm.categoryId" class="input-filter w-22">
                         <option 
-                        v-for="category in categories" :key="category.id" 
-                        :value="category.id" 
-                        :selected="category.id == filterForm.categoryId"
-                        
-                        >{{ category.name }}
-                        
-                    </option>
+                            v-for="category in categories" :key="category.id" 
+                            :value="category.id" 
+                            :selected="category.id == filterForm.categoryId"
+                            
+                            >{{ category.name }}
+                            
+                        </option>
+                        <option 
+                        v-if="props.selectedCategory" 
+                        :value="props.selectedCategory.id">
+                         {{  props.selectedCategory.name }}
+                        </option>
+
                     </select>
                 </div>
 
@@ -81,9 +87,15 @@ const categories = computed(
 
 const props = defineProps( {
     filters: Object,
-    selectedCategoryId: Number,
     cities: Array,
     defaultCity: String,
+    selectedCategory: {
+        type: Object
+    },
+    categoriesChildren: {
+        type: Object,
+        default: null
+    }
 })
 const emit = defineEmits(['categoryFilterChanged'])
 
@@ -99,7 +111,7 @@ const filterForm = useForm({
     baths: props.filters.baths ?? null,
     areaFrom: props.filters.areaFrom ?? null,
     areaTo: props.filters.areaTo ?? null,
-    categoryId: props.selectedCategoryId ?? 3, // Real state by default
+    categoryId: props.selectedCategory.id ?? 3, // Real state by default
     city: props.filters.city ?? null,
 })
 
