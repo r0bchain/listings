@@ -6,19 +6,19 @@ jobs:
   tests:
     name: Install dependencies
     runs-on: ubuntu-latest
+    env:
+      DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
+      TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
+      DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
+      RANDOM_IMAGE_VENDOR: ${{ vars.RANDOM_IMAGE_VENDOR }}
+      RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}
+      PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
+      DB_DATABASE: ${{ secrets.DB_DATABASE }}
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
     steps:
       - uses: actions/checkout@v3
- 
-      env:
-        DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
-        TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
-        DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
-        RANDOM_IMAGE_VENDOR: ${{ vars.RANDOM_IMAGE_VENDOR }}
-        RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}
-        PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
-        DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        DB_USERNAME: ${{ secrets.DB_USERNAME }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
         
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
