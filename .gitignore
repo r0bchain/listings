@@ -1,5 +1,6 @@
 /.phpunit.cache
 /node_modules
+/public/index.html
 /public/build
 /public/vendor/
 /public/css/
