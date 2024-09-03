@@ -33,6 +33,9 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
           coverage: none
  
+      - name: Create .env file
+        run: cp .env.example .env  # Create a .env file based on the example
+    
       - name: Run composer install
         run: composer install -n --prefer-dist
  
