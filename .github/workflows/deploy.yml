@@ -1,14 +1,16 @@
-name: Run tests
+name: Run deployment
  
 on: [push]
  
 jobs:
-  tests:
+  deploy:
     name: Install dependencies
     runs-on: ubuntu-latest
+
     env:
-      APP_DEBUG: false
-      APP_ENV: production
+      APP_DEBUG:  ${{ vars.APP_DEBUG }}
+      APP_NAME: ${{ vars.APP_NAME }}
+      APP_ENV:  ${{ vars.APP_PROD_ENV }}
       DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
       TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
       DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
@@ -19,11 +21,12 @@ jobs:
       DB_DATABASE: ${{ secrets.DB_DATABASE }}
       DB_USERNAME: ${{ secrets.DB_USERNAME }}
       DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      
+        
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup PHP
+      
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
