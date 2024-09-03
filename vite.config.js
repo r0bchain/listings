@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 export default defineConfig({
     plugins: [
@@ -27,7 +28,7 @@ export default defineConfig({
                 },
             },
         }),
-        
+      
     ],
 
     resolve:{
@@ -35,5 +36,12 @@ export default defineConfig({
             ziggy: path.resolve('vendor/tightenco/ziggy/dist'),
 
         }
-    }
+    },
+    build: {
+        rollupOptions: {
+            plugins: [
+                nodePolyfills(),
+            ],
+        },
+    },
 });
