@@ -7,6 +7,8 @@ jobs:
     name: Install dependencies
     runs-on: ubuntu-latest
     env:
+      APP_DEBUG: false
+      APP_ENV: production
       DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
       TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
       DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
@@ -17,6 +19,7 @@ jobs:
       DB_DATABASE: ${{ secrets.DB_DATABASE }}
       DB_USERNAME: ${{ secrets.DB_USERNAME }}
       DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      
     steps:
       - uses: actions/checkout@v3
 
