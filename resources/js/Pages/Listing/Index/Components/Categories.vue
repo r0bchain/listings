@@ -7,6 +7,15 @@
         </div>
         <section class="w-full flex items-center mr-auto text-center bg-transparent">
             <ul class="flex flex-wrap w-full text-center items-center m-auto pt-4 pb-2 justify-between">
+                <li  v-if="categories.length && categories[0].parent_id" class="menu inactive-menu">
+                    <i class="fa-solid fa-backward"></i> <br/>
+                    <Link
+                       class="link text-xs" 
+                       :href="route('listing.index')" 
+                       @click="updateCategory(categories[0].parent_id )"
+                       >Back
+                    </Link>
+                </li>
                <li
                 v-if="(categories && categories.length)"
                 class="menu"
@@ -14,13 +23,12 @@
                 'inactive-menu': props.selectedCategory.id  != category.id}" 
                     v-for="category in categories" :key="category.id">
                     <i :class="category.icon" class="p-1">   </i>  <br/>
-                    <Link v-if="categories" class="link text-xs" :href="route('listing.index',{categoryId: category.id})" v-text="category.name"
-
+                    <Link class="link text-xs" :href="route('listing.index',{categoryId: category.id})" v-text="category.name"
                     @click="updateCategory(category.id)"/>
+               
                 </li>
-
+ 
                 <li v-else class="menu active-menu text-center m-auto">
-                   
                    <i class="fa-solid fa-backward"></i> <br/>
                    <Link 
                    class="link text-xs" 
@@ -29,6 +37,8 @@
                    >Back
                    </Link>
               </li>
+             
+
               
             </ul>
             

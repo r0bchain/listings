@@ -128,15 +128,19 @@
   }
 
   .title-show {
-    @apply text-2xl text-gray-900 dark:text-thai-blue font-light  border-2 p-2 border-thai-blue
+    @apply text-xl font-bold font-sans text-black-title p-2
   }
 
   .description-show {
-    @apply text-lg text-gray-900 dark:text-thai-blue font-light 
+    @apply text-sm text-black-description font-light 
   }
 
   .box {
-    @apply  md:grid p-4  bg-white dark:bg-white border pt-2 shadow-sm dark:text-gray-300
+    @apply  dark:text-white md:grid p-4  dark:bg-thai-blue-dark dark:bg-opacity-5  pt-2 shadow-sm
+  }
+
+  .box-title {
+    @apply mt-0.5 text-lg text-gray-900
   }
 
   .box-details {
@@ -144,7 +148,7 @@
   }
 
   .box-container {
-    @apply md:grid md:grid-cols-12 gap-1 mt-2 border-8 border-thai-blue
+    @apply md:grid md:grid-cols-12 gap-1 mt-2 border-2 border-thai-blue
   }
 
 

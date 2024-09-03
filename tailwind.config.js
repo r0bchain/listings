@@ -16,7 +16,10 @@ export default {
             200:'#888883'
           },
           'thai-blue':'#3A599A',
+          'thai-blue-dark': '#111827',
           'thai-red':'#820f22', 
+          'black-title': '#151515',
+          'black-description' : '#686868',
       },
      
 

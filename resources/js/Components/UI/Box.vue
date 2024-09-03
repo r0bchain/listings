@@ -6,20 +6,20 @@
       <slot />
     </div> -->
 
-  <article class="overflow-hidden  shadow transition hover:shadow-lg">
+  <div class="overflow-hidden shadow transition hover:shadow-lg">
   
     <slot name="image" />
     <div class="box">
 
       <a href="#">
-        <h3 class="mt-0.5 text-lg text-gray-900"><slot name="header" /></h3>
+        <h3 class="box-title"><slot name="header" /></h3>
       </a>
 
-      <p class="mt-2 line-clamp-5 text-sm/relaxed text-gray-500">
+      <p class="mt-2 text-sm/relaxed">
         <slot />
       </p>
     </div>
-  </article>
+  </div>
 
 </template>
 
