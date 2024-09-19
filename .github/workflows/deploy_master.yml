@@ -89,9 +89,13 @@ jobs:
             nc -zv ${{ secrets.SSH_HOST }} ${{ secrets.SSH_PORT }}
 
       - name: Debug SSH Connection
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
             echo "Checking SSH connection details"
-            ssh -i ${{ secrets.SSH_PRIVATE_KEY }} -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "echo 'SSH connection successful'"
+            echo "${SSH_PRIVATE_KEY}" > private_key.pem
+            chmod 600 private_key.pem
+            ssh -i private_key.pem -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "echo 'SSH connection successful'"
 
       - name: Deploy to Hostinger
         uses: appleboy/scp-action@v0.1.0
