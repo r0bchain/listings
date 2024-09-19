@@ -89,8 +89,8 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }} 
           target: /public_html/
           source: ./ # Adjust this to your build directory if needed
-          rm: true
-          strip_components: 1
+          timeout: 120s
        
