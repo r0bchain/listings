@@ -10,6 +10,12 @@
 /public/images/
 /public/css
 /storage/*.key
+/storage/app/public
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/logs
 /vendor
 .env
 .env.backup
