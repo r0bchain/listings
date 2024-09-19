@@ -95,7 +95,7 @@ jobs:
             echo "Checking SSH connection details"
             echo "${SSH_PRIVATE_KEY}" > private_key.pem
             chmod 600 private_key.pem
-            ssh -i private_key.pem -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "echo 'SSH connection successful'"
+            ssh -o StrictHostKeyChecking=no -i private_key.pem -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "echo 'SSH connection successful'"
 
       - name: Deploy to Hostinger
         uses: appleboy/scp-action@v0.1.0
@@ -107,4 +107,5 @@ jobs:
           target: /public_html/
           source: ./ # Adjust this to your build directory if needed
           timeout: 120s
+          args: "-o StrictHostKeyChecking=no"
        
