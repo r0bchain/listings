@@ -69,3 +69,11 @@ jobs:
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
         
     
+      - name: Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+            server: ${{ secrets.FTP_SERVER }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            local-dir: ./ # Adjust this to your build directory if needed
+            server-dir: /public_html/ # Adjust this to your server directory if needed
