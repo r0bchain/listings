@@ -8,8 +8,22 @@ env:
   # Use the same ssh-agent socket value across all jobs
   # Useful when a GH action is using SSH behind-the-scenes
   SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-  
+   
+
 jobs:
+  setup-ssh:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Setup SSH passphrase
+            env:
+              SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+              SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            run: |
+              ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+              echo 'echo $SSH_PASSPHRASE' > ~/.ssh_askpass && chmod +x ~/.ssh_askpass
+              echo "$SSH_PRIVATE_KEY" | tr -d '\r' | DISPLAY=None SSH_ASKPASS=~/.ssh_askpass ssh-add - >/dev/null 
+              ssh-add -l # List added identities to verify
+   
   build:
     runs-on: ubuntu-latest
     name: Build and Push
@@ -68,20 +82,6 @@ jobs:
           TARGET_DIR: public_html
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
-
-      - name: Setup SSH passphrase
-        env:
-            SSH_PASSPHRASE: ${{secrets.SSH_PASSPHRASE}}
-            SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}   
-        run: |
-            ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-            echo 'echo $SSH_PASSPHRASE' > ~/.ssh_askpass && chmod +x ~/.ssh_askpass
-            echo "$SSH_PRIVATE_KEY" | tr -d '\r' | DISPLAY=None SSH_ASKPASS=~/.ssh_askpass ssh-add - >/dev/null
-
-    # Debug print out the added identities. This will prove SSH_AUTH_SOCK
-    # is persisted across job steps
-      - name: Print ssh-add identities
-        run: ssh-add -l
 
       - name: Deploy to Hostinger
         uses: appleboy/scp-action@v0.1.0
