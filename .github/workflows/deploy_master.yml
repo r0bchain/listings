@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Push
     env:
-        APP_KEY: ${{ secrets.APP_KEY }}
-        APP_NAME: ${{ vars.APP_NAME }}
-        DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
-        TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
-        DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
-        RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY }}
-        PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
-        DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        DB_USERNAME: ${{ secrets.DB_USERNAME }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        APP_DEBUG: ${{ vars.APP_DEBUG }}
+      APP_KEY: ${{ secrets.APP_KEY }}
+      APP_NAME: ${{ vars.APP_NAME }}
+      DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
+      TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
+      DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
+      RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY }}
+      PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
+      DB_DATABASE: ${{ secrets.DB_DATABASE }}
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      APP_DEBUG: ${{ vars.APP_DEBUG }}
 
     steps:
       - name: git-checkout
@@ -41,7 +41,6 @@ jobs:
           echo "APP_DEBUG=${{ vars.APP_DEBUG }}" >> .env
 
       - name: Setup PHP
-      
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
@@ -50,9 +49,8 @@ jobs:
 
       - name: Run composer install
         run: composer install -n --prefer-dist
-   
+
       - name: Install all dependencies
-   
         run: npm install
 
       - name: Build
@@ -67,37 +65,34 @@ jobs:
           TARGET_DIR: public_html
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
-        
-    
+
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-            server: ${{ secrets.FTP_SERVER }}
-            username: ${{ secrets.FTP_USERNAME }}
-            password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: ./ # Adjust this to your build directory if needed
-            server-dir: /public_html/ # Adjust this to your server directory if needed
-            exclude: |
-               node_modules
-               vendor
-               .env
-               .git
-               .gitignore
-               .gitattributes
-               .vscode
-               .idea
-               public/hot
-               public/storage
-               storage/*.key
-               storage/app/public
-               storage/framework/cache/data
-               storage/framework/sessions
-               storage/framework/testing
-               storage/framework/views
-               storage/logs
-               Homestead.yaml
-               Homestead.json
-               npm-debug.log
-               yarn-error.log
-        
-        
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./ # Adjust this to your build directory if needed
+          server-dir: /public_html/ # Adjust this to your server directory if needed
+          exclude: |
+            node_modules/
+            vendor/
+            .env
+            .git/
+            .gitignore
+            .gitattributes
+            .vscode/
+            .idea/
+            public/hot/
+            public/storage/
+            storage/*.key
+            storage/app/public/
+            storage/framework/cache/data/
+            storage/framework/sessions/
+            storage/framework/testing/
+            storage/framework/views/
+            storage/logs/
+            Homestead.yaml
+            Homestead.json
+            npm-debug.log
+            yarn-error.log
