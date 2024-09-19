@@ -54,6 +54,7 @@ jobs:
 
       - name: Prepare Laravel Application
         run: |
+          cp .env.example .env
           APP_KEY: ${{ secrets.APP_KEY }}
           php artisan key:generate
 
