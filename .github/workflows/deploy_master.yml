@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - master # The branch name your are commit the new changes
-
+env:
+  # Use the same ssh-agent socket value across all jobs
+  # Useful when a GH action is using SSH behind-the-scenes
+  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+  
 jobs:
   build:
     runs-on: ubuntu-latest
