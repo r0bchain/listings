@@ -32,10 +32,10 @@ jobs:
         run: npm run build # The build command of your project
         
       - name: Prepare Laravel Application
-        env:
-          APP_KEY: ${{ secrets.APP_KEY }}    
         run: |
-          php artisan key:generate
+            cp .env.example .env
+            echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env  
+        
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
@@ -57,5 +57,7 @@ jobs:
           DB_USERNAME: ${{ secrets.DB_USERNAME }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           APP_DEBUG:  ${{ vars.APP_DEBUG }}
+          APP_KEY: ${{ secrets.APP_KEY }}    
+   
 
 
