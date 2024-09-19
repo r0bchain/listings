@@ -21,7 +21,6 @@ jobs:
       DB_USERNAME: ${{ secrets.DB_USERNAME }}
       DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       APP_DEBUG: ${{ vars.APP_DEBUG }}
-
     steps:
       - name: git-checkout
         uses: actions/checkout@v3
