@@ -44,9 +44,12 @@ jobs:
       - name: Add SSH key
         uses: webfactory/ssh-agent@v0.5.4
         with:
-         ssh-private-key: "${{ secrets.SSH_PRIVATE_KEY }}"
-         ssh-passphrase: "${{ secrets.SSH_PASSPHRASE }}"
+          ssh-private-key: "${{ secrets.SSH_PRIVATE_KEY }}"
 
+      - name: Add SSH key with passphrase
+        run: |
+          echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+      
       - name: Create .env file on the server
         run: | 
             ssh -p 65002 u910876084@82.112.232.32 "cp /public_html/.env.example /public_html/.env && \
