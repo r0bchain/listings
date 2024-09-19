@@ -30,12 +30,6 @@ jobs:
 
       - name: Build
         run: npm run build # The build command of your project
-        
-      - name: Prepare Laravel Application
-        run: |
-            cp .env.example .env
-            echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env  
-        
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
@@ -46,18 +40,21 @@ jobs:
           TARGET_DIR: public_html
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
-          APP_NAME: ${{ vars.APP_NAME }}
-          DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
-          TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
-          DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
-          RANDOM_IMAGE_VENDOR: ${{ vars.RANDOM_IMAGE_VENDOR }}
-          RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}
-          PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
-          DB_DATABASE: ${{ secrets.DB_DATABASE }}
-          DB_USERNAME: ${{ secrets.DB_USERNAME }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          APP_DEBUG:  ${{ vars.APP_DEBUG }}
-          APP_KEY: ${{ secrets.APP_KEY }}    
-   
+         
 
+      - name: Create .env file on the server
+        run: | 
+            ssh -p 65002 u910876084@82.112.232.32 "cp /public_html/.env.example /public_html/.env && \
+            echo 'APP_KEY=${{ secrets.APP_KEY }}' >> /public_html/.env"
+
+            echo 'APP_NAME: ${{ vars.APP_NAME }} >> /public_html/.env"
+            echo 'DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}'  >> /public_html/.env"
+            echo 'TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}'  >> /public_html/.env"
+            echo 'DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}'  >> /public_html/.env"
+            echo 'RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}' >> /public_html/.env"
+            echo 'PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}'  >> /public_html/.env"
+            echo 'DB_DATABASE: ${{ secrets.DB_DATABASE }}'  >> /public_html/.env"
+            echo 'DB_USERNAME: ${{ secrets.DB_USERNAME }}'  >> /public_html/.env"
+            echo 'DB_PASSWORD: ${{ secrets.DB_PASSWORD }}'  >> /public_html/.env"
+            echo 'APP_DEBUG:  ${{ vars.APP_DEBUG }}'  >> /public_html/.env"
 
