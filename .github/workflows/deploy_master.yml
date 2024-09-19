@@ -43,10 +43,10 @@ jobs:
         
       - name: Start SSH agent
         run: eval $(ssh-agent -s)  
-
+           
       - name: Add SSH key with passphrase
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add - <<< "${{ secrets.SSH_PASSPHRASE }}"
+          echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
       
       - name: Create .env file on the server
         run: | 
