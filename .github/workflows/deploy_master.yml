@@ -44,7 +44,7 @@ jobs:
       - name: Add SSH key
         uses: webfactory/ssh-agent@v0.5.4
         with:
-         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+         ssh-private-key: "${{ secrets.SSH_PRIVATE_KEY }}"
 
       - name: Create .env file on the server
         run: | 
