@@ -66,32 +66,13 @@ jobs:
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
 
       - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: appleboy/scp-action@v0.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./ # Adjust this to your build directory if needed
-          server-dir: /public_html/ # Adjust this to your server directory if needed
-          exclude: |
-            node_modules/
-            vendor/
-            .env
-            .git/
-            .gitignore
-            .gitattributes
-            .vscode/
-            .idea/
-            public/hot/
-            public/storage/
-            storage/*.key
-            storage/app/public/
-            storage/framework/cache/data/
-            storage/framework/sessions/
-            storage/framework/testing/
-            storage/framework/views/
-            storage/logs/
-            Homestead.yaml
-            Homestead.json
-            npm-debug.log
-            yarn-error.log
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          target: /public_html/
+          source: ./ # Adjust this to your build directory if needed
+          rm: true
+          strip_components: 1
+       
