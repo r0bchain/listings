@@ -45,7 +45,6 @@ jobs:
           TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
           DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
           RANDOM_IMAGE_VENDOR: ${{ vars.RANDOM_IMAGE_VENDOR }}
-          APP_KEY: ${{ secrets.APP_KEY }}
           RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}
           PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
           DB_DATABASE: ${{ secrets.DB_DATABASE }}
@@ -55,6 +54,7 @@ jobs:
 
       - name: Prepare Laravel Application
         run: |
+          APP_KEY: ${{ secrets.APP_KEY }}
           php artisan key:generate
 
 
