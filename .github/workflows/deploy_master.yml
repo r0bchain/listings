@@ -32,9 +32,9 @@ jobs:
         run: npm run build # The build command of your project
         
       - name: Prepare Laravel Application
+        env:
+          APP_KEY: ${{ secrets.APP_KEY }}    
         run: |
-          cp .env.example .env
-          echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
           php artisan key:generate
 
       - name: Push
