@@ -31,7 +31,7 @@ jobs:
           echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
           echo "APP_NAME=${{ secrets.APP_NAME }}" >> .env
           echo "DEFAULT_CATEGORY_IMAGE=${{ vars.DEFAULT_CATEGORY_IMAGE }}" >> .env
-          echo "TOPICS_IMAGE=${{ vars.TOPICS_IMAGE }}" >> .env
+          echo "TOPICS_IMAGE=\"${{ vars.TOPICS_IMAGE }}\"" >> .env
           echo "DEFAULT_CITY=${{ vars.DEFAULT_CITY }}" >> .env
           echo "RANDOM_IMAGE_KEY=${{ secrets.RANDOM_IMAGE_KEY }}" >> .env
           echo "PINATA_SECRET_ACCESS_KEY=${{ secrets.PINATA_SECRET_ACCESS_KEY }}" >> .env
