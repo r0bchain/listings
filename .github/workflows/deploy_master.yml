@@ -33,7 +33,7 @@ jobs:
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
-        env:TARGET_DIR: www
+        env:
           REPO: self
           BRANCH: master # The branch name where you want to push the assets
           FOLDER: public/build # The directory where your assets are generated
