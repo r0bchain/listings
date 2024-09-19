@@ -103,7 +103,7 @@ jobs:
               SSH_HOST: ${{ secrets.SSH_HOST }}
               SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
               SSH_PORT: ${{ secrets.SSH_PORT }}
-        run: |
+        run: |            
               echo "${SSH_PRIVATE_KEY}" > private_key.pem
               chmod 600 private_key.pem
               scp -o StrictHostKeyChecking=no -i private_key.pem -P $SSH_PORT -r ./public/build $SSH_USERNAME@$SSH_HOST:/public_html/    #   - name: Deploy to Hostinger
