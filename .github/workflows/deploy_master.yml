@@ -1,0 +1,42 @@
+name: Generate a build and push to another branch
+
+on:
+  push:
+    branches:
+      - master # The branch name your are commit the new changes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build and Push
+    steps:
+      - name: git-checkout
+        uses: actions/checkout@v3
+
+      - name: Install all dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build # The build command of your project
+
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: master # The branch name where you want to push the assets
+          FOLDER: build # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+          APP_NAME: ${{ vars.APP_NAME }}
+          DEFAULT_CATEGORY_IMAGE: ${{ vars.DEFAULT_CATEGORY_IMAGE }}
+          TOPICS_IMAGE: ${{ vars.TOPICS_IMAGE }}
+          DEFAULT_CITY: ${{ vars.DEFAULT_CITY }}
+          RANDOM_IMAGE_VENDOR: ${{ vars.RANDOM_IMAGE_VENDOR }}
+          APP_KEY: ${{ secrets.APP_KEY }}
+          RANDOM_IMAGE_KEY: ${{ secrets.RANDOM_IMAGE_KEY}}
+          PINATA_SECRET_ACCESS_KEY: ${{ secrets.PINATA_SECRET_ACCESS_KEY }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          APP_DEBUG:  ${{ vars.APP_DEBUG }}
+
