@@ -97,24 +97,45 @@ jobs:
             chmod 600 private_key.pem
             ssh -o StrictHostKeyChecking=no -i private_key.pem -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "echo 'SSH connection successful'"
 
-      - name: Deploy to Hostinger
-        env:
-              SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-              SSH_HOST: ${{ secrets.SSH_HOST }}
-              SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-              SSH_PORT: ${{ secrets.SSH_PORT }}
-        run: |            
-              echo "${SSH_PRIVATE_KEY}" > private_key.pem
-              chmod 600 private_key.pem
-              scp -o StrictHostKeyChecking=no -i private_key.pem -P $SSH_PORT -r ./public/build $SSH_USERNAME@$SSH_HOST:/public_html/
-    #     uses: appleboy/scp-action@v0.1.0
-    #     with:
-    #       host: ${{ secrets.SSH_HOST }}
-    #       username: ${{ secrets.SSH_USERNAME }}
-    #       key: ${{ secrets.SSH_PRIVATE_KEY }}
-    #       port: ${{ secrets.SSH_PORT }} 
-    #       target: /public_html/
-    #       source: ./ # Adjust this to your build directory if needed
-    #       timeout: 120s
-          
+      # - name: Deploy to Hostinger
+      #   env:
+      #         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #         SSH_HOST: ${{ secrets.SSH_HOST }}
+      #         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      #         SSH_PORT: ${{ secrets.SSH_PORT }}
+      #   run: |            
+      #         echo "${SSH_PRIVATE_KEY}" > private_key.pem
+      #         chmod 600 private_key.pem
+      #         scp -o StrictHostKeyChecking=no -i private_key.pem -P $SSH_PORT -r ./public/build $SSH_USERNAME@$SSH_HOST:/public_html/
+      #         echo "Deployment successful"  
        
+      - name: Deploy to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./ # Adjust this to your build directory if needed
+          server-dir: /public_html/ # Adjust this to your server directory if needed
+          exclude: |
+            node_modules/
+            vendor/
+            .env
+            .git/
+            .gitignore
+            .gitattributes
+            .vscode/
+            .idea/
+            public/hot/
+            public/storage/
+            storage/*.key
+            storage/app/public/
+            storage/framework/cache/data/
+            storage/framework/sessions/
+            storage/framework/testing/
+            storage/framework/views/
+            storage/logs/
+            Homestead.yaml
+            Homestead.json
+            npm-debug.log
+            yarn-error.log
