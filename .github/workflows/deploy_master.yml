@@ -118,24 +118,21 @@ jobs:
           local-dir: ./ # Adjust this to your build directory if needed
           server-dir: /public_html/ # Adjust this to your server directory if needed
           exclude: |
-            node_modules/
-            vendor/
-            .env
-            .git/
-            .gitignore
-            .gitattributes
-            .vscode/
-            .idea/
-            public/hot/
-            public/storage/
-            storage/*.key
-            storage/app/public/
-            storage/framework/cache/data/
-            storage/framework/sessions/
-            storage/framework/testing/
-            storage/framework/views/
-            storage/logs/
-            Homestead.yaml
-            Homestead.json
-            npm-debug.log
-            yarn-error.log
+            - **/node_modules/
+            - **/vendor/
+            - .env
+            - **/.git/
+            - .gitignore
+            - .gitattributes
+            - .vscode/
+            - .idea/
+            - **/public/hot/
+            - **/public/storage/
+            - **/storage/*.key
+            - **/storage/app/public/
+            - **/storage/framework/cache/data/
+            - **/storage/framework/sessions/
+            - **/storage/framework/testing/
+            - **/storage/framework/views/
+            - **/storage/logs/
+            - npm-debug.log
