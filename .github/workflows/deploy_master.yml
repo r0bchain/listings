@@ -27,6 +27,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Build and Push
+    timeout-minutes: 720
     env:
       APP_KEY: ${{ secrets.APP_KEY }}
       APP_NAME: ${{ vars.APP_NAME }}
