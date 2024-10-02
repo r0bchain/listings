@@ -1,17 +1,39 @@
 {
+  "node_modules/axios/index.js": {
+    "file": "assets/index-UqzWtY71.js",
+    "name": "index",
+    "src": "node_modules/axios/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-C4DH_WoA.css"
+    ]
+  },
+  "node_modules/is-ipfs/dist/src/index.js": {
+    "file": "assets/index-QfC4KmC2.js",
+    "name": "index",
+    "src": "node_modules/is-ipfs/dist/src/index.js",
+    "isDynamicEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-UhEJRbVH.css",
+    "file": "assets/app-C4DH_WoA.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DLNy9S21.js",
+    "file": "assets/app-DiJXcFBH.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
+    "dynamicImports": [
+      "node_modules/axios/index.js",
+      "node_modules/is-ipfs/dist/src/index.js"
+    ],
     "css": [
-      "assets/app-BzmtSieX.css",
-      "assets/app-UhEJRbVH.css"
+      "assets/app-C5CVs1Fw.css",
+      "assets/app-C4DH_WoA.css"
     ]
   }
 }
