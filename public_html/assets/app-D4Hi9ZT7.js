@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-UqzWtY71.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-DNjH6L17.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
 /* empty css             */
 /**
 * @vue/shared v3.4.32
@@ -23320,7 +23320,7 @@ var uploadCid = async (config, cid, options) => {
 var axiosModule;
 async function getAxios() {
   if (!axiosModule) {
-    axiosModule = await __vitePreload(() => import("./index-UqzWtY71.js"), true ? __vite__mapDeps([0,1]) : void 0);
+    axiosModule = await __vitePreload(() => import("./index-DNjH6L17.js"), true ? __vite__mapDeps([0,1]) : void 0);
   }
   return axiosModule.default;
 }
@@ -26242,12 +26242,28 @@ const __vite_glob_0_20 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$1
 }, Symbol.toStringTag, { value: "Module" }));
+const searchIPFSImage = async (topic, PINATA_SECRET_JWT, PINATA_GATEWAY) => {
+  const pinata = new PinataSDK({
+    pinataJwt: PINATA_SECRET_JWT,
+    pinataGateway: PINATA_GATEWAY
+  });
+  await pinata.listFiles().keyValues("category", topic, "like").then((response) => {
+    console.log(response.rows);
+    return response.rows;
+  });
+};
 const _sfc_main = {
   __name: "Create",
+  props: { listing: Object },
   setup(__props) {
     const page = Q();
     const imageUrl = ref$1("https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800");
     const topics = page.props.site.TOPICS_IMAGE;
+    searchIPFSImage(
+      topics[0],
+      page.props.config.PINATA_SECRET_JWT,
+      page.props.config.PINATA_GATEWAY
+    );
     const { randomImage, location: location2 } = randomImages(
       imageUrl,
       page.props.site.RANDOM_IMAGE_KEY,

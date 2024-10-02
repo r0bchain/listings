@@ -1,6 +1,6 @@
 {
   "node_modules/axios/index.js": {
-    "file": "assets/index-UqzWtY71.js",
+    "file": "assets/index-DNjH6L17.js",
     "name": "index",
     "src": "node_modules/axios/index.js",
     "isDynamicEntry": true,
@@ -23,7 +23,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DiJXcFBH.js",
+    "file": "assets/app-D4Hi9ZT7.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
