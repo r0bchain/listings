@@ -36,14 +36,12 @@
           v-for="image in listing.images" :key="image.id" 
           class="flex flex-col justify-between"
         >
-          <img :src="getImage(image.cid)" class="rounded-md" />
-          <!-- <img :src="image.src" class="rounded-md" /> -->
+          <img :src="image.src" class="rounded-md" />
           <Link 
             :href="route('realtor.listing.image.destroy', { listing: props.listing.id, image: image.id })"
             method="delete"
             as="button"
             class="mt-2 btn-outline text-xs"
-            @click="unPinImage(image.cid)"
           >
             Delete
           </Link>
@@ -55,24 +53,11 @@
   <script setup>
   import { computed } from 'vue'
   import Box from '@/Components/UI/Box.vue'
-  import { Link, useForm, usePage } from '@inertiajs/vue3'
+  import { Link, useForm } from '@inertiajs/vue3'
   import { Inertia } from '@inertiajs/inertia'
   import NProgress from 'nprogress'
-  import { PinataSDK } from "pinata-web3";
-
   
-  // Page props 
-  const page = usePage()
-
   const props = defineProps({ listing: Object })
-  const PINATA_SECRET_JWT = page.props.config.PINATA_SECRET_JWT
-  const PINATA_GATEWAY = page.props.config.PINATA_GATEWAY
-
-  const pinata = new PinataSDK({
-    pinataJwt: PINATA_SECRET_JWT,
-    pinataGateway: PINATA_GATEWAY,
-  });
-
   Inertia.on('progress', (event) => {
     if (event.detail.progress.percentage) {
       NProgress.set((event.detail.progress.percentage / 100) * 0.9)
@@ -98,38 +83,4 @@
     }
   }
   const reset = () => form.reset('images')
-
- function getImage(cid) {
-    try {
-      console.log('cid', cid)
-      // const data = await pinata.gateways.get(cid);
-      
-      // console.log(data)
-
-      const url = 'https://' + PINATA_GATEWAY + '/ipfs/' + cid
-      // const url = await pinata.gateways.createSignedURL({
-      //   cid: cid,
-      //   expires: 1800,
-      // })
-      // console.log(url)
-      return url
-
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  
-  /*
-  * Unpin image from Pinata
-  */
- async function unPinImage(cid) {
-  
-    const unpin = await pinata.unpin([
-      cid
-    ]).then((result) => {
-      console.log(result);
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
-</script>
+  </script>

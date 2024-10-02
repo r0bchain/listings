@@ -42,6 +42,12 @@ class HandleInertiaRequests extends Middleware
                 'error'   => fn() => $request->session()->get('error'),
             ],
 
+            'config' => fn() => [
+                'PINATA_SECRET_JWT' => env('PINATA_SECRET_JWT'),
+                'PINATA_GATEWAY' => env('PINATA_GATEWAY'),
+                'PINATA_GATEWAY_UPLOADS' => env('PINATA_GATEWAY_UPLOADS'),
+            ],
+
             'site' => fn() => [
                 'APP_NAME' => env('APP_NAME'),
                 'APP_SLOGAN' => env('APP_SLOGAN'),

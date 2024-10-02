@@ -10,7 +10,7 @@ export const randomImages = (initialImageUrl, api_key, words, options) => {
         const location = ref(words[Math.floor(Math.random() * words.length)])
 
         const query = location.value;
-        console.log('api_key', api_key)
+        console.log('query', query)
 
         const client = createClient(api_key)
         // console.log('words.length', words.length)

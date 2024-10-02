@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  body {
+    @apply font-sans text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-900
+  }
+
+
+
+  .title {
+    @apply text-2xl  text-gray-800 dark:text-gray-200
+  }
+
+
+  .topic-title {
+    @apply  absolute z-50 mb-4 mt-5 pl-10 text-3xl font-extrabold text-thai-red dark:text-thai-red md:text-3xl lg:text-4xl
+  }
+
+  .categories-header {
+    @apply w-full opacity-100 bg-gray-100 dark:bg-gray-800 m-auto bg-center
+  }
+  .container-header-category {
+    @apply w-full pt-2 pl-4 grid text-center  text-white text-2xl font-light 
+  }
+
+  .category-header-title {
+    @apply  uppercase text-6xl  
+  }
+
+  .container {
+    @apply  w-full mx-auto p-0  bg-transparent  
+  }
+
+  .header-container {
+    @apply  w-full border-b-2 border-gray-600 bg-thai-blue
+  }
+  
+  .logo {
+    @apply h-[4.3rem] w-40
+  }
+
+  
+  .label {
+    @apply block mb-1 text-gray-500 dark:text-gray-300 font-medium
+  }
+  
+  .input {
+    @apply block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500
+  }
+  
+  .input-error {
+    @apply text-sm text-red-500 dark:text-red-400
+  }
+  .title-form {
+    @apply text-2xl text-thai-blue font-bold
+  }
+  .filter-wrapper  {
+    @apply w-full p-0 flex items-center justify-between bg-thai-blue m-auto
+  }
+  
+  .filter-container {
+    @apply mb-2 mt-2 flex flex-wrap gap-2  bg-opacity-10 p-4 rounded-md
+  }
+
+  .input-filter {
+    @apply p-3 placeholder:text-gray-500 border border-gray-200 dark:border-gray-700 text-xs font-medium text-black dark:text-black dark:bg-white
+  }
+
+  .input-file {
+    @apply border rounded-md file:px-4 file:py-2 border-gray-200 dark:border-gray-700 file:text-gray-700 file:dark:text-white file:border-0 file:bg-gray-100 file:dark:bg-gray-800 file:font-medium file:hover:bg-gray-200 file:dark:hover:text-black
+  }
+
+  .btn-normal {
+    @apply bg-gray-600 hover:bg-gray-500 text-white font-medium p-2 rounded-md
+  }
+
+  .btn-danger {
+    @apply bg-thai-red hover:bg-red-800 text-white font-medium p-2 rounded-md
+  }
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md
+  }
+
+  .btn-outline {
+    @apply p-2 rounded-md border shadow-sm border-gray-300 dark:border-gray-800 hover:border-gray-400 hover:bg-gray-50 dark:hover:border-gray-700 dark:hover:bg-gray-800
+  }
+
+  .checkbox-custom {
+    @apply h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500
+  }
+
+  .accepted {
+    @apply dark:text-green-900 bg-green-200 text-green-900 p-1 rounded-md uppercase ml-1
+  }
+
+  .sold {
+    @apply text-xs font-bold uppercase border border-dashed p-1 border-green-300 text-green-500 dark:border-green-600 dark:text-green-600 inline-block rounded-md mb-2
+  }
+
+  .bell {
+    @apply right-0 top-0 w-5 h-5 bg-red-700 dark:bg-red-400 text-white font-medium border border-white dark:border-gray-900 rounded-full text-xs text-center
+  }
+
+  .link {
+    @apply text-white dark:text-white
+  }
+
+  .menu {
+    @apply p-4 w-1/6  justify-between text-center 
+  }
+
+  .active-menu {
+    @apply bg-thai-red dark:bg-thai-red hover:bg-red-400 text-white dark:text-white
+  }
+
+  .inactive-menu {
+    @apply text-gray-500 dark:text-gray-300 bg-gray-800 opacity-90  hover:bg-red-400
+  }
+  .box-border {
+    @apply border border-gray-200 dark:border-gray-800 rounded-md p-4 shadow-sm dark:text-gray-300
+  }
+
+  .listing-container {
+    @apply grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-4 p-4
+  }
+
+  .title-show {
+    @apply text-xl font-bold font-sans text-black-title p-2
+  }
+
+  .description-show {
+    @apply text-sm text-black-description font-light 
+  }
+
+  .box {
+    @apply  dark:text-white md:grid p-4  dark:bg-thai-blue-dark dark:bg-opacity-5  pt-2 shadow-sm
+  }
+
+  .box-title {
+    @apply mt-0.5 text-lg text-gray-900
+  }
+
+  .box-details {
+    @apply grid md:col-span-7 grid-rows-8 grid-flow-col gap-1  text-black bg-white dark:bg-white opacity-80 p-4 pt-4 shadow-sm 
+  }
+
+  .box-container {
+    @apply md:grid md:grid-cols-12 gap-1 mt-2 border-2 border-thai-blue
+  }
+
+
+  
+}
+

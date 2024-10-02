@@ -10,17 +10,18 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.7.0",
+        "@rollup/plugin-commonjs": "^26.0.1",
         "@tailwindcss/forms": "^0.5.7",
         "@vitejs/plugin-vue": "^5.0.5",
-        "autoprefixer": "^10.4.19",
+        "autoprefixer": "^10.4.20",
         "axios": "^1.6.4",
         "eslint": "^9.7.0",
         "eslint-plugin-vue": "^9.27.0",
         "globals": "^15.8.0",
         "laravel-vite-plugin": "^1.0",
-        "postcss": "^8.4.40",
+        "postcss": "^8.4.47",
         "rollup-plugin-node-polyfills": "^0.2.1",
-        "tailwindcss": "^3.4.6",
+        "tailwindcss": "^3.4.12",
         "vite": "^5.0"
     },
     "dependencies": {
@@ -31,11 +32,17 @@
         "@fortawesome/vue-fontawesome": "^3.0.8",
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/vue3": "^1.2.0",
+        "@vitejs/plugin-legacy": "^5.4.2",
+        "core-js": "^3.38.1",
         "lodash": "^4.17.21",
         "lodash.throttle": "^4.1.1",
         "pexels": "^1.4.0",
+        "pinata": "^1.4.1",
+        "pinata-web3": "^0.5.0",
         "tailwindcss-debug-screens": "^2.2.1",
+        "vite-plugin-commonjs": "^0.10.3",
         "vite-plugin-node-polyfills": "^0.22.0",
+        "vite-plugin-require": "^1.2.14",
         "vue-router": "^4.0.13"
     }
 }
