@@ -4,9 +4,9 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+// Remove the duplicate import statement
 use App\Faker\ThaiCitiesProvider;
-use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Listing>
@@ -25,8 +25,10 @@ class ListingFactory extends Factory
 
         $this->faker->addProvider(new ThaiCitiesProvider($this->faker));
 
+        $title = $this->faker->sentence(4);
         return [
-            'title' => $this->faker->sentence(4),
+            'title' => $title,
+            'slug' =>  Str::slug($title),
             'description' => $this->faker->paragraph(3),
             'beds' => $this->faker->numberBetween(1, 7),
             'baths' => $this->faker->numberBetween(1, 7),

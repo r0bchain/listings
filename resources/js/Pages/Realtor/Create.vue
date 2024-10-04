@@ -1,5 +1,29 @@
 <template>
+  <JobListener />
   <form @submit.prevent="create">
+    <div class="grid grid-cols-6 gap-2">
+      <div class="col-span-2">
+        <label class="label">Title</label>
+        <input v-model.number="form.title" type="text" class="input" />
+        <ErrorMessage :errorMsg="form.errors.title" />
+
+      </div>
+      <div class="col-span-2">
+        <label class="label">Description</label>
+        <textarea v-model.number="form.description" class="input" />
+        <ErrorMessage :errorMsg="form.errors.description" />
+
+      </div>
+      <div class="col-span-2">
+        <label class="label">Category</label>
+        <select name="category_id" v-model="form.category_id" class="input" required>
+          <option  v-for="category in categories" :value="category.id">{{ category.name }}</option>
+       
+        </select>
+        <ErrorMessage :errorMsg="form.errors.category_id" />
+
+      </div>
+    </div>
     <div class="grid grid-cols-6 gap-4">
       <div class="col-span-2">
         <label class="label">Beds</label>
@@ -9,7 +33,7 @@
       </div>
 
       <div class="col-span-2">
-        <label class="label">Baths</label>
+        <label class="label">Baths1</label>
         <input v-model.number="form.baths" type="text" class="input" />
         
         <ErrorMessage :errorMsg="form.errors.baths" />
@@ -33,7 +57,7 @@
       </div>
 
       <div class="col-span-2">
-        <label class="label">Post Code</label>
+        <label class="label">Post Code 1</label>
         <input v-model="form.code" type="text" class="input" />
         <ErrorMessage :errorMsg="form.errors.code" />
 
@@ -70,8 +94,15 @@
 <script setup>
 import { useForm } from '@inertiajs/vue3'
 import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
+import JobListener from '@/Components/JobListener.vue';
+const props = defineProps({
+    categories: Array,
+})
 
 const form = useForm({
+  title: null,
+  description: null,
+  category_id: 1,
   beds: 0,
   baths: 0,
   area: 0,

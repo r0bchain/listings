@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use \App\Models\Listing;
+use Illuminate\Support\Str;
 
 class RealtorListingController extends Controller
 {
@@ -50,6 +51,8 @@ class RealtorListingController extends Controller
      */
     public function edit(Listing $listing)
     {
+        $listing->load('category');
+
         $response = Gate::inspect('update', $listing, Listing::class);
         if (!$response->allowed()) {
             // The action is authorized...
@@ -83,7 +86,9 @@ class RealtorListingController extends Controller
 
         }
 
-        return inertia('Realtor/Create');
+        return inertia('Realtor/Create', [
+            'categories' => \App\Models\Category::all()
+        ]);
     }
     
     /**
@@ -105,6 +110,8 @@ class RealtorListingController extends Controller
         } 
         
         $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
             'beds' => 'required|integer|min:1|max:20',
             'baths' => 'required|integer|min:1|max:20',
             'area' => 'required|integer|min:15|max:1500',
@@ -115,6 +122,8 @@ class RealtorListingController extends Controller
             'price' => 'required|integer|min:1|max:20000000',
 
         ]);
+
+        $validatedData['slug'] = Str::slug($validatedData['title']);
 
         $listing->update($validatedData);
 
@@ -130,17 +139,22 @@ class RealtorListingController extends Controller
     {
        
         $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'category_id' => 'required|integer|min:1|max:50',
             'beds' => 'required|integer|min:1|max:20',
             'baths' => 'required|integer|min:1|max:20',
-            'area' => 'required|integer|min:15|max:1500',
+            'area' => 'required|integer|min:5|max:15000',
             'city' => 'required',
             'code' => 'required',
             'street' => 'required',
             'street_nr' => 'required|integer|min:0|max:1000',
-            'price' => 'required|integer|min:1|max:20000000',
+            'price' => 'required|integer|min:1|max:200000000000',
 
         ]);
 
+        $validatedData['slug'] = Str::slug($validatedData['title']);
+      
         $request->user()->listings()->create($validatedData);
 
         return redirect()->route('realtor.listing.index')

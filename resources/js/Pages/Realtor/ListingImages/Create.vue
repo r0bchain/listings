@@ -86,7 +86,7 @@
   const canUpload = computed(() => form.images.length)
   const upload = () => {
     form.post(
-      route('realtor.listing.image.store', { listing: props.listing.id }),
+      route('realtor.listing.image.store', { listing: props.listing.slug }),
       {
         onSuccess: () => form.reset('images'),
       },

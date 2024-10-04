@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
+
 class Listing extends Model
 {
     use HasFactory, SoftDeletes; 
@@ -15,12 +17,29 @@ class Listing extends Model
     // Allows mass assignment
 
     protected $fillable = [
-        'beds', 'baths', 'area', 'beds', 'city', 'code', 'street', 'street_nr', 'price'
+        'beds', 'title', 'slug', 'description', 'category_id', 'baths', 'area', 'beds', 'city', 'code', 'street', 'street_nr', 'price'
     ];
 
     protected $sortable = [
         'price', 'created_at'
     ];
+
+    public static function boot() {
+
+        parent::boot();
+        static::creating(function ($listing) {
+            $listing->slug = Str::slug($listing->title);
+        });
+
+        static::updating(function ($listing) {
+            $listing->slug = Str::slug($listing->title);
+        });
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     /**
      * Get the user that owns the Listing

@@ -2,6 +2,24 @@
 
 <template>
   <form @submit.prevent="update">
+    <div class="grid grid-cols-6 gap-2">
+      <div class="col-span-2">
+        <label class="label">Title</label>
+        <input v-model.number="form.title" type="text" class="input" />
+        <ErrorMessage :errorMsg="form.errors.title" />
+
+      </div>
+      <div class="col-span-2">
+        <label class="label">Description</label>
+        <textarea v-model.number="form.description" class="input" />
+        <ErrorMessage :errorMsg="form.errors.description" />
+
+      </div>
+      <div class="col-span-2">
+        <label class="label">Category</label>
+        <p type="text" class="input" v-text="listing.category.name" ></p>
+      </div>
+    </div>
     <div class="grid grid-cols-6 gap-4">
       <div class="col-span-2">
         <label class="label">Beds</label>
@@ -78,10 +96,12 @@
   import ErrorMessage from '@/Components/Messages/ErrorMessage.vue'
 
   const props = defineProps({
-    listing: Object,
+    listing: Object
   })
 
   const form = useForm({
+    title: props.listing.title || '',
+    description: props.listing.description  || '',
     beds: props.listing.beds,
     baths: props.listing.baths,
     area: props.listing.area,
@@ -91,7 +111,7 @@
     street_nr: props.listing.street_nr,
     price: props.listing.price,
   })
-  const update = () => form.put(route('realtor.listing.update', {listing: props.listing.id}))
+  const update = () => form.put(route('realtor.listing.update', {listing: props.listing.slug}))
   </script>
   
   <style scoped>

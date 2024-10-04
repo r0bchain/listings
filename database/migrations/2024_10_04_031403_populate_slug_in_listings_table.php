@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('listings', function (Blueprint $table) {
-            $table->foreignId('category_id')->constrained();       
+            // Update the slug column based on the title column
+            DB::table('listings')->get()->each(function ($listing) {
+                DB::table('listings')
+                    ->where('id', $listing->id)
+                    ->update(['slug' => Str::slug($listing->title)]);
+            });
         });
     }
 
@@ -22,8 +27,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('listings', function (Blueprint $table) {
-            $table->dropForeign(['category_id']);
-            $table->dropColumn('category_id');
+            DB::table('listings')->update(['slug' => null]);
+
         });
     }
 };

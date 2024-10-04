@@ -1,6 +1,4 @@
 
-import {computed, ref} from 'vue'
-import { createClient } from 'pexels';
 import { PinataSDK } from "pinata-web3";
 
 export const searchIPFSImage = async (topic, PINATA_SECRET_JWT, PINATA_GATEWAY) => {

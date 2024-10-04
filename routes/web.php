@@ -55,6 +55,7 @@ Route::prefix('realtor')
       ->withTrashed();
     Route::resource('listing', RealtorListingController::class)
       // ->only(['index', 'destroy', 'edit', 'update', 'create', 'store', 'destroy', 'restore'])
+      ->parameters(['listing' => 'listing:slug']) // Use slug instead of ID
       ->withTrashed();
 
     Route::name('offer.accept')

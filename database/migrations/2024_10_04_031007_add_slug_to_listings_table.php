@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('listing_images', function (Blueprint $table) {
-            $table->char('cid', 64)->after('filename')->unique();; // Add the new field
+        Schema::table('listings', function (Blueprint $table) {
+            $table->string('slug')->nullable()->unique()->after('title');
 
         });
     }
@@ -22,8 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('listing_images', function (Blueprint $table) {
-            $table->dropColumn('cid'); // Drop the field
+        Schema::table('listings', function (Blueprint $table) {
+            $table->dropColumn('slug');
         });
     }
 };

@@ -8,7 +8,10 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Database\QueryException;
 use App\Models\ListingImage;
+use App\Events\JobPinnedFinished;
 
 class UploadToIPFS implements ShouldQueue
 {
@@ -57,7 +60,11 @@ class UploadToIPFS implements ShouldQueue
         $metadata = [
             'name' => $this->fileName,
             'keyvalues' => [
-                'listing_id' => $this->listing->id,
+                // 'listing_id' => $this->listing->id,
+				'website' => env('APP_URL'),
+				'listing' => route('listing.show', ['listing' => $this->listing->slug]),
+				'title' => $this->listing->title,
+				'description' => $this->listing->description,
                 'category' =>  $this->listing->category->name
                 // Add more key-value pairs as needed
             ]
@@ -89,6 +96,7 @@ class UploadToIPFS implements ShouldQueue
             'status' => $response->status(),
         ]);
 
+		// If the image was pinned successfully
 		if ($response->successful()) {
 			Log::info('File uploaded to IPFS successfully', ['response' => $response->json()]);
             
@@ -98,7 +106,25 @@ class UploadToIPFS implements ShouldQueue
             $listingImage->filename = $this->fileName;
             $listingImage->cid = $data['IpfsHash'];
             $listingImage->listing_id = $this->listing->id;
-            $listingImage->save();
+			try {
+				$listingImage->save();
+				event(new JobPinnedFinished($this->listing->id));
+				Log::info('JobPinnedFinished job completed successfully', ['listing_id' => $this->listing->id]);
+
+
+			} catch (QueryException $e) {
+				
+				if ($e->getCode() == 23000) {
+					// Handle the duplicate entry error
+					// For example, log the error or notify the user
+					Log::error('Duplicate entry for CID: ' . $data['IpfsHash']);
+				} else {
+					throw $e; // Rethrow the exception if it's not a duplicate entry error
+
+				}
+			}
+
+
 		} else {
 			// Log the error response
 			Log::error('Failed to upload....', ['response' => $response->body()]);

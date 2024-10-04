@@ -24,12 +24,12 @@
           >
             <a
               class="btn-outline text-xs font-medium"
-              :href="route('listing.show', { listing: listing.id })"
+              :href="route('listing.show', { listing: listing.slug })"
               target="_blank"
             >Preview</a>
             <Link
               class="btn-outline text-xs font-medium"
-              :href="route('realtor.listing.edit', { listing: listing.id })"
+              :href="route('realtor.listing.edit', { listing: listing.slug })"
             >
               Edit
             </Link>
@@ -37,7 +37,7 @@
             <Link
               v-if="!listing.deleted_at"
               class="btn-outline text-xs font-medium"
-              :href="route('realtor.listing.destroy', { listing: listing.id })"
+              :href="route('realtor.listing.destroy', { listing: listing.slug })"
               as="button" method="delete"
             >
               Delete
@@ -45,7 +45,7 @@
           
             <Link
               v-else class="btn-outline text-xs font-medium"
-              :href="route('realtor.listing.restore', { listing: listing.id })"
+              :href="route('realtor.listing.restore', { listing: listing.slug })"
               as="button" method="put"
             >
               Restore
@@ -53,13 +53,13 @@
           </div>
 
           <div class="mt-2">
-            <Link :href="route('realtor.listing.image.create', { listing: listing.id })" class="block w-full btn-outline text-xs font-medium text-center">
+            <Link :href="route('realtor.listing.image.create', { listing: listing.slug })" class="block w-full btn-outline text-xs font-medium text-center">
               Images {{  listing.images_count }}</Link>
           </div>
 
           <div class="mt-2">
             <Link
-              :href="route('realtor.listing.show', { listing: listing.id })"
+              :href="route('realtor.listing.show', { listing: listing.slug })"
               class="block w-full btn-outline text-xs font-medium text-center">
               Offers ({{ listing.offers_count }})
             </Link>
