@@ -1,6 +1,6 @@
 {
   "node_modules/axios/index.js": {
-    "file": "assets/index-DNjH6L17.js",
+    "file": "assets/index-imSD9FR_.js",
     "name": "index",
     "src": "node_modules/axios/index.js",
     "isDynamicEntry": true,
@@ -23,7 +23,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-D4Hi9ZT7.js",
+    "file": "assets/app-BxEv39ip.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -32,7 +32,7 @@
       "node_modules/is-ipfs/dist/src/index.js"
     ],
     "css": [
-      "assets/app-C5CVs1Fw.css",
+      "assets/app-BY7aLFP4.css",
       "assets/app-C4DH_WoA.css"
     ]
   }

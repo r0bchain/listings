@@ -1,4 +1,4 @@
-import { a as axios } from "./app-D4Hi9ZT7.js";
+import { a as axios } from "./app-BxEv39ip.js";
 /* empty css             */
 const {
   Axios,

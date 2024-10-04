@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-DNjH6L17.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-imSD9FR_.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
 /* empty css             */
 /**
 * @vue/shared v3.4.32
@@ -8819,26 +8819,26 @@ function createInstance$1(defaultConfig) {
   };
   return instance;
 }
-const axios$3 = createInstance$1(defaults$6);
-axios$3.Axios = Axios$2;
-axios$3.CanceledError = CanceledError;
-axios$3.CancelToken = CancelToken;
-axios$3.isCancel = isCancel$2;
-axios$3.VERSION = VERSION;
-axios$3.toFormData = toFormData;
-axios$3.AxiosError = AxiosError;
-axios$3.Cancel = axios$3.CanceledError;
-axios$3.all = function all(promises) {
+const axios$4 = createInstance$1(defaults$6);
+axios$4.Axios = Axios$2;
+axios$4.CanceledError = CanceledError;
+axios$4.CancelToken = CancelToken;
+axios$4.isCancel = isCancel$2;
+axios$4.VERSION = VERSION;
+axios$4.toFormData = toFormData;
+axios$4.AxiosError = AxiosError;
+axios$4.Cancel = axios$4.CanceledError;
+axios$4.all = function all(promises) {
   return Promise.all(promises);
 };
-axios$3.spread = spread$1;
-axios$3.isAxiosError = isAxiosError$1;
-axios$3.mergeConfig = mergeConfig$3;
-axios$3.AxiosHeaders = AxiosHeaders;
-axios$3.formToJSON = (thing) => formDataToJSON(utils$e.isHTMLForm(thing) ? new FormData(thing) : thing);
-axios$3.getAdapter = adapters.getAdapter;
-axios$3.HttpStatusCode = HttpStatusCode;
-axios$3.default = axios$3;
+axios$4.spread = spread$1;
+axios$4.isAxiosError = isAxiosError$1;
+axios$4.mergeConfig = mergeConfig$3;
+axios$4.AxiosHeaders = AxiosHeaders;
+axios$4.formToJSON = (thing) => formDataToJSON(utils$e.isHTMLForm(thing) ? new FormData(thing) : thing);
+axios$4.getAdapter = adapters.getAdapter;
+axios$4.HttpStatusCode = HttpStatusCode;
+axios$4.default = axios$4;
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x2) {
   return x2 && x2.__esModule && Object.prototype.hasOwnProperty.call(x2, "default") ? x2["default"] : x2;
@@ -11338,7 +11338,7 @@ var Q$1 = typeof window > "u", C = class {
       this.activeVisit && this.cancelVisit(this.activeVisit, { cancelled: true });
     } }), X(R2), p2(R2);
     let j2 = !!(g2.length || f2.length);
-    axios$3({ method: i2, url: w$1(S2).href, data: i2 === "get" ? {} : n2, params: i2 === "get" ? n2 : {}, signal: this.activeVisit.cancelToken.signal, headers: { ...c2, Accept: "text/html, application/xhtml+xml", "X-Requested-With": "XMLHttpRequest", "X-Inertia": true, ...j2 ? { "X-Inertia-Partial-Component": this.page.component } : {}, ...g2.length ? { "X-Inertia-Partial-Data": g2.join(",") } : {}, ...f2.length ? { "X-Inertia-Partial-Except": f2.join(",") } : {}, ...o2 && o2.length ? { "X-Inertia-Error-Bag": o2 } : {}, ...this.page.version ? { "X-Inertia-Version": this.page.version } : {} }, onUploadProgress: (r2) => {
+    axios$4({ method: i2, url: w$1(S2).href, data: i2 === "get" ? {} : n2, params: i2 === "get" ? n2 : {}, signal: this.activeVisit.cancelToken.signal, headers: { ...c2, Accept: "text/html, application/xhtml+xml", "X-Requested-With": "XMLHttpRequest", "X-Inertia": true, ...j2 ? { "X-Inertia-Partial-Component": this.page.component } : {}, ...g2.length ? { "X-Inertia-Partial-Data": g2.join(",") } : {}, ...f2.length ? { "X-Inertia-Partial-Except": f2.join(",") } : {}, ...o2 && o2.length ? { "X-Inertia-Error-Bag": o2 } : {}, ...this.page.version ? { "X-Inertia-Version": this.page.version } : {} }, onUploadProgress: (r2) => {
       n2 instanceof FormData && (r2.percentage = r2.progress ? Math.round(r2.progress * 100) : 0, W$1(r2), P(r2));
     } }).then((r2) => {
       var _a;
@@ -11364,7 +11364,7 @@ var Q$1 = typeof window > "u", C = class {
     }).then(() => {
       this.activeVisit && this.finishVisit(this.activeVisit);
     }).catch((r2) => {
-      if (!axios$3.isCancel(r2)) {
+      if (!axios$4.isCancel(r2)) {
         let a2 = $$2(r2);
         if (this.activeVisit && this.finishVisit(this.activeVisit), a2) return Promise.reject(r2);
       }
@@ -12972,7 +12972,7 @@ const _hoisted_14$5 = {
 const _hoisted_15$5 = /* @__PURE__ */ createBaseVNode("div", { class: "relative" }, [
   /* @__PURE__ */ createBaseVNode("button", { class: "bg-blue-500 text-white rounded-md px-2 py-1" }, "Submit")
 ], -1);
-const _sfc_main$v = {
+const _sfc_main$w = {
   __name: "LoginBox",
   props: {
     randomImage: {
@@ -13049,7 +13049,7 @@ const _sfc_main$v = {
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$v
+  default: _sfc_main$w
 }, Symbol.toStringTag, { value: "Module" }));
 var g$1 = typeof globalThis !== "undefined" && globalThis || typeof self !== "undefined" && self || // eslint-disable-next-line no-undef
 typeof global !== "undefined" && global || {};
@@ -13674,7 +13674,7 @@ const randomImages = (initialImageUrl, api_key, words, options) => {
   });
   return { randomImage, location };
 };
-const _sfc_main$u = {
+const _sfc_main$v = {
   __name: "Login",
   setup(__props) {
     const page = Q();
@@ -13689,17 +13689,17 @@ const _sfc_main$u = {
     console.log("randomImage", randomImage);
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", null, [
-        createVNode(_sfc_main$v, { randomImage: unref(randomImage) }, null, 8, ["randomImage"])
+        createVNode(_sfc_main$w, { randomImage: unref(randomImage) }, null, 8, ["randomImage"])
       ]);
     };
   }
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$u
+  default: _sfc_main$v
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$q = /* @__PURE__ */ createBaseVNode("div", null, "You need be verified first to see this page!", -1);
-const _sfc_main$t = {
+const _sfc_main$u = {
   __name: "VerifyEmail",
   setup(__props) {
     return (_ctx, _cache) => {
@@ -13724,7 +13724,7 @@ const _sfc_main$t = {
 };
 const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$t
+  default: _sfc_main$u
 }, Symbol.toStringTag, { value: "Module" }));
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -13754,7 +13754,7 @@ const _hoisted_9$8 = {
 const _hoisted_10$8 = { class: "container" };
 const _hoisted_11$7 = ["textContent"];
 const _hoisted_12$6 = ["textContent"];
-const _sfc_main$s = {
+const _sfc_main$t = {
   __name: "MainLayout",
   props: { message: String },
   setup(__props) {
@@ -13875,9 +13875,9 @@ const _sfc_main$s = {
     };
   }
 };
-const MainLayout = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["__scopeId", "data-v-b96f8015"]]);
+const MainLayout = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__scopeId", "data-v-b96f8015"]]);
 const _hoisted_1$o = /* @__PURE__ */ createBaseVNode("div", null, "Index", -1);
-const _sfc_main$r = {
+const _sfc_main$s = {
   __name: "Index",
   props: { message: String },
   setup(__props) {
@@ -13891,9 +13891,9 @@ const _sfc_main$r = {
 };
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$r
+  default: _sfc_main$s
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$q = {
+const _sfc_main$r = {
   __name: "Show",
   setup(__props) {
     return (_ctx, _cache) => {
@@ -13903,10 +13903,10 @@ const _sfc_main$q = {
 };
 const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$q
+  default: _sfc_main$r
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$n = { class: "line-clamp-1" };
-const _sfc_main$p = {
+const _sfc_main$q = {
   __name: "ListingAddress",
   props: {
     listing: Object
@@ -13926,7 +13926,7 @@ const _hoisted_2$i = /* @__PURE__ */ createBaseVNode("span", { class: "text-gray
 const _hoisted_3$g = { class: "font-normal" };
 const _hoisted_4$f = /* @__PURE__ */ createBaseVNode("span", { class: "text-gray-400" }, "| ", -1);
 const _hoisted_5$e = { class: "font-normal" };
-const _sfc_main$o = {
+const _sfc_main$p = {
   __name: "ListingSpace",
   props: {
     listing: Object
@@ -13946,7 +13946,7 @@ const _sfc_main$o = {
     };
   }
 };
-const _sfc_main$n = {
+const _sfc_main$o = {
   __name: "Price",
   props: {
     price: [Number, String]
@@ -13965,13 +13965,13 @@ const _sfc_main$n = {
     };
   }
 };
-const _sfc_main$m = {};
+const _sfc_main$n = {};
 const _hoisted_1$l = { class: "overflow-hidden shadow transition hover:shadow-lg" };
 const _hoisted_2$h = { class: "box" };
 const _hoisted_3$f = { href: "#" };
 const _hoisted_4$e = { class: "box-title" };
 const _hoisted_5$d = { class: "mt-2 text-sm/relaxed" };
-function _sfc_render$1(_ctx, _cache) {
+function _sfc_render$2(_ctx, _cache) {
   return openBlock(), createElementBlock("div", _hoisted_1$l, [
     renderSlot(_ctx.$slots, "image"),
     createBaseVNode("div", _hoisted_2$h, [
@@ -13986,7 +13986,7 @@ function _sfc_render$1(_ctx, _cache) {
     ])
   ]);
 }
-const Box = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$1]]);
+const Box = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$2]]);
 const useMonthlyPayment = (total, interestRate, duration) => {
   const monthlyPayment = computed(() => {
     const principle = isRef(total) ? total.value : total;
@@ -14008,7 +14008,7 @@ const _hoisted_1$k = /* @__PURE__ */ createBaseVNode("img", {
   class: "h-50 w-full object-cover border border-white-500"
 }, null, -1);
 const _hoisted_2$g = { class: "flex items-center gap-1" };
-const _sfc_main$l = {
+const _sfc_main$m = {
   __name: "Listing",
   props: {
     listing: Object
@@ -14027,7 +14027,7 @@ const _sfc_main$l = {
         ]),
         default: withCtx(() => [
           createBaseVNode("div", _hoisted_2$g, [
-            createVNode(_sfc_main$n, {
+            createVNode(_sfc_main$o, {
               price: __props.listing.price,
               class: "text-1xl font-bold"
             }, null, 8, ["price"])
@@ -14036,11 +14036,11 @@ const _sfc_main$l = {
             href: _ctx.route("listing.show", { listing: __props.listing.id })
           }, {
             default: withCtx(() => [
-              createVNode(_sfc_main$o, {
+              createVNode(_sfc_main$p, {
                 listing: __props.listing,
                 class: "text-xs"
               }, null, 8, ["listing"]),
-              createVNode(_sfc_main$p, {
+              createVNode(_sfc_main$q, {
                 listing: __props.listing,
                 class: "text-gray"
               }, null, 8, ["listing"])
@@ -14055,10 +14055,10 @@ const _sfc_main$l = {
 };
 const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$l
+  default: _sfc_main$m
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$j = { class: "flex gap-1 justify-center items-center" };
-const _sfc_main$k = {
+const _sfc_main$l = {
   __name: "Pagination",
   props: { links: Array },
   setup(__props) {
@@ -14156,7 +14156,7 @@ const _hoisted_12$5 = /* @__PURE__ */ createStaticVNode('<div class="grid max-w-
 const _hoisted_13$5 = [
   _hoisted_12$5
 ];
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "MenuNav",
   props: {
     slogan: {
@@ -19719,7 +19719,7 @@ const _hoisted_18$4 = /* @__PURE__ */ createBaseVNode("button", {
   type: "submit",
   class: "btn-normal"
 }, "Filters", -1);
-const _sfc_main$i = {
+const _sfc_main$j = {
   __name: "Filters",
   props: {
     filters: Object,
@@ -19899,7 +19899,7 @@ const _sfc_main$i = {
 };
 const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$i
+  default: _sfc_main$j
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$g = {
   key: 0,
@@ -19921,7 +19921,7 @@ const _hoisted_9$5 = {
 };
 const _hoisted_10$5 = /* @__PURE__ */ createBaseVNode("i", { class: "fa-solid fa-backward" }, null, -1);
 const _hoisted_11$4 = /* @__PURE__ */ createBaseVNode("br", null, null, -1);
-const _sfc_main$h = {
+const _sfc_main$i = {
   __name: "Categories",
   props: {
     headerBg: {
@@ -20017,14 +20017,14 @@ const _sfc_main$h = {
 };
 const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$h
+  default: _sfc_main$i
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$f = { class: "listing-container" };
 const _hoisted_2$c = {
   key: 0,
   class: "w-full justify-center mt-4 mb-4"
 };
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "Index",
   props: {
     listings: Object,
@@ -20071,8 +20071,8 @@ const _sfc_main$g = {
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
-        createVNode(_sfc_main$j),
-        createVNode(_sfc_main$i, {
+        createVNode(_sfc_main$k),
+        createVNode(_sfc_main$j, {
           filters: __props.filters,
           selectedCategoryId: updateCategory.value,
           selectedCategory: __props.category,
@@ -20081,7 +20081,7 @@ const _sfc_main$g = {
           categoriesChildren: props.categoriesChildren ?? null,
           onCategoryFilterChanged: _cache[0] || (_cache[0] = ($event) => updateCategory.value = $event)
         }, null, 8, ["filters", "selectedCategoryId", "selectedCategory", "cities", "defaultCity", "categoriesChildren"]),
-        createVNode(_sfc_main$h, {
+        createVNode(_sfc_main$i, {
           onCategoryClicked: _cache[1] || (_cache[1] = ($event) => updateCategory.value = $event),
           selectedCategory: __props.category,
           headerBg: imageUrl.value,
@@ -20089,14 +20089,14 @@ const _sfc_main$g = {
         }, null, 8, ["selectedCategory", "headerBg", "categoriesChildren"]),
         createBaseVNode("div", _hoisted_1$f, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(__props.listings.data, (listing) => {
-            return openBlock(), createBlock(_sfc_main$l, {
+            return openBlock(), createBlock(_sfc_main$m, {
               key: listing.id,
               listing
             }, null, 8, ["listing"]);
           }), 128))
         ]),
         __props.listings.data.length ? (openBlock(), createElementBlock("div", _hoisted_2$c, [
-          createVNode(_sfc_main$k, {
+          createVNode(_sfc_main$l, {
             links: __props.listings.links
           }, null, 8, ["links"])
         ])) : createCommentVNode("", true)
@@ -20106,17 +20106,17 @@ const _sfc_main$g = {
 };
 const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$g
+  default: _sfc_main$h
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$f = {};
+const _sfc_main$g = {};
 const _hoisted_1$e = { class: "box-details" };
-function _sfc_render(_ctx, _cache) {
+function _sfc_render$1(_ctx, _cache) {
   return openBlock(), createElementBlock("div", _hoisted_1$e, [
     renderSlot(_ctx.$slots, "header"),
     renderSlot(_ctx.$slots, "default")
   ]);
 }
-const BoxDetails = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render]]);
+const BoxDetails = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$1]]);
 const _hoisted_1$d = ["min", "max"];
 const _hoisted_2$b = /* @__PURE__ */ createBaseVNode("button", {
   type: "submit",
@@ -20124,7 +20124,7 @@ const _hoisted_2$b = /* @__PURE__ */ createBaseVNode("button", {
 }, " Make an Offer ", -1);
 const _hoisted_3$b = { class: "flex justify-between text-gray-500 mt-2" };
 const _hoisted_4$a = /* @__PURE__ */ createBaseVNode("div", null, "Difference", -1);
-const _sfc_main$e = {
+const _sfc_main$f = {
   __name: "MakeOffer",
   props: {
     listingId: Number,
@@ -20200,7 +20200,7 @@ const _sfc_main$e = {
           createBaseVNode("div", _hoisted_3$b, [
             _hoisted_4$a,
             createBaseVNode("div", null, [
-              createVNode(_sfc_main$n, { price: difference.value }, null, 8, ["price"])
+              createVNode(_sfc_main$o, { price: difference.value }, null, 8, ["price"])
             ])
           ])
         ]),
@@ -20211,12 +20211,12 @@ const _sfc_main$e = {
 };
 const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$e
+  default: _sfc_main$f
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$c = { class: "mt-2 flex flex-col md:flex-row justify-between text-gray-500" };
 const _hoisted_2$a = /* @__PURE__ */ createBaseVNode("div", null, "Made on", -1);
 const _hoisted_3$a = { class: "font-medium" };
-const _sfc_main$d = {
+const _sfc_main$e = {
   __name: "OfferMade",
   props: { offer: Object },
   setup(__props) {
@@ -20230,7 +20230,7 @@ const _sfc_main$d = {
           createTextVNode("Offer made")
         ]),
         default: withCtx(() => [
-          createVNode(_sfc_main$n, {
+          createVNode(_sfc_main$o, {
             price: __props.offer.amount,
             class: "text-3xl"
           }, null, 8, ["price"]),
@@ -20246,10 +20246,10 @@ const _sfc_main$d = {
 };
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$d
+  default: _sfc_main$e
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$b = { class: "w-full text-center font-medium text-gray-500" };
-const _sfc_main$c = {
+const _sfc_main$d = {
   __name: "EmptyState",
   setup(__props) {
     return (_ctx, _cache) => {
@@ -20283,7 +20283,7 @@ const _hoisted_15$3 = { class: "flex justify-between" };
 const _hoisted_16$3 = /* @__PURE__ */ createBaseVNode("div", null, "Principal paid", -1);
 const _hoisted_17$3 = { class: "flex justify-between" };
 const _hoisted_18$3 = /* @__PURE__ */ createBaseVNode("div", null, "Interest paid", -1);
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "Show",
   props: {
     listing: Object,
@@ -20322,7 +20322,7 @@ const _sfc_main$b = {
                 ])
               ]),
               _: 1
-            })) : (openBlock(), createBlock(_sfc_main$c, {
+            })) : (openBlock(), createBlock(_sfc_main$d, {
               key: 1,
               class: "md:col-span-7 flex items-center"
             }, {
@@ -20340,15 +20340,15 @@ const _sfc_main$b = {
               createTextVNode(" Basic info ")
             ]),
             default: withCtx(() => [
-              createVNode(_sfc_main$n, {
+              createVNode(_sfc_main$o, {
                 price: __props.listing.price,
                 class: "text-2xl font-bold"
               }, null, 8, ["price"]),
-              createVNode(_sfc_main$o, {
+              createVNode(_sfc_main$p, {
                 listing: __props.listing,
                 class: "text-lg"
               }, null, 8, ["listing"]),
-              createVNode(_sfc_main$p, {
+              createVNode(_sfc_main$q, {
                 listing: __props.listing,
                 class: ""
               }, null, 8, ["listing"])
@@ -20395,7 +20395,7 @@ const _sfc_main$b = {
                 ]),
                 createBaseVNode("div", _hoisted_10$4, [
                   _hoisted_11$3,
-                  createVNode(_sfc_main$n, {
+                  createVNode(_sfc_main$o, {
                     price: unref(monthlyPayment),
                     class: "text-3xl"
                   }, null, 8, ["price"])
@@ -20404,7 +20404,7 @@ const _sfc_main$b = {
                   createBaseVNode("div", _hoisted_13$3, [
                     _hoisted_14$3,
                     createBaseVNode("div", null, [
-                      createVNode(_sfc_main$n, {
+                      createVNode(_sfc_main$o, {
                         price: unref(totalPaid),
                         class: "font-medium"
                       }, null, 8, ["price"])
@@ -20413,7 +20413,7 @@ const _sfc_main$b = {
                   createBaseVNode("div", _hoisted_15$3, [
                     _hoisted_16$3,
                     createBaseVNode("div", null, [
-                      createVNode(_sfc_main$n, {
+                      createVNode(_sfc_main$o, {
                         price: __props.listing.price,
                         class: "font-medium"
                       }, null, 8, ["price"])
@@ -20422,7 +20422,7 @@ const _sfc_main$b = {
                   createBaseVNode("div", _hoisted_17$3, [
                     _hoisted_18$3,
                     createBaseVNode("div", null, [
-                      createVNode(_sfc_main$n, {
+                      createVNode(_sfc_main$o, {
                         price: unref(totalInterest),
                         class: "font-medium"
                       }, null, 8, ["price"])
@@ -20433,13 +20433,13 @@ const _sfc_main$b = {
             ]),
             _: 1
           }),
-          user.value && !__props.offerMade ? (openBlock(), createBlock(_sfc_main$e, {
+          user.value && !__props.offerMade ? (openBlock(), createBlock(_sfc_main$f, {
             key: 0,
             "listing-id": __props.listing.id,
             price: __props.listing.price,
             onOfferUpdated: _cache[2] || (_cache[2] = ($event) => offer.value = $event)
           }, null, 8, ["listing-id", "price"])) : createCommentVNode("", true),
-          user.value && __props.offerMade ? (openBlock(), createBlock(_sfc_main$d, {
+          user.value && __props.offerMade ? (openBlock(), createBlock(_sfc_main$e, {
             key: 1,
             offer: __props.offerMade
           }, null, 8, ["offer"])) : createCommentVNode("", true)
@@ -20450,7 +20450,7 @@ const _sfc_main$b = {
 };
 const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$b
+  default: _sfc_main$c
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$9 = /* @__PURE__ */ createBaseVNode("h1", { class: "text-3xl mb-4" }, "Your Notifications", -1);
 const _hoisted_2$8 = {
@@ -20467,7 +20467,7 @@ const _hoisted_7$5 = {
   key: 2,
   class: "w-full flex justify-center"
 };
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "Index",
   props: {
     // Pagination used an object with a data property
@@ -20486,7 +20486,7 @@ const _sfc_main$a = {
               createBaseVNode("div", null, [
                 notification.type == "App\\Notifications\\OfferMade" ? (openBlock(), createElementBlock("span", _hoisted_3$8, [
                   createTextVNode(" Offer "),
-                  createVNode(_sfc_main$n, {
+                  createVNode(_sfc_main$o, {
                     price: notification.data.amount
                   }, null, 8, ["price"]),
                   createTextVNode(" made on your listing "),
@@ -20518,14 +20518,14 @@ const _sfc_main$a = {
               ])
             ]);
           }), 128))
-        ])) : (openBlock(), createBlock(_sfc_main$c, { key: 1 }, {
+        ])) : (openBlock(), createBlock(_sfc_main$d, { key: 1 }, {
           default: withCtx(() => [
             createTextVNode("No notifications yet!")
           ]),
           _: 1
         })),
         __props.notifications.data.length ? (openBlock(), createElementBlock("section", _hoisted_7$5, [
-          createVNode(_sfc_main$k, {
+          createVNode(_sfc_main$l, {
             links: __props.notifications.links
           }, null, 8, ["links"])
         ])) : createCommentVNode("", true)
@@ -20535,13 +20535,13 @@ const _sfc_main$a = {
 };
 const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$a
+  default: _sfc_main$b
 }, Symbol.toStringTag, { value: "Module" }));
 const _hoisted_1$8 = {
   key: 0,
   class: "input-error"
 };
-const _sfc_main$9 = {
+const _sfc_main$a = {
   __name: "ErrorMessage",
   props: {
     errorMsg: Object
@@ -20552,25 +20552,5369 @@ const _sfc_main$9 = {
     };
   }
 };
-const _withScopeId$1 = (n2) => (pushScopeId("data-v-40fd86d5"), n2 = n2(), popScopeId(), n2);
-const _hoisted_1$7 = { class: "grid grid-cols-6 gap-4" };
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj2) {
+    return typeof obj2;
+  } : function(obj2) {
+    return obj2 && "function" == typeof Symbol && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+  }, _typeof(obj);
+}
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function _defineProperties(target, props) {
+  for (var i2 = 0; i2 < props.length; i2++) {
+    var descriptor = props[i2];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+function _extends() {
+  _extends = Object.assign || function(target) {
+    for (var i2 = 1; i2 < arguments.length; i2++) {
+      var source = arguments[i2];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  Object.defineProperty(subClass, "prototype", {
+    writable: false
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _getPrototypeOf(o2) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf2(o3) {
+    return o3.__proto__ || Object.getPrototypeOf(o3);
+  };
+  return _getPrototypeOf(o2);
+}
+function _setPrototypeOf(o2, p2) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o3, p3) {
+    o3.__proto__ = p3;
+    return o3;
+  };
+  return _setPrototypeOf(o2, p2);
+}
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
+    }));
+    return true;
+  } catch (e2) {
+    return false;
+  }
+}
+function _assertThisInitialized(self2) {
+  if (self2 === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+  return self2;
+}
+function _possibleConstructorReturn(self2, call2) {
+  if (call2 && (typeof call2 === "object" || typeof call2 === "function")) {
+    return call2;
+  } else if (call2 !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+  return _assertThisInitialized(self2);
+}
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived), result;
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+    return _possibleConstructorReturn(this, result);
+  };
+}
+var Channel = /* @__PURE__ */ function() {
+  function Channel2() {
+    _classCallCheck(this, Channel2);
+  }
+  _createClass(Channel2, [{
+    key: "listenForWhisper",
+    value: (
+      /**
+       * Listen for a whisper event on the channel instance.
+       */
+      function listenForWhisper(event, callback) {
+        return this.listen(".client-" + event, callback);
+      }
+    )
+    /**
+     * Listen for an event on the channel instance.
+     */
+  }, {
+    key: "notification",
+    value: function notification(callback) {
+      return this.listen(".Illuminate\\Notifications\\Events\\BroadcastNotificationCreated", callback);
+    }
+    /**
+     * Stop listening for a whisper event on the channel instance.
+     */
+  }, {
+    key: "stopListeningForWhisper",
+    value: function stopListeningForWhisper(event, callback) {
+      return this.stopListening(".client-" + event, callback);
+    }
+  }]);
+  return Channel2;
+}();
+var EventFormatter = /* @__PURE__ */ function() {
+  function EventFormatter2(namespace) {
+    _classCallCheck(this, EventFormatter2);
+    this.namespace = namespace;
+  }
+  _createClass(EventFormatter2, [{
+    key: "format",
+    value: function format(event) {
+      if ([".", "\\"].includes(event.charAt(0))) {
+        return event.substring(1);
+      } else if (this.namespace) {
+        event = this.namespace + "." + event;
+      }
+      return event.replace(/\./g, "\\");
+    }
+    /**
+     * Set the event namespace.
+     */
+  }, {
+    key: "setNamespace",
+    value: function setNamespace(value) {
+      this.namespace = value;
+    }
+  }]);
+  return EventFormatter2;
+}();
+var PusherChannel = /* @__PURE__ */ function(_Channel) {
+  _inherits(PusherChannel2, _Channel);
+  var _super = _createSuper(PusherChannel2);
+  function PusherChannel2(pusher2, name2, options) {
+    var _this;
+    _classCallCheck(this, PusherChannel2);
+    _this = _super.call(this);
+    _this.name = name2;
+    _this.pusher = pusher2;
+    _this.options = options;
+    _this.eventFormatter = new EventFormatter(_this.options.namespace);
+    _this.subscribe();
+    return _this;
+  }
+  _createClass(PusherChannel2, [{
+    key: "subscribe",
+    value: function subscribe() {
+      this.subscription = this.pusher.subscribe(this.name);
+    }
+    /**
+     * Unsubscribe from a Pusher channel.
+     */
+  }, {
+    key: "unsubscribe",
+    value: function unsubscribe() {
+      this.pusher.unsubscribe(this.name);
+    }
+    /**
+     * Listen for an event on the channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(event, callback) {
+      this.on(this.eventFormatter.format(event), callback);
+      return this;
+    }
+    /**
+     * Listen for all events on the channel instance.
+     */
+  }, {
+    key: "listenToAll",
+    value: function listenToAll(callback) {
+      var _this2 = this;
+      this.subscription.bind_global(function(event, data) {
+        if (event.startsWith("pusher:")) {
+          return;
+        }
+        var namespace = _this2.options.namespace.replace(/\./g, "\\");
+        var formattedEvent = event.startsWith(namespace) ? event.substring(namespace.length + 1) : "." + event;
+        callback(formattedEvent, data);
+      });
+      return this;
+    }
+    /**
+     * Stop listening for an event on the channel instance.
+     */
+  }, {
+    key: "stopListening",
+    value: function stopListening(event, callback) {
+      if (callback) {
+        this.subscription.unbind(this.eventFormatter.format(event), callback);
+      } else {
+        this.subscription.unbind(this.eventFormatter.format(event));
+      }
+      return this;
+    }
+    /**
+     * Stop listening for all events on the channel instance.
+     */
+  }, {
+    key: "stopListeningToAll",
+    value: function stopListeningToAll(callback) {
+      if (callback) {
+        this.subscription.unbind_global(callback);
+      } else {
+        this.subscription.unbind_global();
+      }
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime a subscription succeeds.
+     */
+  }, {
+    key: "subscribed",
+    value: function subscribed(callback) {
+      this.on("pusher:subscription_succeeded", function() {
+        callback();
+      });
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime a subscription error occurs.
+     */
+  }, {
+    key: "error",
+    value: function error(callback) {
+      this.on("pusher:subscription_error", function(status) {
+        callback(status);
+      });
+      return this;
+    }
+    /**
+     * Bind a channel to an event.
+     */
+  }, {
+    key: "on",
+    value: function on(event, callback) {
+      this.subscription.bind(event, callback);
+      return this;
+    }
+  }]);
+  return PusherChannel2;
+}(Channel);
+var PusherPrivateChannel = /* @__PURE__ */ function(_PusherChannel) {
+  _inherits(PusherPrivateChannel2, _PusherChannel);
+  var _super = _createSuper(PusherPrivateChannel2);
+  function PusherPrivateChannel2() {
+    _classCallCheck(this, PusherPrivateChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(PusherPrivateChannel2, [{
+    key: "whisper",
+    value: (
+      /**
+       * Send a whisper event to other clients in the channel.
+       */
+      function whisper(eventName, data) {
+        this.pusher.channels.channels[this.name].trigger("client-".concat(eventName), data);
+        return this;
+      }
+    )
+  }]);
+  return PusherPrivateChannel2;
+}(PusherChannel);
+var PusherEncryptedPrivateChannel = /* @__PURE__ */ function(_PusherChannel) {
+  _inherits(PusherEncryptedPrivateChannel2, _PusherChannel);
+  var _super = _createSuper(PusherEncryptedPrivateChannel2);
+  function PusherEncryptedPrivateChannel2() {
+    _classCallCheck(this, PusherEncryptedPrivateChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(PusherEncryptedPrivateChannel2, [{
+    key: "whisper",
+    value: (
+      /**
+       * Send a whisper event to other clients in the channel.
+       */
+      function whisper(eventName, data) {
+        this.pusher.channels.channels[this.name].trigger("client-".concat(eventName), data);
+        return this;
+      }
+    )
+  }]);
+  return PusherEncryptedPrivateChannel2;
+}(PusherChannel);
+var PusherPresenceChannel = /* @__PURE__ */ function(_PusherChannel) {
+  _inherits(PusherPresenceChannel2, _PusherChannel);
+  var _super = _createSuper(PusherPresenceChannel2);
+  function PusherPresenceChannel2() {
+    _classCallCheck(this, PusherPresenceChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(PusherPresenceChannel2, [{
+    key: "here",
+    value: (
+      /**
+       * Register a callback to be called anytime the member list changes.
+       */
+      function here(callback) {
+        this.on("pusher:subscription_succeeded", function(data) {
+          callback(Object.keys(data.members).map(function(k2) {
+            return data.members[k2];
+          }));
+        });
+        return this;
+      }
+    )
+    /**
+     * Listen for someone joining the channel.
+     */
+  }, {
+    key: "joining",
+    value: function joining(callback) {
+      this.on("pusher:member_added", function(member) {
+        callback(member.info);
+      });
+      return this;
+    }
+    /**
+     * Send a whisper event to other clients in the channel.
+     */
+  }, {
+    key: "whisper",
+    value: function whisper(eventName, data) {
+      this.pusher.channels.channels[this.name].trigger("client-".concat(eventName), data);
+      return this;
+    }
+    /**
+     * Listen for someone leaving the channel.
+     */
+  }, {
+    key: "leaving",
+    value: function leaving(callback) {
+      this.on("pusher:member_removed", function(member) {
+        callback(member.info);
+      });
+      return this;
+    }
+  }]);
+  return PusherPresenceChannel2;
+}(PusherChannel);
+var SocketIoChannel = /* @__PURE__ */ function(_Channel) {
+  _inherits(SocketIoChannel2, _Channel);
+  var _super = _createSuper(SocketIoChannel2);
+  function SocketIoChannel2(socket, name2, options) {
+    var _this;
+    _classCallCheck(this, SocketIoChannel2);
+    _this = _super.call(this);
+    _this.events = {};
+    _this.listeners = {};
+    _this.name = name2;
+    _this.socket = socket;
+    _this.options = options;
+    _this.eventFormatter = new EventFormatter(_this.options.namespace);
+    _this.subscribe();
+    return _this;
+  }
+  _createClass(SocketIoChannel2, [{
+    key: "subscribe",
+    value: function subscribe() {
+      this.socket.emit("subscribe", {
+        channel: this.name,
+        auth: this.options.auth || {}
+      });
+    }
+    /**
+     * Unsubscribe from channel and ubind event callbacks.
+     */
+  }, {
+    key: "unsubscribe",
+    value: function unsubscribe() {
+      this.unbind();
+      this.socket.emit("unsubscribe", {
+        channel: this.name,
+        auth: this.options.auth || {}
+      });
+    }
+    /**
+     * Listen for an event on the channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(event, callback) {
+      this.on(this.eventFormatter.format(event), callback);
+      return this;
+    }
+    /**
+     * Stop listening for an event on the channel instance.
+     */
+  }, {
+    key: "stopListening",
+    value: function stopListening(event, callback) {
+      this.unbindEvent(this.eventFormatter.format(event), callback);
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime a subscription succeeds.
+     */
+  }, {
+    key: "subscribed",
+    value: function subscribed(callback) {
+      this.on("connect", function(socket) {
+        callback(socket);
+      });
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime an error occurs.
+     */
+  }, {
+    key: "error",
+    value: function error(callback) {
+      return this;
+    }
+    /**
+     * Bind the channel's socket to an event and store the callback.
+     */
+  }, {
+    key: "on",
+    value: function on(event, callback) {
+      var _this2 = this;
+      this.listeners[event] = this.listeners[event] || [];
+      if (!this.events[event]) {
+        this.events[event] = function(channel, data) {
+          if (_this2.name === channel && _this2.listeners[event]) {
+            _this2.listeners[event].forEach(function(cb) {
+              return cb(data);
+            });
+          }
+        };
+        this.socket.on(event, this.events[event]);
+      }
+      this.listeners[event].push(callback);
+      return this;
+    }
+    /**
+     * Unbind the channel's socket from all stored event callbacks.
+     */
+  }, {
+    key: "unbind",
+    value: function unbind() {
+      var _this3 = this;
+      Object.keys(this.events).forEach(function(event) {
+        _this3.unbindEvent(event);
+      });
+    }
+    /**
+     * Unbind the listeners for the given event.
+     */
+  }, {
+    key: "unbindEvent",
+    value: function unbindEvent(event, callback) {
+      this.listeners[event] = this.listeners[event] || [];
+      if (callback) {
+        this.listeners[event] = this.listeners[event].filter(function(cb) {
+          return cb !== callback;
+        });
+      }
+      if (!callback || this.listeners[event].length === 0) {
+        if (this.events[event]) {
+          this.socket.removeListener(event, this.events[event]);
+          delete this.events[event];
+        }
+        delete this.listeners[event];
+      }
+    }
+  }]);
+  return SocketIoChannel2;
+}(Channel);
+var SocketIoPrivateChannel = /* @__PURE__ */ function(_SocketIoChannel) {
+  _inherits(SocketIoPrivateChannel2, _SocketIoChannel);
+  var _super = _createSuper(SocketIoPrivateChannel2);
+  function SocketIoPrivateChannel2() {
+    _classCallCheck(this, SocketIoPrivateChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(SocketIoPrivateChannel2, [{
+    key: "whisper",
+    value: (
+      /**
+       * Send a whisper event to other clients in the channel.
+       */
+      function whisper(eventName, data) {
+        this.socket.emit("client event", {
+          channel: this.name,
+          event: "client-".concat(eventName),
+          data
+        });
+        return this;
+      }
+    )
+  }]);
+  return SocketIoPrivateChannel2;
+}(SocketIoChannel);
+var SocketIoPresenceChannel = /* @__PURE__ */ function(_SocketIoPrivateChann) {
+  _inherits(SocketIoPresenceChannel2, _SocketIoPrivateChann);
+  var _super = _createSuper(SocketIoPresenceChannel2);
+  function SocketIoPresenceChannel2() {
+    _classCallCheck(this, SocketIoPresenceChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(SocketIoPresenceChannel2, [{
+    key: "here",
+    value: (
+      /**
+       * Register a callback to be called anytime the member list changes.
+       */
+      function here(callback) {
+        this.on("presence:subscribed", function(members) {
+          callback(members.map(function(m2) {
+            return m2.user_info;
+          }));
+        });
+        return this;
+      }
+    )
+    /**
+     * Listen for someone joining the channel.
+     */
+  }, {
+    key: "joining",
+    value: function joining(callback) {
+      this.on("presence:joining", function(member) {
+        return callback(member.user_info);
+      });
+      return this;
+    }
+    /**
+     * Send a whisper event to other clients in the channel.
+     */
+  }, {
+    key: "whisper",
+    value: function whisper(eventName, data) {
+      this.socket.emit("client event", {
+        channel: this.name,
+        event: "client-".concat(eventName),
+        data
+      });
+      return this;
+    }
+    /**
+     * Listen for someone leaving the channel.
+     */
+  }, {
+    key: "leaving",
+    value: function leaving(callback) {
+      this.on("presence:leaving", function(member) {
+        return callback(member.user_info);
+      });
+      return this;
+    }
+  }]);
+  return SocketIoPresenceChannel2;
+}(SocketIoPrivateChannel);
+var NullChannel = /* @__PURE__ */ function(_Channel) {
+  _inherits(NullChannel2, _Channel);
+  var _super = _createSuper(NullChannel2);
+  function NullChannel2() {
+    _classCallCheck(this, NullChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(NullChannel2, [{
+    key: "subscribe",
+    value: (
+      /**
+       * Subscribe to a channel.
+       */
+      function subscribe() {
+      }
+    )
+    /**
+     * Unsubscribe from a channel.
+     */
+  }, {
+    key: "unsubscribe",
+    value: function unsubscribe() {
+    }
+    /**
+     * Listen for an event on the channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(event, callback) {
+      return this;
+    }
+    /**
+     * Listen for all events on the channel instance.
+     */
+  }, {
+    key: "listenToAll",
+    value: function listenToAll(callback) {
+      return this;
+    }
+    /**
+     * Stop listening for an event on the channel instance.
+     */
+  }, {
+    key: "stopListening",
+    value: function stopListening(event, callback) {
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime a subscription succeeds.
+     */
+  }, {
+    key: "subscribed",
+    value: function subscribed(callback) {
+      return this;
+    }
+    /**
+     * Register a callback to be called anytime an error occurs.
+     */
+  }, {
+    key: "error",
+    value: function error(callback) {
+      return this;
+    }
+    /**
+     * Bind a channel to an event.
+     */
+  }, {
+    key: "on",
+    value: function on(event, callback) {
+      return this;
+    }
+  }]);
+  return NullChannel2;
+}(Channel);
+var NullPrivateChannel = /* @__PURE__ */ function(_NullChannel) {
+  _inherits(NullPrivateChannel2, _NullChannel);
+  var _super = _createSuper(NullPrivateChannel2);
+  function NullPrivateChannel2() {
+    _classCallCheck(this, NullPrivateChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(NullPrivateChannel2, [{
+    key: "whisper",
+    value: (
+      /**
+       * Send a whisper event to other clients in the channel.
+       */
+      function whisper(eventName, data) {
+        return this;
+      }
+    )
+  }]);
+  return NullPrivateChannel2;
+}(NullChannel);
+var NullPresenceChannel = /* @__PURE__ */ function(_NullChannel) {
+  _inherits(NullPresenceChannel2, _NullChannel);
+  var _super = _createSuper(NullPresenceChannel2);
+  function NullPresenceChannel2() {
+    _classCallCheck(this, NullPresenceChannel2);
+    return _super.apply(this, arguments);
+  }
+  _createClass(NullPresenceChannel2, [{
+    key: "here",
+    value: (
+      /**
+       * Register a callback to be called anytime the member list changes.
+       */
+      function here(callback) {
+        return this;
+      }
+    )
+    /**
+     * Listen for someone joining the channel.
+     */
+  }, {
+    key: "joining",
+    value: function joining(callback) {
+      return this;
+    }
+    /**
+     * Send a whisper event to other clients in the channel.
+     */
+  }, {
+    key: "whisper",
+    value: function whisper(eventName, data) {
+      return this;
+    }
+    /**
+     * Listen for someone leaving the channel.
+     */
+  }, {
+    key: "leaving",
+    value: function leaving(callback) {
+      return this;
+    }
+  }]);
+  return NullPresenceChannel2;
+}(NullChannel);
+var Connector = /* @__PURE__ */ function() {
+  function Connector2(options) {
+    _classCallCheck(this, Connector2);
+    this._defaultOptions = {
+      auth: {
+        headers: {}
+      },
+      authEndpoint: "/broadcasting/auth",
+      userAuthentication: {
+        endpoint: "/broadcasting/user-auth",
+        headers: {}
+      },
+      broadcaster: "pusher",
+      csrfToken: null,
+      bearerToken: null,
+      host: null,
+      key: null,
+      namespace: "App.Events"
+    };
+    this.setOptions(options);
+    this.connect();
+  }
+  _createClass(Connector2, [{
+    key: "setOptions",
+    value: function setOptions(options) {
+      this.options = _extends(this._defaultOptions, options);
+      var token = this.csrfToken();
+      if (token) {
+        this.options.auth.headers["X-CSRF-TOKEN"] = token;
+        this.options.userAuthentication.headers["X-CSRF-TOKEN"] = token;
+      }
+      token = this.options.bearerToken;
+      if (token) {
+        this.options.auth.headers["Authorization"] = "Bearer " + token;
+        this.options.userAuthentication.headers["Authorization"] = "Bearer " + token;
+      }
+      return options;
+    }
+    /**
+     * Extract the CSRF token from the page.
+     */
+  }, {
+    key: "csrfToken",
+    value: function csrfToken() {
+      var selector;
+      if (typeof window !== "undefined" && window["Laravel"] && window["Laravel"].csrfToken) {
+        return window["Laravel"].csrfToken;
+      } else if (this.options.csrfToken) {
+        return this.options.csrfToken;
+      } else if (typeof document !== "undefined" && typeof document.querySelector === "function" && (selector = document.querySelector('meta[name="csrf-token"]'))) {
+        return selector.getAttribute("content");
+      }
+      return null;
+    }
+  }]);
+  return Connector2;
+}();
+var PusherConnector = /* @__PURE__ */ function(_Connector) {
+  _inherits(PusherConnector2, _Connector);
+  var _super = _createSuper(PusherConnector2);
+  function PusherConnector2() {
+    var _this;
+    _classCallCheck(this, PusherConnector2);
+    _this = _super.apply(this, arguments);
+    _this.channels = {};
+    return _this;
+  }
+  _createClass(PusherConnector2, [{
+    key: "connect",
+    value: function connect() {
+      if (typeof this.options.client !== "undefined") {
+        this.pusher = this.options.client;
+      } else if (this.options.Pusher) {
+        this.pusher = new this.options.Pusher(this.options.key, this.options);
+      } else {
+        this.pusher = new Pusher(this.options.key, this.options);
+      }
+    }
+    /**
+     * Sign in the user via Pusher user authentication (https://pusher.com/docs/channels/using_channels/user-authentication/).
+     */
+  }, {
+    key: "signin",
+    value: function signin() {
+      this.pusher.signin();
+    }
+    /**
+     * Listen for an event on a channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(name2, event, callback) {
+      return this.channel(name2).listen(event, callback);
+    }
+    /**
+     * Get a channel instance by name.
+     */
+  }, {
+    key: "channel",
+    value: function channel(name2) {
+      if (!this.channels[name2]) {
+        this.channels[name2] = new PusherChannel(this.pusher, name2, this.options);
+      }
+      return this.channels[name2];
+    }
+    /**
+     * Get a private channel instance by name.
+     */
+  }, {
+    key: "privateChannel",
+    value: function privateChannel(name2) {
+      if (!this.channels["private-" + name2]) {
+        this.channels["private-" + name2] = new PusherPrivateChannel(this.pusher, "private-" + name2, this.options);
+      }
+      return this.channels["private-" + name2];
+    }
+    /**
+     * Get a private encrypted channel instance by name.
+     */
+  }, {
+    key: "encryptedPrivateChannel",
+    value: function encryptedPrivateChannel(name2) {
+      if (!this.channels["private-encrypted-" + name2]) {
+        this.channels["private-encrypted-" + name2] = new PusherEncryptedPrivateChannel(this.pusher, "private-encrypted-" + name2, this.options);
+      }
+      return this.channels["private-encrypted-" + name2];
+    }
+    /**
+     * Get a presence channel instance by name.
+     */
+  }, {
+    key: "presenceChannel",
+    value: function presenceChannel(name2) {
+      if (!this.channels["presence-" + name2]) {
+        this.channels["presence-" + name2] = new PusherPresenceChannel(this.pusher, "presence-" + name2, this.options);
+      }
+      return this.channels["presence-" + name2];
+    }
+    /**
+     * Leave the given channel, as well as its private and presence variants.
+     */
+  }, {
+    key: "leave",
+    value: function leave(name2) {
+      var _this2 = this;
+      var channels = [name2, "private-" + name2, "private-encrypted-" + name2, "presence-" + name2];
+      channels.forEach(function(name3, index) {
+        _this2.leaveChannel(name3);
+      });
+    }
+    /**
+     * Leave the given channel.
+     */
+  }, {
+    key: "leaveChannel",
+    value: function leaveChannel(name2) {
+      if (this.channels[name2]) {
+        this.channels[name2].unsubscribe();
+        delete this.channels[name2];
+      }
+    }
+    /**
+     * Get the socket ID for the connection.
+     */
+  }, {
+    key: "socketId",
+    value: function socketId() {
+      return this.pusher.connection.socket_id;
+    }
+    /**
+     * Disconnect Pusher connection.
+     */
+  }, {
+    key: "disconnect",
+    value: function disconnect() {
+      this.pusher.disconnect();
+    }
+  }]);
+  return PusherConnector2;
+}(Connector);
+var SocketIoConnector = /* @__PURE__ */ function(_Connector) {
+  _inherits(SocketIoConnector2, _Connector);
+  var _super = _createSuper(SocketIoConnector2);
+  function SocketIoConnector2() {
+    var _this;
+    _classCallCheck(this, SocketIoConnector2);
+    _this = _super.apply(this, arguments);
+    _this.channels = {};
+    return _this;
+  }
+  _createClass(SocketIoConnector2, [{
+    key: "connect",
+    value: function connect() {
+      var _this2 = this;
+      var io2 = this.getSocketIO();
+      this.socket = io2(this.options.host, this.options);
+      this.socket.on("reconnect", function() {
+        Object.values(_this2.channels).forEach(function(channel) {
+          channel.subscribe();
+        });
+      });
+      return this.socket;
+    }
+    /**
+     * Get socket.io module from global scope or options.
+     */
+  }, {
+    key: "getSocketIO",
+    value: function getSocketIO() {
+      if (typeof this.options.client !== "undefined") {
+        return this.options.client;
+      }
+      if (typeof io !== "undefined") {
+        return io;
+      }
+      throw new Error("Socket.io client not found. Should be globally available or passed via options.client");
+    }
+    /**
+     * Listen for an event on a channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(name2, event, callback) {
+      return this.channel(name2).listen(event, callback);
+    }
+    /**
+     * Get a channel instance by name.
+     */
+  }, {
+    key: "channel",
+    value: function channel(name2) {
+      if (!this.channels[name2]) {
+        this.channels[name2] = new SocketIoChannel(this.socket, name2, this.options);
+      }
+      return this.channels[name2];
+    }
+    /**
+     * Get a private channel instance by name.
+     */
+  }, {
+    key: "privateChannel",
+    value: function privateChannel(name2) {
+      if (!this.channels["private-" + name2]) {
+        this.channels["private-" + name2] = new SocketIoPrivateChannel(this.socket, "private-" + name2, this.options);
+      }
+      return this.channels["private-" + name2];
+    }
+    /**
+     * Get a presence channel instance by name.
+     */
+  }, {
+    key: "presenceChannel",
+    value: function presenceChannel(name2) {
+      if (!this.channels["presence-" + name2]) {
+        this.channels["presence-" + name2] = new SocketIoPresenceChannel(this.socket, "presence-" + name2, this.options);
+      }
+      return this.channels["presence-" + name2];
+    }
+    /**
+     * Leave the given channel, as well as its private and presence variants.
+     */
+  }, {
+    key: "leave",
+    value: function leave(name2) {
+      var _this3 = this;
+      var channels = [name2, "private-" + name2, "presence-" + name2];
+      channels.forEach(function(name3) {
+        _this3.leaveChannel(name3);
+      });
+    }
+    /**
+     * Leave the given channel.
+     */
+  }, {
+    key: "leaveChannel",
+    value: function leaveChannel(name2) {
+      if (this.channels[name2]) {
+        this.channels[name2].unsubscribe();
+        delete this.channels[name2];
+      }
+    }
+    /**
+     * Get the socket ID for the connection.
+     */
+  }, {
+    key: "socketId",
+    value: function socketId() {
+      return this.socket.id;
+    }
+    /**
+     * Disconnect Socketio connection.
+     */
+  }, {
+    key: "disconnect",
+    value: function disconnect() {
+      this.socket.disconnect();
+    }
+  }]);
+  return SocketIoConnector2;
+}(Connector);
+var NullConnector = /* @__PURE__ */ function(_Connector) {
+  _inherits(NullConnector2, _Connector);
+  var _super = _createSuper(NullConnector2);
+  function NullConnector2() {
+    var _this;
+    _classCallCheck(this, NullConnector2);
+    _this = _super.apply(this, arguments);
+    _this.channels = {};
+    return _this;
+  }
+  _createClass(NullConnector2, [{
+    key: "connect",
+    value: function connect() {
+    }
+    /**
+     * Listen for an event on a channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(name2, event, callback) {
+      return new NullChannel();
+    }
+    /**
+     * Get a channel instance by name.
+     */
+  }, {
+    key: "channel",
+    value: function channel(name2) {
+      return new NullChannel();
+    }
+    /**
+     * Get a private channel instance by name.
+     */
+  }, {
+    key: "privateChannel",
+    value: function privateChannel(name2) {
+      return new NullPrivateChannel();
+    }
+    /**
+     * Get a private encrypted channel instance by name.
+     */
+  }, {
+    key: "encryptedPrivateChannel",
+    value: function encryptedPrivateChannel(name2) {
+      return new NullPrivateChannel();
+    }
+    /**
+     * Get a presence channel instance by name.
+     */
+  }, {
+    key: "presenceChannel",
+    value: function presenceChannel(name2) {
+      return new NullPresenceChannel();
+    }
+    /**
+     * Leave the given channel, as well as its private and presence variants.
+     */
+  }, {
+    key: "leave",
+    value: function leave(name2) {
+    }
+    /**
+     * Leave the given channel.
+     */
+  }, {
+    key: "leaveChannel",
+    value: function leaveChannel(name2) {
+    }
+    /**
+     * Get the socket ID for the connection.
+     */
+  }, {
+    key: "socketId",
+    value: function socketId() {
+      return "fake-socket-id";
+    }
+    /**
+     * Disconnect the connection.
+     */
+  }, {
+    key: "disconnect",
+    value: function disconnect() {
+    }
+  }]);
+  return NullConnector2;
+}(Connector);
+var Echo = /* @__PURE__ */ function() {
+  function Echo2(options) {
+    _classCallCheck(this, Echo2);
+    this.options = options;
+    this.connect();
+    if (!this.options.withoutInterceptors) {
+      this.registerInterceptors();
+    }
+  }
+  _createClass(Echo2, [{
+    key: "channel",
+    value: function channel(_channel) {
+      return this.connector.channel(_channel);
+    }
+    /**
+     * Create a new connection.
+     */
+  }, {
+    key: "connect",
+    value: function connect() {
+      if (this.options.broadcaster == "reverb") {
+        this.connector = new PusherConnector(_extends(_extends({}, this.options), {
+          cluster: ""
+        }));
+      } else if (this.options.broadcaster == "pusher") {
+        this.connector = new PusherConnector(this.options);
+      } else if (this.options.broadcaster == "socket.io") {
+        this.connector = new SocketIoConnector(this.options);
+      } else if (this.options.broadcaster == "null") {
+        this.connector = new NullConnector(this.options);
+      } else if (typeof this.options.broadcaster == "function") {
+        this.connector = new this.options.broadcaster(this.options);
+      } else {
+        throw new Error("Broadcaster ".concat(_typeof(this.options.broadcaster), " ").concat(this.options.broadcaster, " is not supported."));
+      }
+    }
+    /**
+     * Disconnect from the Echo server.
+     */
+  }, {
+    key: "disconnect",
+    value: function disconnect() {
+      this.connector.disconnect();
+    }
+    /**
+     * Get a presence channel instance by name.
+     */
+  }, {
+    key: "join",
+    value: function join(channel) {
+      return this.connector.presenceChannel(channel);
+    }
+    /**
+     * Leave the given channel, as well as its private and presence variants.
+     */
+  }, {
+    key: "leave",
+    value: function leave(channel) {
+      this.connector.leave(channel);
+    }
+    /**
+     * Leave the given channel.
+     */
+  }, {
+    key: "leaveChannel",
+    value: function leaveChannel(channel) {
+      this.connector.leaveChannel(channel);
+    }
+    /**
+     * Leave all channels.
+     */
+  }, {
+    key: "leaveAllChannels",
+    value: function leaveAllChannels() {
+      for (var channel in this.connector.channels) {
+        this.leaveChannel(channel);
+      }
+    }
+    /**
+     * Listen for an event on a channel instance.
+     */
+  }, {
+    key: "listen",
+    value: function listen(channel, event, callback) {
+      return this.connector.listen(channel, event, callback);
+    }
+    /**
+     * Get a private channel instance by name.
+     */
+  }, {
+    key: "private",
+    value: function _private(channel) {
+      return this.connector.privateChannel(channel);
+    }
+    /**
+     * Get a private encrypted channel instance by name.
+     */
+  }, {
+    key: "encryptedPrivate",
+    value: function encryptedPrivate(channel) {
+      return this.connector.encryptedPrivateChannel(channel);
+    }
+    /**
+     * Get the Socket ID for the connection.
+     */
+  }, {
+    key: "socketId",
+    value: function socketId() {
+      return this.connector.socketId();
+    }
+    /**
+     * Register 3rd party request interceptiors. These are used to automatically
+     * send a connections socket id to a Laravel app with a X-Socket-Id header.
+     */
+  }, {
+    key: "registerInterceptors",
+    value: function registerInterceptors() {
+      if (typeof Vue === "function" && Vue.http) {
+        this.registerVueRequestInterceptor();
+      }
+      if (typeof axios === "function") {
+        this.registerAxiosRequestInterceptor();
+      }
+      if (typeof jQuery === "function") {
+        this.registerjQueryAjaxSetup();
+      }
+      if ((typeof Turbo === "undefined" ? "undefined" : _typeof(Turbo)) === "object") {
+        this.registerTurboRequestInterceptor();
+      }
+    }
+    /**
+     * Register a Vue HTTP interceptor to add the X-Socket-ID header.
+     */
+  }, {
+    key: "registerVueRequestInterceptor",
+    value: function registerVueRequestInterceptor() {
+      var _this = this;
+      Vue.http.interceptors.push(function(request2, next) {
+        if (_this.socketId()) {
+          request2.headers.set("X-Socket-ID", _this.socketId());
+        }
+        next();
+      });
+    }
+    /**
+     * Register an Axios HTTP interceptor to add the X-Socket-ID header.
+     */
+  }, {
+    key: "registerAxiosRequestInterceptor",
+    value: function registerAxiosRequestInterceptor() {
+      var _this2 = this;
+      axios.interceptors.request.use(function(config) {
+        if (_this2.socketId()) {
+          config.headers["X-Socket-Id"] = _this2.socketId();
+        }
+        return config;
+      });
+    }
+    /**
+     * Register jQuery AjaxPrefilter to add the X-Socket-ID header.
+     */
+  }, {
+    key: "registerjQueryAjaxSetup",
+    value: function registerjQueryAjaxSetup() {
+      var _this3 = this;
+      if (typeof jQuery.ajax != "undefined") {
+        jQuery.ajaxPrefilter(function(options, originalOptions, xhr2) {
+          if (_this3.socketId()) {
+            xhr2.setRequestHeader("X-Socket-Id", _this3.socketId());
+          }
+        });
+      }
+    }
+    /**
+     * Register the Turbo Request interceptor to add the X-Socket-ID header.
+     */
+  }, {
+    key: "registerTurboRequestInterceptor",
+    value: function registerTurboRequestInterceptor() {
+      var _this4 = this;
+      document.addEventListener("turbo:before-fetch-request", function(event) {
+        event.detail.fetchOptions.headers["X-Socket-Id"] = _this4.socketId();
+      });
+    }
+  }]);
+  return Echo2;
+}();
+var pusher = { exports: {} };
+/*!
+ * Pusher JavaScript Library v8.4.0-rc2
+ * https://pusher.com/
+ *
+ * Copyright 2020, Pusher
+ * Released under the MIT licence.
+ */
+(function(module, exports) {
+  (function webpackUniversalModuleDefinition(root, factory) {
+    module.exports = factory();
+  })(window, function() {
+    return (
+      /******/
+      function(modules) {
+        var installedModules = {};
+        function __webpack_require__(moduleId) {
+          if (installedModules[moduleId]) {
+            return installedModules[moduleId].exports;
+          }
+          var module2 = installedModules[moduleId] = {
+            /******/
+            i: moduleId,
+            /******/
+            l: false,
+            /******/
+            exports: {}
+            /******/
+          };
+          modules[moduleId].call(module2.exports, module2, module2.exports, __webpack_require__);
+          module2.l = true;
+          return module2.exports;
+        }
+        __webpack_require__.m = modules;
+        __webpack_require__.c = installedModules;
+        __webpack_require__.d = function(exports2, name2, getter) {
+          if (!__webpack_require__.o(exports2, name2)) {
+            Object.defineProperty(exports2, name2, { enumerable: true, get: getter });
+          }
+        };
+        __webpack_require__.r = function(exports2) {
+          if (typeof Symbol !== "undefined" && Symbol.toStringTag) {
+            Object.defineProperty(exports2, Symbol.toStringTag, { value: "Module" });
+          }
+          Object.defineProperty(exports2, "__esModule", { value: true });
+        };
+        __webpack_require__.t = function(value, mode) {
+          if (mode & 1) value = __webpack_require__(value);
+          if (mode & 8) return value;
+          if (mode & 4 && typeof value === "object" && value && value.__esModule) return value;
+          var ns = /* @__PURE__ */ Object.create(null);
+          __webpack_require__.r(ns);
+          Object.defineProperty(ns, "default", { enumerable: true, value });
+          if (mode & 2 && typeof value != "string") for (var key in value) __webpack_require__.d(ns, key, (function(key2) {
+            return value[key2];
+          }).bind(null, key));
+          return ns;
+        };
+        __webpack_require__.n = function(module2) {
+          var getter = module2 && module2.__esModule ? (
+            /******/
+            function getDefault() {
+              return module2["default"];
+            }
+          ) : (
+            /******/
+            function getModuleExports() {
+              return module2;
+            }
+          );
+          __webpack_require__.d(getter, "a", getter);
+          return getter;
+        };
+        __webpack_require__.o = function(object, property) {
+          return Object.prototype.hasOwnProperty.call(object, property);
+        };
+        __webpack_require__.p = "";
+        return __webpack_require__(__webpack_require__.s = 2);
+      }([
+        /* 0 */
+        /***/
+        function(module2, exports2, __webpack_require__) {
+          var __extends = this && this.__extends || /* @__PURE__ */ function() {
+            var extendStatics = function(d2, b2) {
+              extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b3) {
+                d3.__proto__ = b3;
+              } || function(d3, b3) {
+                for (var p2 in b3) if (b3.hasOwnProperty(p2)) d3[p2] = b3[p2];
+              };
+              return extendStatics(d2, b2);
+            };
+            return function(d2, b2) {
+              extendStatics(d2, b2);
+              function __() {
+                this.constructor = d2;
+              }
+              d2.prototype = b2 === null ? Object.create(b2) : (__.prototype = b2.prototype, new __());
+            };
+          }();
+          Object.defineProperty(exports2, "__esModule", { value: true });
+          var INVALID_BYTE = 256;
+          var Coder = (
+            /** @class */
+            function() {
+              function Coder2(_paddingCharacter) {
+                if (_paddingCharacter === void 0) {
+                  _paddingCharacter = "=";
+                }
+                this._paddingCharacter = _paddingCharacter;
+              }
+              Coder2.prototype.encodedLength = function(length) {
+                if (!this._paddingCharacter) {
+                  return (length * 8 + 5) / 6 | 0;
+                }
+                return (length + 2) / 3 * 4 | 0;
+              };
+              Coder2.prototype.encode = function(data) {
+                var out = "";
+                var i2 = 0;
+                for (; i2 < data.length - 2; i2 += 3) {
+                  var c2 = data[i2] << 16 | data[i2 + 1] << 8 | data[i2 + 2];
+                  out += this._encodeByte(c2 >>> 3 * 6 & 63);
+                  out += this._encodeByte(c2 >>> 2 * 6 & 63);
+                  out += this._encodeByte(c2 >>> 1 * 6 & 63);
+                  out += this._encodeByte(c2 >>> 0 * 6 & 63);
+                }
+                var left = data.length - i2;
+                if (left > 0) {
+                  var c2 = data[i2] << 16 | (left === 2 ? data[i2 + 1] << 8 : 0);
+                  out += this._encodeByte(c2 >>> 3 * 6 & 63);
+                  out += this._encodeByte(c2 >>> 2 * 6 & 63);
+                  if (left === 2) {
+                    out += this._encodeByte(c2 >>> 1 * 6 & 63);
+                  } else {
+                    out += this._paddingCharacter || "";
+                  }
+                  out += this._paddingCharacter || "";
+                }
+                return out;
+              };
+              Coder2.prototype.maxDecodedLength = function(length) {
+                if (!this._paddingCharacter) {
+                  return (length * 6 + 7) / 8 | 0;
+                }
+                return length / 4 * 3 | 0;
+              };
+              Coder2.prototype.decodedLength = function(s2) {
+                return this.maxDecodedLength(s2.length - this._getPaddingLength(s2));
+              };
+              Coder2.prototype.decode = function(s2) {
+                if (s2.length === 0) {
+                  return new Uint8Array(0);
+                }
+                var paddingLength = this._getPaddingLength(s2);
+                var length = s2.length - paddingLength;
+                var out = new Uint8Array(this.maxDecodedLength(length));
+                var op = 0;
+                var i2 = 0;
+                var haveBad = 0;
+                var v0 = 0, v1 = 0, v2 = 0, v3 = 0;
+                for (; i2 < length - 4; i2 += 4) {
+                  v0 = this._decodeChar(s2.charCodeAt(i2 + 0));
+                  v1 = this._decodeChar(s2.charCodeAt(i2 + 1));
+                  v2 = this._decodeChar(s2.charCodeAt(i2 + 2));
+                  v3 = this._decodeChar(s2.charCodeAt(i2 + 3));
+                  out[op++] = v0 << 2 | v1 >>> 4;
+                  out[op++] = v1 << 4 | v2 >>> 2;
+                  out[op++] = v2 << 6 | v3;
+                  haveBad |= v0 & INVALID_BYTE;
+                  haveBad |= v1 & INVALID_BYTE;
+                  haveBad |= v2 & INVALID_BYTE;
+                  haveBad |= v3 & INVALID_BYTE;
+                }
+                if (i2 < length - 1) {
+                  v0 = this._decodeChar(s2.charCodeAt(i2));
+                  v1 = this._decodeChar(s2.charCodeAt(i2 + 1));
+                  out[op++] = v0 << 2 | v1 >>> 4;
+                  haveBad |= v0 & INVALID_BYTE;
+                  haveBad |= v1 & INVALID_BYTE;
+                }
+                if (i2 < length - 2) {
+                  v2 = this._decodeChar(s2.charCodeAt(i2 + 2));
+                  out[op++] = v1 << 4 | v2 >>> 2;
+                  haveBad |= v2 & INVALID_BYTE;
+                }
+                if (i2 < length - 3) {
+                  v3 = this._decodeChar(s2.charCodeAt(i2 + 3));
+                  out[op++] = v2 << 6 | v3;
+                  haveBad |= v3 & INVALID_BYTE;
+                }
+                if (haveBad !== 0) {
+                  throw new Error("Base64Coder: incorrect characters for decoding");
+                }
+                return out;
+              };
+              Coder2.prototype._encodeByte = function(b2) {
+                var result = b2;
+                result += 65;
+                result += 25 - b2 >>> 8 & 0 - 65 - 26 + 97;
+                result += 51 - b2 >>> 8 & 26 - 97 - 52 + 48;
+                result += 61 - b2 >>> 8 & 52 - 48 - 62 + 43;
+                result += 62 - b2 >>> 8 & 62 - 43 - 63 + 47;
+                return String.fromCharCode(result);
+              };
+              Coder2.prototype._decodeChar = function(c2) {
+                var result = INVALID_BYTE;
+                result += (42 - c2 & c2 - 44) >>> 8 & -INVALID_BYTE + c2 - 43 + 62;
+                result += (46 - c2 & c2 - 48) >>> 8 & -INVALID_BYTE + c2 - 47 + 63;
+                result += (47 - c2 & c2 - 58) >>> 8 & -INVALID_BYTE + c2 - 48 + 52;
+                result += (64 - c2 & c2 - 91) >>> 8 & -INVALID_BYTE + c2 - 65 + 0;
+                result += (96 - c2 & c2 - 123) >>> 8 & -INVALID_BYTE + c2 - 97 + 26;
+                return result;
+              };
+              Coder2.prototype._getPaddingLength = function(s2) {
+                var paddingLength = 0;
+                if (this._paddingCharacter) {
+                  for (var i2 = s2.length - 1; i2 >= 0; i2--) {
+                    if (s2[i2] !== this._paddingCharacter) {
+                      break;
+                    }
+                    paddingLength++;
+                  }
+                  if (s2.length < 4 || paddingLength > 2) {
+                    throw new Error("Base64Coder: incorrect padding");
+                  }
+                }
+                return paddingLength;
+              };
+              return Coder2;
+            }()
+          );
+          exports2.Coder = Coder;
+          var stdCoder = new Coder();
+          function encode3(data) {
+            return stdCoder.encode(data);
+          }
+          exports2.encode = encode3;
+          function decode2(s2) {
+            return stdCoder.decode(s2);
+          }
+          exports2.decode = decode2;
+          var URLSafeCoder = (
+            /** @class */
+            function(_super) {
+              __extends(URLSafeCoder2, _super);
+              function URLSafeCoder2() {
+                return _super !== null && _super.apply(this, arguments) || this;
+              }
+              URLSafeCoder2.prototype._encodeByte = function(b2) {
+                var result = b2;
+                result += 65;
+                result += 25 - b2 >>> 8 & 0 - 65 - 26 + 97;
+                result += 51 - b2 >>> 8 & 26 - 97 - 52 + 48;
+                result += 61 - b2 >>> 8 & 52 - 48 - 62 + 45;
+                result += 62 - b2 >>> 8 & 62 - 45 - 63 + 95;
+                return String.fromCharCode(result);
+              };
+              URLSafeCoder2.prototype._decodeChar = function(c2) {
+                var result = INVALID_BYTE;
+                result += (44 - c2 & c2 - 46) >>> 8 & -INVALID_BYTE + c2 - 45 + 62;
+                result += (94 - c2 & c2 - 96) >>> 8 & -INVALID_BYTE + c2 - 95 + 63;
+                result += (47 - c2 & c2 - 58) >>> 8 & -INVALID_BYTE + c2 - 48 + 52;
+                result += (64 - c2 & c2 - 91) >>> 8 & -INVALID_BYTE + c2 - 65 + 0;
+                result += (96 - c2 & c2 - 123) >>> 8 & -INVALID_BYTE + c2 - 97 + 26;
+                return result;
+              };
+              return URLSafeCoder2;
+            }(Coder)
+          );
+          exports2.URLSafeCoder = URLSafeCoder;
+          var urlSafeCoder = new URLSafeCoder();
+          function encodeURLSafe(data) {
+            return urlSafeCoder.encode(data);
+          }
+          exports2.encodeURLSafe = encodeURLSafe;
+          function decodeURLSafe(s2) {
+            return urlSafeCoder.decode(s2);
+          }
+          exports2.decodeURLSafe = decodeURLSafe;
+          exports2.encodedLength = function(length) {
+            return stdCoder.encodedLength(length);
+          };
+          exports2.maxDecodedLength = function(length) {
+            return stdCoder.maxDecodedLength(length);
+          };
+          exports2.decodedLength = function(s2) {
+            return stdCoder.decodedLength(s2);
+          };
+        },
+        /* 1 */
+        /***/
+        function(module2, exports2, __webpack_require__) {
+          Object.defineProperty(exports2, "__esModule", { value: true });
+          var INVALID_UTF16 = "utf8: invalid string";
+          var INVALID_UTF8 = "utf8: invalid source encoding";
+          function encode3(s2) {
+            var arr = new Uint8Array(encodedLength(s2));
+            var pos = 0;
+            for (var i2 = 0; i2 < s2.length; i2++) {
+              var c2 = s2.charCodeAt(i2);
+              if (c2 < 128) {
+                arr[pos++] = c2;
+              } else if (c2 < 2048) {
+                arr[pos++] = 192 | c2 >> 6;
+                arr[pos++] = 128 | c2 & 63;
+              } else if (c2 < 55296) {
+                arr[pos++] = 224 | c2 >> 12;
+                arr[pos++] = 128 | c2 >> 6 & 63;
+                arr[pos++] = 128 | c2 & 63;
+              } else {
+                i2++;
+                c2 = (c2 & 1023) << 10;
+                c2 |= s2.charCodeAt(i2) & 1023;
+                c2 += 65536;
+                arr[pos++] = 240 | c2 >> 18;
+                arr[pos++] = 128 | c2 >> 12 & 63;
+                arr[pos++] = 128 | c2 >> 6 & 63;
+                arr[pos++] = 128 | c2 & 63;
+              }
+            }
+            return arr;
+          }
+          exports2.encode = encode3;
+          function encodedLength(s2) {
+            var result = 0;
+            for (var i2 = 0; i2 < s2.length; i2++) {
+              var c2 = s2.charCodeAt(i2);
+              if (c2 < 128) {
+                result += 1;
+              } else if (c2 < 2048) {
+                result += 2;
+              } else if (c2 < 55296) {
+                result += 3;
+              } else if (c2 <= 57343) {
+                if (i2 >= s2.length - 1) {
+                  throw new Error(INVALID_UTF16);
+                }
+                i2++;
+                result += 4;
+              } else {
+                throw new Error(INVALID_UTF16);
+              }
+            }
+            return result;
+          }
+          exports2.encodedLength = encodedLength;
+          function decode2(arr) {
+            var chars = [];
+            for (var i2 = 0; i2 < arr.length; i2++) {
+              var b2 = arr[i2];
+              if (b2 & 128) {
+                var min = void 0;
+                if (b2 < 224) {
+                  if (i2 >= arr.length) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  var n1 = arr[++i2];
+                  if ((n1 & 192) !== 128) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  b2 = (b2 & 31) << 6 | n1 & 63;
+                  min = 128;
+                } else if (b2 < 240) {
+                  if (i2 >= arr.length - 1) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  var n1 = arr[++i2];
+                  var n2 = arr[++i2];
+                  if ((n1 & 192) !== 128 || (n2 & 192) !== 128) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  b2 = (b2 & 15) << 12 | (n1 & 63) << 6 | n2 & 63;
+                  min = 2048;
+                } else if (b2 < 248) {
+                  if (i2 >= arr.length - 2) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  var n1 = arr[++i2];
+                  var n2 = arr[++i2];
+                  var n3 = arr[++i2];
+                  if ((n1 & 192) !== 128 || (n2 & 192) !== 128 || (n3 & 192) !== 128) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  b2 = (b2 & 15) << 18 | (n1 & 63) << 12 | (n2 & 63) << 6 | n3 & 63;
+                  min = 65536;
+                } else {
+                  throw new Error(INVALID_UTF8);
+                }
+                if (b2 < min || b2 >= 55296 && b2 <= 57343) {
+                  throw new Error(INVALID_UTF8);
+                }
+                if (b2 >= 65536) {
+                  if (b2 > 1114111) {
+                    throw new Error(INVALID_UTF8);
+                  }
+                  b2 -= 65536;
+                  chars.push(String.fromCharCode(55296 | b2 >> 10));
+                  b2 = 56320 | b2 & 1023;
+                }
+              }
+              chars.push(String.fromCharCode(b2));
+            }
+            return chars.join("");
+          }
+          exports2.decode = decode2;
+        },
+        /* 2 */
+        /***/
+        function(module2, exports2, __webpack_require__) {
+          module2.exports = __webpack_require__(3).default;
+        },
+        /* 3 */
+        /***/
+        function(module2, __webpack_exports__, __webpack_require__) {
+          __webpack_require__.r(__webpack_exports__);
+          class ScriptReceiverFactory {
+            constructor(prefix2, name2) {
+              this.lastId = 0;
+              this.prefix = prefix2;
+              this.name = name2;
+            }
+            create(callback) {
+              this.lastId++;
+              var number = this.lastId;
+              var id = this.prefix + number;
+              var name2 = this.name + "[" + number + "]";
+              var called = false;
+              var callbackWrapper = function() {
+                if (!called) {
+                  callback.apply(null, arguments);
+                  called = true;
+                }
+              };
+              this[number] = callbackWrapper;
+              return { number, id, name: name2, callback: callbackWrapper };
+            }
+            remove(receiver) {
+              delete this[receiver.number];
+            }
+          }
+          var ScriptReceivers = new ScriptReceiverFactory("_pusher_script_", "Pusher.ScriptReceivers");
+          var Defaults = {
+            VERSION: "8.4.0-rc2",
+            PROTOCOL: 7,
+            wsPort: 80,
+            wssPort: 443,
+            wsPath: "",
+            httpHost: "sockjs.pusher.com",
+            httpPort: 80,
+            httpsPort: 443,
+            httpPath: "/pusher",
+            stats_host: "stats.pusher.com",
+            authEndpoint: "/pusher/auth",
+            authTransport: "ajax",
+            activityTimeout: 12e4,
+            pongTimeout: 3e4,
+            unavailableTimeout: 1e4,
+            userAuthentication: {
+              endpoint: "/pusher/user-auth",
+              transport: "ajax"
+            },
+            channelAuthorization: {
+              endpoint: "/pusher/auth",
+              transport: "ajax"
+            },
+            cdn_http: "http://js.pusher.com",
+            cdn_https: "https://js.pusher.com",
+            dependency_suffix: ""
+          };
+          var defaults2 = Defaults;
+          class dependency_loader_DependencyLoader {
+            constructor(options) {
+              this.options = options;
+              this.receivers = options.receivers || ScriptReceivers;
+              this.loading = {};
+            }
+            load(name2, options, callback) {
+              var self2 = this;
+              if (self2.loading[name2] && self2.loading[name2].length > 0) {
+                self2.loading[name2].push(callback);
+              } else {
+                self2.loading[name2] = [callback];
+                var request2 = runtime.createScriptRequest(self2.getPath(name2, options));
+                var receiver = self2.receivers.create(function(error) {
+                  self2.receivers.remove(receiver);
+                  if (self2.loading[name2]) {
+                    var callbacks = self2.loading[name2];
+                    delete self2.loading[name2];
+                    var successCallback = function(wasSuccessful) {
+                      if (!wasSuccessful) {
+                        request2.cleanup();
+                      }
+                    };
+                    for (var i2 = 0; i2 < callbacks.length; i2++) {
+                      callbacks[i2](error, successCallback);
+                    }
+                  }
+                });
+                request2.send(receiver);
+              }
+            }
+            getRoot(options) {
+              var cdn;
+              var protocol = runtime.getDocument().location.protocol;
+              if (options && options.useTLS || protocol === "https:") {
+                cdn = this.options.cdn_https;
+              } else {
+                cdn = this.options.cdn_http;
+              }
+              return cdn.replace(/\/*$/, "") + "/" + this.options.version;
+            }
+            getPath(name2, options) {
+              return this.getRoot(options) + "/" + name2 + this.options.suffix + ".js";
+            }
+          }
+          var DependenciesReceivers = new ScriptReceiverFactory("_pusher_dependencies", "Pusher.DependenciesReceivers");
+          var Dependencies = new dependency_loader_DependencyLoader({
+            cdn_http: defaults2.cdn_http,
+            cdn_https: defaults2.cdn_https,
+            version: defaults2.VERSION,
+            suffix: defaults2.dependency_suffix,
+            receivers: DependenciesReceivers
+          });
+          const urlStore = {
+            baseUrl: "https://pusher.com",
+            urls: {
+              authenticationEndpoint: {
+                path: "/docs/channels/server_api/authenticating_users"
+              },
+              authorizationEndpoint: {
+                path: "/docs/channels/server_api/authorizing-users/"
+              },
+              javascriptQuickStart: {
+                path: "/docs/javascript_quick_start"
+              },
+              triggeringClientEvents: {
+                path: "/docs/client_api_guide/client_events#trigger-events"
+              },
+              encryptedChannelSupport: {
+                fullUrl: "https://github.com/pusher/pusher-js/tree/cc491015371a4bde5743d1c87a0fbac0feb53195#encrypted-channel-support"
+              }
+            }
+          };
+          const buildLogSuffix = function(key) {
+            const urlPrefix = "See:";
+            const urlObj = urlStore.urls[key];
+            if (!urlObj)
+              return "";
+            let url;
+            if (urlObj.fullUrl) {
+              url = urlObj.fullUrl;
+            } else if (urlObj.path) {
+              url = urlStore.baseUrl + urlObj.path;
+            }
+            if (!url)
+              return "";
+            return `${urlPrefix} ${url}`;
+          };
+          var url_store = { buildLogSuffix };
+          var AuthRequestType;
+          (function(AuthRequestType2) {
+            AuthRequestType2["UserAuthentication"] = "user-authentication";
+            AuthRequestType2["ChannelAuthorization"] = "channel-authorization";
+          })(AuthRequestType || (AuthRequestType = {}));
+          class BadEventName extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class BadChannelName extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class RequestTimedOut extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class TransportPriorityTooLow extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class TransportClosed extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class UnsupportedFeature extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class UnsupportedTransport extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class UnsupportedStrategy extends Error {
+            constructor(msg) {
+              super(msg);
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          class HTTPAuthError extends Error {
+            constructor(status, msg) {
+              super(msg);
+              this.status = status;
+              Object.setPrototypeOf(this, new.target.prototype);
+            }
+          }
+          const ajax = function(context, query, authOptions, authRequestType, callback) {
+            const xhr2 = runtime.createXHR();
+            xhr2.open("POST", authOptions.endpoint, true);
+            xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            for (var headerName in authOptions.headers) {
+              xhr2.setRequestHeader(headerName, authOptions.headers[headerName]);
+            }
+            if (authOptions.headersProvider != null) {
+              let dynamicHeaders = authOptions.headersProvider();
+              for (var headerName in dynamicHeaders) {
+                xhr2.setRequestHeader(headerName, dynamicHeaders[headerName]);
+              }
+            }
+            xhr2.onreadystatechange = function() {
+              if (xhr2.readyState === 4) {
+                if (xhr2.status === 200) {
+                  let data;
+                  let parsed = false;
+                  try {
+                    data = JSON.parse(xhr2.responseText);
+                    parsed = true;
+                  } catch (e2) {
+                    callback(new HTTPAuthError(200, `JSON returned from ${authRequestType.toString()} endpoint was invalid, yet status code was 200. Data was: ${xhr2.responseText}`), null);
+                  }
+                  if (parsed) {
+                    callback(null, data);
+                  }
+                } else {
+                  let suffix = "";
+                  switch (authRequestType) {
+                    case AuthRequestType.UserAuthentication:
+                      suffix = url_store.buildLogSuffix("authenticationEndpoint");
+                      break;
+                    case AuthRequestType.ChannelAuthorization:
+                      suffix = `Clients must be authorized to join private or presence channels. ${url_store.buildLogSuffix("authorizationEndpoint")}`;
+                      break;
+                  }
+                  callback(new HTTPAuthError(xhr2.status, `Unable to retrieve auth string from ${authRequestType.toString()} endpoint - received status: ${xhr2.status} from ${authOptions.endpoint}. ${suffix}`), null);
+                }
+              }
+            };
+            xhr2.send(query);
+            return xhr2;
+          };
+          var xhr_auth = ajax;
+          function encode3(s2) {
+            return btoa2(utob(s2));
+          }
+          var fromCharCode = String.fromCharCode;
+          var b64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+          var cb_utob = function(c2) {
+            var cc = c2.charCodeAt(0);
+            return cc < 128 ? c2 : cc < 2048 ? fromCharCode(192 | cc >>> 6) + fromCharCode(128 | cc & 63) : fromCharCode(224 | cc >>> 12 & 15) + fromCharCode(128 | cc >>> 6 & 63) + fromCharCode(128 | cc & 63);
+          };
+          var utob = function(u2) {
+            return u2.replace(/[^\x00-\x7F]/g, cb_utob);
+          };
+          var cb_encode = function(ccc) {
+            var padlen = [0, 2, 1][ccc.length % 3];
+            var ord = ccc.charCodeAt(0) << 16 | (ccc.length > 1 ? ccc.charCodeAt(1) : 0) << 8 | (ccc.length > 2 ? ccc.charCodeAt(2) : 0);
+            var chars = [
+              b64chars.charAt(ord >>> 18),
+              b64chars.charAt(ord >>> 12 & 63),
+              padlen >= 2 ? "=" : b64chars.charAt(ord >>> 6 & 63),
+              padlen >= 1 ? "=" : b64chars.charAt(ord & 63)
+            ];
+            return chars.join("");
+          };
+          var btoa2 = window.btoa || function(b2) {
+            return b2.replace(/[\s\S]{1,3}/g, cb_encode);
+          };
+          class Timer {
+            constructor(set2, clear2, delay, callback) {
+              this.clear = clear2;
+              this.timer = set2(() => {
+                if (this.timer) {
+                  this.timer = callback(this.timer);
+                }
+              }, delay);
+            }
+            isRunning() {
+              return this.timer !== null;
+            }
+            ensureAborted() {
+              if (this.timer) {
+                this.clear(this.timer);
+                this.timer = null;
+              }
+            }
+          }
+          var abstract_timer = Timer;
+          function timers_clearTimeout(timer) {
+            window.clearTimeout(timer);
+          }
+          function timers_clearInterval(timer) {
+            window.clearInterval(timer);
+          }
+          class timers_OneOffTimer extends abstract_timer {
+            constructor(delay, callback) {
+              super(setTimeout, timers_clearTimeout, delay, function(timer) {
+                callback();
+                return null;
+              });
+            }
+          }
+          class timers_PeriodicTimer extends abstract_timer {
+            constructor(delay, callback) {
+              super(setInterval, timers_clearInterval, delay, function(timer) {
+                callback();
+                return timer;
+              });
+            }
+          }
+          var Util = {
+            now() {
+              if (Date.now) {
+                return Date.now();
+              } else {
+                return (/* @__PURE__ */ new Date()).valueOf();
+              }
+            },
+            defer(callback) {
+              return new timers_OneOffTimer(0, callback);
+            },
+            method(name2, ...args) {
+              var boundArguments = Array.prototype.slice.call(arguments, 1);
+              return function(object) {
+                return object[name2].apply(object, boundArguments.concat(arguments));
+              };
+            }
+          };
+          var util = Util;
+          function extend2(target, ...sources) {
+            for (var i2 = 0; i2 < sources.length; i2++) {
+              var extensions = sources[i2];
+              for (var property in extensions) {
+                if (extensions[property] && extensions[property].constructor && extensions[property].constructor === Object) {
+                  target[property] = extend2(target[property] || {}, extensions[property]);
+                } else {
+                  target[property] = extensions[property];
+                }
+              }
+            }
+            return target;
+          }
+          function stringify3() {
+            var m2 = ["Pusher"];
+            for (var i2 = 0; i2 < arguments.length; i2++) {
+              if (typeof arguments[i2] === "string") {
+                m2.push(arguments[i2]);
+              } else {
+                m2.push(safeJSONStringify(arguments[i2]));
+              }
+            }
+            return m2.join(" : ");
+          }
+          function arrayIndexOf(array, item) {
+            var nativeIndexOf = Array.prototype.indexOf;
+            if (array === null) {
+              return -1;
+            }
+            if (nativeIndexOf && array.indexOf === nativeIndexOf) {
+              return array.indexOf(item);
+            }
+            for (var i2 = 0, l2 = array.length; i2 < l2; i2++) {
+              if (array[i2] === item) {
+                return i2;
+              }
+            }
+            return -1;
+          }
+          function objectApply(object, f2) {
+            for (var key in object) {
+              if (Object.prototype.hasOwnProperty.call(object, key)) {
+                f2(object[key], key, object);
+              }
+            }
+          }
+          function keys(object) {
+            var keys2 = [];
+            objectApply(object, function(_, key) {
+              keys2.push(key);
+            });
+            return keys2;
+          }
+          function values(object) {
+            var values2 = [];
+            objectApply(object, function(value) {
+              values2.push(value);
+            });
+            return values2;
+          }
+          function apply(array, f2, context) {
+            for (var i2 = 0; i2 < array.length; i2++) {
+              f2.call(context || window, array[i2], i2, array);
+            }
+          }
+          function map(array, f2) {
+            var result = [];
+            for (var i2 = 0; i2 < array.length; i2++) {
+              result.push(f2(array[i2], i2, array, result));
+            }
+            return result;
+          }
+          function mapObject(object, f2) {
+            var result = {};
+            objectApply(object, function(value, key) {
+              result[key] = f2(value);
+            });
+            return result;
+          }
+          function filter2(array, test2) {
+            test2 = test2 || function(value) {
+              return !!value;
+            };
+            var result = [];
+            for (var i2 = 0; i2 < array.length; i2++) {
+              if (test2(array[i2], i2, array, result)) {
+                result.push(array[i2]);
+              }
+            }
+            return result;
+          }
+          function filterObject(object, test2) {
+            var result = {};
+            objectApply(object, function(value, key) {
+              if (test2 && test2(value, key, object, result) || Boolean(value)) {
+                result[key] = value;
+              }
+            });
+            return result;
+          }
+          function flatten(object) {
+            var result = [];
+            objectApply(object, function(value, key) {
+              result.push([key, value]);
+            });
+            return result;
+          }
+          function any(array, test2) {
+            for (var i2 = 0; i2 < array.length; i2++) {
+              if (test2(array[i2], i2, array)) {
+                return true;
+              }
+            }
+            return false;
+          }
+          function collections_all(array, test2) {
+            for (var i2 = 0; i2 < array.length; i2++) {
+              if (!test2(array[i2], i2, array)) {
+                return false;
+              }
+            }
+            return true;
+          }
+          function encodeParamsObject(data) {
+            return mapObject(data, function(value) {
+              if (typeof value === "object") {
+                value = safeJSONStringify(value);
+              }
+              return encodeURIComponent(encode3(value.toString()));
+            });
+          }
+          function buildQueryString(data) {
+            var params = filterObject(data, function(value) {
+              return value !== void 0;
+            });
+            var query = map(flatten(encodeParamsObject(params)), util.method("join", "=")).join("&");
+            return query;
+          }
+          function decycleObject(object) {
+            var objects = [], paths = [];
+            return function derez(value, path) {
+              var i2, name2, nu;
+              switch (typeof value) {
+                case "object":
+                  if (!value) {
+                    return null;
+                  }
+                  for (i2 = 0; i2 < objects.length; i2 += 1) {
+                    if (objects[i2] === value) {
+                      return { $ref: paths[i2] };
+                    }
+                  }
+                  objects.push(value);
+                  paths.push(path);
+                  if (Object.prototype.toString.apply(value) === "[object Array]") {
+                    nu = [];
+                    for (i2 = 0; i2 < value.length; i2 += 1) {
+                      nu[i2] = derez(value[i2], path + "[" + i2 + "]");
+                    }
+                  } else {
+                    nu = {};
+                    for (name2 in value) {
+                      if (Object.prototype.hasOwnProperty.call(value, name2)) {
+                        nu[name2] = derez(value[name2], path + "[" + JSON.stringify(name2) + "]");
+                      }
+                    }
+                  }
+                  return nu;
+                case "number":
+                case "string":
+                case "boolean":
+                  return value;
+              }
+            }(object, "$");
+          }
+          function safeJSONStringify(source) {
+            try {
+              return JSON.stringify(source);
+            } catch (e2) {
+              return JSON.stringify(decycleObject(source));
+            }
+          }
+          class logger_Logger {
+            constructor() {
+              this.globalLog = (message) => {
+                if (window.console && window.console.log) {
+                  window.console.log(message);
+                }
+              };
+            }
+            debug(...args) {
+              this.log(this.globalLog, args);
+            }
+            warn(...args) {
+              this.log(this.globalLogWarn, args);
+            }
+            error(...args) {
+              this.log(this.globalLogError, args);
+            }
+            globalLogWarn(message) {
+              if (window.console && window.console.warn) {
+                window.console.warn(message);
+              } else {
+                this.globalLog(message);
+              }
+            }
+            globalLogError(message) {
+              if (window.console && window.console.error) {
+                window.console.error(message);
+              } else {
+                this.globalLogWarn(message);
+              }
+            }
+            log(defaultLoggingFunction, ...args) {
+              var message = stringify3.apply(this, arguments);
+              if (core_pusher.log) {
+                core_pusher.log(message);
+              } else if (core_pusher.logToConsole) {
+                const log = defaultLoggingFunction.bind(this);
+                log(message);
+              }
+            }
+          }
+          var logger = new logger_Logger();
+          var jsonp = function(context, query, authOptions, authRequestType, callback) {
+            if (authOptions.headers !== void 0 || authOptions.headersProvider != null) {
+              logger.warn(`To send headers with the ${authRequestType.toString()} request, you must use AJAX, rather than JSONP.`);
+            }
+            var callbackName = context.nextAuthCallbackID.toString();
+            context.nextAuthCallbackID++;
+            var document2 = context.getDocument();
+            var script = document2.createElement("script");
+            context.auth_callbacks[callbackName] = function(data) {
+              callback(null, data);
+            };
+            var callback_name = "Pusher.auth_callbacks['" + callbackName + "']";
+            script.src = authOptions.endpoint + "?callback=" + encodeURIComponent(callback_name) + "&" + query;
+            var head = document2.getElementsByTagName("head")[0] || document2.documentElement;
+            head.insertBefore(script, head.firstChild);
+          };
+          var jsonp_auth = jsonp;
+          class ScriptRequest {
+            constructor(src) {
+              this.src = src;
+            }
+            send(receiver) {
+              var self2 = this;
+              var errorString = "Error loading " + self2.src;
+              self2.script = document.createElement("script");
+              self2.script.id = receiver.id;
+              self2.script.src = self2.src;
+              self2.script.type = "text/javascript";
+              self2.script.charset = "UTF-8";
+              if (self2.script.addEventListener) {
+                self2.script.onerror = function() {
+                  receiver.callback(errorString);
+                };
+                self2.script.onload = function() {
+                  receiver.callback(null);
+                };
+              } else {
+                self2.script.onreadystatechange = function() {
+                  if (self2.script.readyState === "loaded" || self2.script.readyState === "complete") {
+                    receiver.callback(null);
+                  }
+                };
+              }
+              if (self2.script.async === void 0 && document.attachEvent && /opera/i.test(navigator.userAgent)) {
+                self2.errorScript = document.createElement("script");
+                self2.errorScript.id = receiver.id + "_error";
+                self2.errorScript.text = receiver.name + "('" + errorString + "');";
+                self2.script.async = self2.errorScript.async = false;
+              } else {
+                self2.script.async = true;
+              }
+              var head = document.getElementsByTagName("head")[0];
+              head.insertBefore(self2.script, head.firstChild);
+              if (self2.errorScript) {
+                head.insertBefore(self2.errorScript, self2.script.nextSibling);
+              }
+            }
+            cleanup() {
+              if (this.script) {
+                this.script.onload = this.script.onerror = null;
+                this.script.onreadystatechange = null;
+              }
+              if (this.script && this.script.parentNode) {
+                this.script.parentNode.removeChild(this.script);
+              }
+              if (this.errorScript && this.errorScript.parentNode) {
+                this.errorScript.parentNode.removeChild(this.errorScript);
+              }
+              this.script = null;
+              this.errorScript = null;
+            }
+          }
+          class jsonp_request_JSONPRequest {
+            constructor(url, data) {
+              this.url = url;
+              this.data = data;
+            }
+            send(receiver) {
+              if (this.request) {
+                return;
+              }
+              var query = buildQueryString(this.data);
+              var url = this.url + "/" + receiver.number + "?" + query;
+              this.request = runtime.createScriptRequest(url);
+              this.request.send(receiver);
+            }
+            cleanup() {
+              if (this.request) {
+                this.request.cleanup();
+              }
+            }
+          }
+          var getAgent = function(sender, useTLS) {
+            return function(data, callback) {
+              var scheme = "http" + (useTLS ? "s" : "") + "://";
+              var url = scheme + (sender.host || sender.options.host) + sender.options.path;
+              var request2 = runtime.createJSONPRequest(url, data);
+              var receiver = runtime.ScriptReceivers.create(function(error, result) {
+                ScriptReceivers.remove(receiver);
+                request2.cleanup();
+                if (result && result.host) {
+                  sender.host = result.host;
+                }
+                if (callback) {
+                  callback(error, result);
+                }
+              });
+              request2.send(receiver);
+            };
+          };
+          var jsonp_timeline_jsonp = {
+            name: "jsonp",
+            getAgent
+          };
+          var jsonp_timeline = jsonp_timeline_jsonp;
+          function getGenericURL(baseScheme, params, path) {
+            var scheme = baseScheme + (params.useTLS ? "s" : "");
+            var host = params.useTLS ? params.hostTLS : params.hostNonTLS;
+            return scheme + "://" + host + path;
+          }
+          function getGenericPath(key, queryString) {
+            var path = "/app/" + key;
+            var query = "?protocol=" + defaults2.PROTOCOL + "&client=js&version=" + defaults2.VERSION + (queryString ? "&" + queryString : "");
+            return path + query;
+          }
+          var ws = {
+            getInitial: function(key, params) {
+              var path = (params.httpPath || "") + getGenericPath(key, "flash=false");
+              return getGenericURL("ws", params, path);
+            }
+          };
+          var http = {
+            getInitial: function(key, params) {
+              var path = (params.httpPath || "/pusher") + getGenericPath(key);
+              return getGenericURL("http", params, path);
+            }
+          };
+          var sockjs = {
+            getInitial: function(key, params) {
+              return getGenericURL("http", params, params.httpPath || "/pusher");
+            },
+            getPath: function(key, params) {
+              return getGenericPath(key);
+            }
+          };
+          class callback_registry_CallbackRegistry {
+            constructor() {
+              this._callbacks = {};
+            }
+            get(name2) {
+              return this._callbacks[prefix(name2)];
+            }
+            add(name2, callback, context) {
+              var prefixedEventName = prefix(name2);
+              this._callbacks[prefixedEventName] = this._callbacks[prefixedEventName] || [];
+              this._callbacks[prefixedEventName].push({
+                fn: callback,
+                context
+              });
+            }
+            remove(name2, callback, context) {
+              if (!name2 && !callback && !context) {
+                this._callbacks = {};
+                return;
+              }
+              var names = name2 ? [prefix(name2)] : keys(this._callbacks);
+              if (callback || context) {
+                this.removeCallback(names, callback, context);
+              } else {
+                this.removeAllCallbacks(names);
+              }
+            }
+            removeCallback(names, callback, context) {
+              apply(names, function(name2) {
+                this._callbacks[name2] = filter2(this._callbacks[name2] || [], function(binding) {
+                  return callback && callback !== binding.fn || context && context !== binding.context;
+                });
+                if (this._callbacks[name2].length === 0) {
+                  delete this._callbacks[name2];
+                }
+              }, this);
+            }
+            removeAllCallbacks(names) {
+              apply(names, function(name2) {
+                delete this._callbacks[name2];
+              }, this);
+            }
+          }
+          function prefix(name2) {
+            return "_" + name2;
+          }
+          class dispatcher_Dispatcher {
+            constructor(failThrough) {
+              this.callbacks = new callback_registry_CallbackRegistry();
+              this.global_callbacks = [];
+              this.failThrough = failThrough;
+            }
+            bind(eventName, callback, context) {
+              this.callbacks.add(eventName, callback, context);
+              return this;
+            }
+            bind_global(callback) {
+              this.global_callbacks.push(callback);
+              return this;
+            }
+            unbind(eventName, callback, context) {
+              this.callbacks.remove(eventName, callback, context);
+              return this;
+            }
+            unbind_global(callback) {
+              if (!callback) {
+                this.global_callbacks = [];
+                return this;
+              }
+              this.global_callbacks = filter2(this.global_callbacks || [], (c2) => c2 !== callback);
+              return this;
+            }
+            unbind_all() {
+              this.unbind();
+              this.unbind_global();
+              return this;
+            }
+            emit(eventName, data, metadata) {
+              for (var i2 = 0; i2 < this.global_callbacks.length; i2++) {
+                this.global_callbacks[i2](eventName, data);
+              }
+              var callbacks = this.callbacks.get(eventName);
+              var args = [];
+              if (metadata) {
+                args.push(data, metadata);
+              } else if (data) {
+                args.push(data);
+              }
+              if (callbacks && callbacks.length > 0) {
+                for (var i2 = 0; i2 < callbacks.length; i2++) {
+                  callbacks[i2].fn.apply(callbacks[i2].context || window, args);
+                }
+              } else if (this.failThrough) {
+                this.failThrough(eventName, data);
+              }
+              return this;
+            }
+          }
+          class transport_connection_TransportConnection extends dispatcher_Dispatcher {
+            constructor(hooks, name2, priority, key, options) {
+              super();
+              this.initialize = runtime.transportConnectionInitializer;
+              this.hooks = hooks;
+              this.name = name2;
+              this.priority = priority;
+              this.key = key;
+              this.options = options;
+              this.state = "new";
+              this.timeline = options.timeline;
+              this.activityTimeout = options.activityTimeout;
+              this.id = this.timeline.generateUniqueID();
+            }
+            handlesActivityChecks() {
+              return Boolean(this.hooks.handlesActivityChecks);
+            }
+            supportsPing() {
+              return Boolean(this.hooks.supportsPing);
+            }
+            connect() {
+              if (this.socket || this.state !== "initialized") {
+                return false;
+              }
+              var url = this.hooks.urls.getInitial(this.key, this.options);
+              try {
+                this.socket = this.hooks.getSocket(url, this.options);
+              } catch (e2) {
+                util.defer(() => {
+                  this.onError(e2);
+                  this.changeState("closed");
+                });
+                return false;
+              }
+              this.bindListeners();
+              logger.debug("Connecting", { transport: this.name, url });
+              this.changeState("connecting");
+              return true;
+            }
+            close() {
+              if (this.socket) {
+                this.socket.close();
+                return true;
+              } else {
+                return false;
+              }
+            }
+            send(data) {
+              if (this.state === "open") {
+                util.defer(() => {
+                  if (this.socket) {
+                    this.socket.send(data);
+                  }
+                });
+                return true;
+              } else {
+                return false;
+              }
+            }
+            ping() {
+              if (this.state === "open" && this.supportsPing()) {
+                this.socket.ping();
+              }
+            }
+            onOpen() {
+              if (this.hooks.beforeOpen) {
+                this.hooks.beforeOpen(this.socket, this.hooks.urls.getPath(this.key, this.options));
+              }
+              this.changeState("open");
+              this.socket.onopen = void 0;
+            }
+            onError(error) {
+              this.emit("error", { type: "WebSocketError", error });
+              this.timeline.error(this.buildTimelineMessage({ error: error.toString() }));
+            }
+            onClose(closeEvent) {
+              if (closeEvent) {
+                this.changeState("closed", {
+                  code: closeEvent.code,
+                  reason: closeEvent.reason,
+                  wasClean: closeEvent.wasClean
+                });
+              } else {
+                this.changeState("closed");
+              }
+              this.unbindListeners();
+              this.socket = void 0;
+            }
+            onMessage(message) {
+              this.emit("message", message);
+            }
+            onActivity() {
+              this.emit("activity");
+            }
+            bindListeners() {
+              this.socket.onopen = () => {
+                this.onOpen();
+              };
+              this.socket.onerror = (error) => {
+                this.onError(error);
+              };
+              this.socket.onclose = (closeEvent) => {
+                this.onClose(closeEvent);
+              };
+              this.socket.onmessage = (message) => {
+                this.onMessage(message);
+              };
+              if (this.supportsPing()) {
+                this.socket.onactivity = () => {
+                  this.onActivity();
+                };
+              }
+            }
+            unbindListeners() {
+              if (this.socket) {
+                this.socket.onopen = void 0;
+                this.socket.onerror = void 0;
+                this.socket.onclose = void 0;
+                this.socket.onmessage = void 0;
+                if (this.supportsPing()) {
+                  this.socket.onactivity = void 0;
+                }
+              }
+            }
+            changeState(state2, params) {
+              this.state = state2;
+              this.timeline.info(this.buildTimelineMessage({
+                state: state2,
+                params
+              }));
+              this.emit(state2, params);
+            }
+            buildTimelineMessage(message) {
+              return extend2({ cid: this.id }, message);
+            }
+          }
+          class transport_Transport {
+            constructor(hooks) {
+              this.hooks = hooks;
+            }
+            isSupported(environment) {
+              return this.hooks.isSupported(environment);
+            }
+            createConnection(name2, priority, key, options) {
+              return new transport_connection_TransportConnection(this.hooks, name2, priority, key, options);
+            }
+          }
+          var WSTransport = new transport_Transport({
+            urls: ws,
+            handlesActivityChecks: false,
+            supportsPing: false,
+            isInitialized: function() {
+              return Boolean(runtime.getWebSocketAPI());
+            },
+            isSupported: function() {
+              return Boolean(runtime.getWebSocketAPI());
+            },
+            getSocket: function(url) {
+              return runtime.createWebSocket(url);
+            }
+          });
+          var httpConfiguration = {
+            urls: http,
+            handlesActivityChecks: false,
+            supportsPing: true,
+            isInitialized: function() {
+              return true;
+            }
+          };
+          var streamingConfiguration = extend2({
+            getSocket: function(url) {
+              return runtime.HTTPFactory.createStreamingSocket(url);
+            }
+          }, httpConfiguration);
+          var pollingConfiguration = extend2({
+            getSocket: function(url) {
+              return runtime.HTTPFactory.createPollingSocket(url);
+            }
+          }, httpConfiguration);
+          var xhrConfiguration = {
+            isSupported: function() {
+              return runtime.isXHRSupported();
+            }
+          };
+          var XHRStreamingTransport = new transport_Transport(extend2({}, streamingConfiguration, xhrConfiguration));
+          var XHRPollingTransport = new transport_Transport(extend2({}, pollingConfiguration, xhrConfiguration));
+          var Transports = {
+            ws: WSTransport,
+            xhr_streaming: XHRStreamingTransport,
+            xhr_polling: XHRPollingTransport
+          };
+          var transports = Transports;
+          var SockJSTransport = new transport_Transport({
+            file: "sockjs",
+            urls: sockjs,
+            handlesActivityChecks: true,
+            supportsPing: false,
+            isSupported: function() {
+              return true;
+            },
+            isInitialized: function() {
+              return window.SockJS !== void 0;
+            },
+            getSocket: function(url, options) {
+              return new window.SockJS(url, null, {
+                js_path: Dependencies.getPath("sockjs", {
+                  useTLS: options.useTLS
+                }),
+                ignore_null_origin: options.ignoreNullOrigin
+              });
+            },
+            beforeOpen: function(socket, path) {
+              socket.send(JSON.stringify({
+                path
+              }));
+            }
+          });
+          var xdrConfiguration = {
+            isSupported: function(environment) {
+              var yes = runtime.isXDRSupported(environment.useTLS);
+              return yes;
+            }
+          };
+          var XDRStreamingTransport = new transport_Transport(extend2({}, streamingConfiguration, xdrConfiguration));
+          var XDRPollingTransport = new transport_Transport(extend2({}, pollingConfiguration, xdrConfiguration));
+          transports.xdr_streaming = XDRStreamingTransport;
+          transports.xdr_polling = XDRPollingTransport;
+          transports.sockjs = SockJSTransport;
+          var transports_transports = transports;
+          class net_info_NetInfo extends dispatcher_Dispatcher {
+            constructor() {
+              super();
+              var self2 = this;
+              if (window.addEventListener !== void 0) {
+                window.addEventListener("online", function() {
+                  self2.emit("online");
+                }, false);
+                window.addEventListener("offline", function() {
+                  self2.emit("offline");
+                }, false);
+              }
+            }
+            isOnline() {
+              if (window.navigator.onLine === void 0) {
+                return true;
+              } else {
+                return window.navigator.onLine;
+              }
+            }
+          }
+          var net_info_Network = new net_info_NetInfo();
+          class assistant_to_the_transport_manager_AssistantToTheTransportManager {
+            constructor(manager, transport, options) {
+              this.manager = manager;
+              this.transport = transport;
+              this.minPingDelay = options.minPingDelay;
+              this.maxPingDelay = options.maxPingDelay;
+              this.pingDelay = void 0;
+            }
+            createConnection(name2, priority, key, options) {
+              options = extend2({}, options, {
+                activityTimeout: this.pingDelay
+              });
+              var connection = this.transport.createConnection(name2, priority, key, options);
+              var openTimestamp = null;
+              var onOpen = function() {
+                connection.unbind("open", onOpen);
+                connection.bind("closed", onClosed);
+                openTimestamp = util.now();
+              };
+              var onClosed = (closeEvent) => {
+                connection.unbind("closed", onClosed);
+                if (closeEvent.code === 1002 || closeEvent.code === 1003) {
+                  this.manager.reportDeath();
+                } else if (!closeEvent.wasClean && openTimestamp) {
+                  var lifespan = util.now() - openTimestamp;
+                  if (lifespan < 2 * this.maxPingDelay) {
+                    this.manager.reportDeath();
+                    this.pingDelay = Math.max(lifespan / 2, this.minPingDelay);
+                  }
+                }
+              };
+              connection.bind("open", onOpen);
+              return connection;
+            }
+            isSupported(environment) {
+              return this.manager.isAlive() && this.transport.isSupported(environment);
+            }
+          }
+          const Protocol = {
+            decodeMessage: function(messageEvent) {
+              try {
+                var messageData = JSON.parse(messageEvent.data);
+                var pusherEventData = messageData.data;
+                if (typeof pusherEventData === "string") {
+                  try {
+                    pusherEventData = JSON.parse(messageData.data);
+                  } catch (e2) {
+                  }
+                }
+                var pusherEvent = {
+                  event: messageData.event,
+                  channel: messageData.channel,
+                  data: pusherEventData
+                };
+                if (messageData.user_id) {
+                  pusherEvent.user_id = messageData.user_id;
+                }
+                return pusherEvent;
+              } catch (e2) {
+                throw { type: "MessageParseError", error: e2, data: messageEvent.data };
+              }
+            },
+            encodeMessage: function(event) {
+              return JSON.stringify(event);
+            },
+            processHandshake: function(messageEvent) {
+              var message = Protocol.decodeMessage(messageEvent);
+              if (message.event === "pusher:connection_established") {
+                if (!message.data.activity_timeout) {
+                  throw "No activity timeout specified in handshake";
+                }
+                return {
+                  action: "connected",
+                  id: message.data.socket_id,
+                  activityTimeout: message.data.activity_timeout * 1e3
+                };
+              } else if (message.event === "pusher:error") {
+                return {
+                  action: this.getCloseAction(message.data),
+                  error: this.getCloseError(message.data)
+                };
+              } else {
+                throw "Invalid handshake";
+              }
+            },
+            getCloseAction: function(closeEvent) {
+              if (closeEvent.code < 4e3) {
+                if (closeEvent.code >= 1002 && closeEvent.code <= 1004) {
+                  return "backoff";
+                } else {
+                  return null;
+                }
+              } else if (closeEvent.code === 4e3) {
+                return "tls_only";
+              } else if (closeEvent.code < 4100) {
+                return "refused";
+              } else if (closeEvent.code < 4200) {
+                return "backoff";
+              } else if (closeEvent.code < 4300) {
+                return "retry";
+              } else {
+                return "refused";
+              }
+            },
+            getCloseError: function(closeEvent) {
+              if (closeEvent.code !== 1e3 && closeEvent.code !== 1001) {
+                return {
+                  type: "PusherError",
+                  data: {
+                    code: closeEvent.code,
+                    message: closeEvent.reason || closeEvent.message
+                  }
+                };
+              } else {
+                return null;
+              }
+            }
+          };
+          var protocol_protocol = Protocol;
+          class connection_Connection extends dispatcher_Dispatcher {
+            constructor(id, transport) {
+              super();
+              this.id = id;
+              this.transport = transport;
+              this.activityTimeout = transport.activityTimeout;
+              this.bindListeners();
+            }
+            handlesActivityChecks() {
+              return this.transport.handlesActivityChecks();
+            }
+            send(data) {
+              return this.transport.send(data);
+            }
+            send_event(name2, data, channel) {
+              var event = { event: name2, data };
+              if (channel) {
+                event.channel = channel;
+              }
+              logger.debug("Event sent", event);
+              return this.send(protocol_protocol.encodeMessage(event));
+            }
+            ping() {
+              if (this.transport.supportsPing()) {
+                this.transport.ping();
+              } else {
+                this.send_event("pusher:ping", {});
+              }
+            }
+            close() {
+              this.transport.close();
+            }
+            bindListeners() {
+              var listeners = {
+                message: (messageEvent) => {
+                  var pusherEvent;
+                  try {
+                    pusherEvent = protocol_protocol.decodeMessage(messageEvent);
+                  } catch (e2) {
+                    this.emit("error", {
+                      type: "MessageParseError",
+                      error: e2,
+                      data: messageEvent.data
+                    });
+                  }
+                  if (pusherEvent !== void 0) {
+                    logger.debug("Event recd", pusherEvent);
+                    switch (pusherEvent.event) {
+                      case "pusher:error":
+                        this.emit("error", {
+                          type: "PusherError",
+                          data: pusherEvent.data
+                        });
+                        break;
+                      case "pusher:ping":
+                        this.emit("ping");
+                        break;
+                      case "pusher:pong":
+                        this.emit("pong");
+                        break;
+                    }
+                    this.emit("message", pusherEvent);
+                  }
+                },
+                activity: () => {
+                  this.emit("activity");
+                },
+                error: (error) => {
+                  this.emit("error", error);
+                },
+                closed: (closeEvent) => {
+                  unbindListeners();
+                  if (closeEvent && closeEvent.code) {
+                    this.handleCloseEvent(closeEvent);
+                  }
+                  this.transport = null;
+                  this.emit("closed");
+                }
+              };
+              var unbindListeners = () => {
+                objectApply(listeners, (listener, event) => {
+                  this.transport.unbind(event, listener);
+                });
+              };
+              objectApply(listeners, (listener, event) => {
+                this.transport.bind(event, listener);
+              });
+            }
+            handleCloseEvent(closeEvent) {
+              var action = protocol_protocol.getCloseAction(closeEvent);
+              var error = protocol_protocol.getCloseError(closeEvent);
+              if (error) {
+                this.emit("error", error);
+              }
+              if (action) {
+                this.emit(action, { action, error });
+              }
+            }
+          }
+          class handshake_Handshake {
+            constructor(transport, callback) {
+              this.transport = transport;
+              this.callback = callback;
+              this.bindListeners();
+            }
+            close() {
+              this.unbindListeners();
+              this.transport.close();
+            }
+            bindListeners() {
+              this.onMessage = (m2) => {
+                this.unbindListeners();
+                var result;
+                try {
+                  result = protocol_protocol.processHandshake(m2);
+                } catch (e2) {
+                  this.finish("error", { error: e2 });
+                  this.transport.close();
+                  return;
+                }
+                if (result.action === "connected") {
+                  this.finish("connected", {
+                    connection: new connection_Connection(result.id, this.transport),
+                    activityTimeout: result.activityTimeout
+                  });
+                } else {
+                  this.finish(result.action, { error: result.error });
+                  this.transport.close();
+                }
+              };
+              this.onClosed = (closeEvent) => {
+                this.unbindListeners();
+                var action = protocol_protocol.getCloseAction(closeEvent) || "backoff";
+                var error = protocol_protocol.getCloseError(closeEvent);
+                this.finish(action, { error });
+              };
+              this.transport.bind("message", this.onMessage);
+              this.transport.bind("closed", this.onClosed);
+            }
+            unbindListeners() {
+              this.transport.unbind("message", this.onMessage);
+              this.transport.unbind("closed", this.onClosed);
+            }
+            finish(action, params) {
+              this.callback(extend2({ transport: this.transport, action }, params));
+            }
+          }
+          class timeline_sender_TimelineSender {
+            constructor(timeline, options) {
+              this.timeline = timeline;
+              this.options = options || {};
+            }
+            send(useTLS, callback) {
+              if (this.timeline.isEmpty()) {
+                return;
+              }
+              this.timeline.send(runtime.TimelineTransport.getAgent(this, useTLS), callback);
+            }
+          }
+          class channel_Channel extends dispatcher_Dispatcher {
+            constructor(name2, pusher2) {
+              super(function(event, data) {
+                logger.debug("No callbacks on " + name2 + " for " + event);
+              });
+              this.name = name2;
+              this.pusher = pusher2;
+              this.subscribed = false;
+              this.subscriptionPending = false;
+              this.subscriptionCancelled = false;
+            }
+            authorize(socketId, callback) {
+              return callback(null, { auth: "" });
+            }
+            trigger(event, data) {
+              if (event.indexOf("client-") !== 0) {
+                throw new BadEventName("Event '" + event + "' does not start with 'client-'");
+              }
+              if (!this.subscribed) {
+                var suffix = url_store.buildLogSuffix("triggeringClientEvents");
+                logger.warn(`Client event triggered before channel 'subscription_succeeded' event . ${suffix}`);
+              }
+              return this.pusher.send_event(event, data, this.name);
+            }
+            disconnect() {
+              this.subscribed = false;
+              this.subscriptionPending = false;
+            }
+            handleEvent(event) {
+              var eventName = event.event;
+              var data = event.data;
+              if (eventName === "pusher_internal:subscription_succeeded") {
+                this.handleSubscriptionSucceededEvent(event);
+              } else if (eventName === "pusher_internal:subscription_count") {
+                this.handleSubscriptionCountEvent(event);
+              } else if (eventName.indexOf("pusher_internal:") !== 0) {
+                var metadata = {};
+                this.emit(eventName, data, metadata);
+              }
+            }
+            handleSubscriptionSucceededEvent(event) {
+              this.subscriptionPending = false;
+              this.subscribed = true;
+              if (this.subscriptionCancelled) {
+                this.pusher.unsubscribe(this.name);
+              } else {
+                this.emit("pusher:subscription_succeeded", event.data);
+              }
+            }
+            handleSubscriptionCountEvent(event) {
+              if (event.data.subscription_count) {
+                this.subscriptionCount = event.data.subscription_count;
+              }
+              this.emit("pusher:subscription_count", event.data);
+            }
+            subscribe() {
+              if (this.subscribed) {
+                return;
+              }
+              this.subscriptionPending = true;
+              this.subscriptionCancelled = false;
+              this.authorize(this.pusher.connection.socket_id, (error, data) => {
+                if (error) {
+                  this.subscriptionPending = false;
+                  logger.error(error.toString());
+                  this.emit("pusher:subscription_error", Object.assign({}, {
+                    type: "AuthError",
+                    error: error.message
+                  }, error instanceof HTTPAuthError ? { status: error.status } : {}));
+                } else {
+                  this.pusher.send_event("pusher:subscribe", {
+                    auth: data.auth,
+                    channel_data: data.channel_data,
+                    channel: this.name
+                  });
+                }
+              });
+            }
+            unsubscribe() {
+              this.subscribed = false;
+              this.pusher.send_event("pusher:unsubscribe", {
+                channel: this.name
+              });
+            }
+            cancelSubscription() {
+              this.subscriptionCancelled = true;
+            }
+            reinstateSubscription() {
+              this.subscriptionCancelled = false;
+            }
+          }
+          class private_channel_PrivateChannel extends channel_Channel {
+            authorize(socketId, callback) {
+              return this.pusher.config.channelAuthorizer({
+                channelName: this.name,
+                socketId
+              }, callback);
+            }
+          }
+          class members_Members {
+            constructor() {
+              this.reset();
+            }
+            get(id) {
+              if (Object.prototype.hasOwnProperty.call(this.members, id)) {
+                return {
+                  id,
+                  info: this.members[id]
+                };
+              } else {
+                return null;
+              }
+            }
+            each(callback) {
+              objectApply(this.members, (member, id) => {
+                callback(this.get(id));
+              });
+            }
+            setMyID(id) {
+              this.myID = id;
+            }
+            onSubscription(subscriptionData) {
+              this.members = subscriptionData.presence.hash;
+              this.count = subscriptionData.presence.count;
+              this.me = this.get(this.myID);
+            }
+            addMember(memberData) {
+              if (this.get(memberData.user_id) === null) {
+                this.count++;
+              }
+              this.members[memberData.user_id] = memberData.user_info;
+              return this.get(memberData.user_id);
+            }
+            removeMember(memberData) {
+              var member = this.get(memberData.user_id);
+              if (member) {
+                delete this.members[memberData.user_id];
+                this.count--;
+              }
+              return member;
+            }
+            reset() {
+              this.members = {};
+              this.count = 0;
+              this.myID = null;
+              this.me = null;
+            }
+          }
+          var __awaiter = function(thisArg, _arguments, P, generator) {
+            function adopt(value) {
+              return value instanceof P ? value : new P(function(resolve2) {
+                resolve2(value);
+              });
+            }
+            return new (P || (P = Promise))(function(resolve2, reject) {
+              function fulfilled(value) {
+                try {
+                  step(generator.next(value));
+                } catch (e2) {
+                  reject(e2);
+                }
+              }
+              function rejected(value) {
+                try {
+                  step(generator["throw"](value));
+                } catch (e2) {
+                  reject(e2);
+                }
+              }
+              function step(result) {
+                result.done ? resolve2(result.value) : adopt(result.value).then(fulfilled, rejected);
+              }
+              step((generator = generator.apply(thisArg, _arguments || [])).next());
+            });
+          };
+          class presence_channel_PresenceChannel extends private_channel_PrivateChannel {
+            constructor(name2, pusher2) {
+              super(name2, pusher2);
+              this.members = new members_Members();
+            }
+            authorize(socketId, callback) {
+              super.authorize(socketId, (error, authData) => __awaiter(this, void 0, void 0, function* () {
+                if (!error) {
+                  authData = authData;
+                  if (authData.channel_data != null) {
+                    var channelData = JSON.parse(authData.channel_data);
+                    this.members.setMyID(channelData.user_id);
+                  } else {
+                    yield this.pusher.user.signinDonePromise;
+                    if (this.pusher.user.user_data != null) {
+                      this.members.setMyID(this.pusher.user.user_data.id);
+                    } else {
+                      let suffix = url_store.buildLogSuffix("authorizationEndpoint");
+                      logger.error(`Invalid auth response for channel '${this.name}', expected 'channel_data' field. ${suffix}, or the user should be signed in.`);
+                      callback("Invalid auth response");
+                      return;
+                    }
+                  }
+                }
+                callback(error, authData);
+              }));
+            }
+            handleEvent(event) {
+              var eventName = event.event;
+              if (eventName.indexOf("pusher_internal:") === 0) {
+                this.handleInternalEvent(event);
+              } else {
+                var data = event.data;
+                var metadata = {};
+                if (event.user_id) {
+                  metadata.user_id = event.user_id;
+                }
+                this.emit(eventName, data, metadata);
+              }
+            }
+            handleInternalEvent(event) {
+              var eventName = event.event;
+              var data = event.data;
+              switch (eventName) {
+                case "pusher_internal:subscription_succeeded":
+                  this.handleSubscriptionSucceededEvent(event);
+                  break;
+                case "pusher_internal:subscription_count":
+                  this.handleSubscriptionCountEvent(event);
+                  break;
+                case "pusher_internal:member_added":
+                  var addedMember = this.members.addMember(data);
+                  this.emit("pusher:member_added", addedMember);
+                  break;
+                case "pusher_internal:member_removed":
+                  var removedMember = this.members.removeMember(data);
+                  if (removedMember) {
+                    this.emit("pusher:member_removed", removedMember);
+                  }
+                  break;
+              }
+            }
+            handleSubscriptionSucceededEvent(event) {
+              this.subscriptionPending = false;
+              this.subscribed = true;
+              if (this.subscriptionCancelled) {
+                this.pusher.unsubscribe(this.name);
+              } else {
+                this.members.onSubscription(event.data);
+                this.emit("pusher:subscription_succeeded", this.members);
+              }
+            }
+            disconnect() {
+              this.members.reset();
+              super.disconnect();
+            }
+          }
+          var utf8 = __webpack_require__(1);
+          var base64 = __webpack_require__(0);
+          class encrypted_channel_EncryptedChannel extends private_channel_PrivateChannel {
+            constructor(name2, pusher2, nacl) {
+              super(name2, pusher2);
+              this.key = null;
+              this.nacl = nacl;
+            }
+            authorize(socketId, callback) {
+              super.authorize(socketId, (error, authData) => {
+                if (error) {
+                  callback(error, authData);
+                  return;
+                }
+                let sharedSecret = authData["shared_secret"];
+                if (!sharedSecret) {
+                  callback(new Error(`No shared_secret key in auth payload for encrypted channel: ${this.name}`), null);
+                  return;
+                }
+                this.key = Object(base64["decode"])(sharedSecret);
+                delete authData["shared_secret"];
+                callback(null, authData);
+              });
+            }
+            trigger(event, data) {
+              throw new UnsupportedFeature("Client events are not currently supported for encrypted channels");
+            }
+            handleEvent(event) {
+              var eventName = event.event;
+              var data = event.data;
+              if (eventName.indexOf("pusher_internal:") === 0 || eventName.indexOf("pusher:") === 0) {
+                super.handleEvent(event);
+                return;
+              }
+              this.handleEncryptedEvent(eventName, data);
+            }
+            handleEncryptedEvent(event, data) {
+              if (!this.key) {
+                logger.debug("Received encrypted event before key has been retrieved from the authEndpoint");
+                return;
+              }
+              if (!data.ciphertext || !data.nonce) {
+                logger.error("Unexpected format for encrypted event, expected object with `ciphertext` and `nonce` fields, got: " + data);
+                return;
+              }
+              let cipherText = Object(base64["decode"])(data.ciphertext);
+              if (cipherText.length < this.nacl.secretbox.overheadLength) {
+                logger.error(`Expected encrypted event ciphertext length to be ${this.nacl.secretbox.overheadLength}, got: ${cipherText.length}`);
+                return;
+              }
+              let nonce = Object(base64["decode"])(data.nonce);
+              if (nonce.length < this.nacl.secretbox.nonceLength) {
+                logger.error(`Expected encrypted event nonce length to be ${this.nacl.secretbox.nonceLength}, got: ${nonce.length}`);
+                return;
+              }
+              let bytes = this.nacl.secretbox.open(cipherText, nonce, this.key);
+              if (bytes === null) {
+                logger.debug("Failed to decrypt an event, probably because it was encrypted with a different key. Fetching a new key from the authEndpoint...");
+                this.authorize(this.pusher.connection.socket_id, (error, authData) => {
+                  if (error) {
+                    logger.error(`Failed to make a request to the authEndpoint: ${authData}. Unable to fetch new key, so dropping encrypted event`);
+                    return;
+                  }
+                  bytes = this.nacl.secretbox.open(cipherText, nonce, this.key);
+                  if (bytes === null) {
+                    logger.error(`Failed to decrypt event with new key. Dropping encrypted event`);
+                    return;
+                  }
+                  this.emit(event, this.getDataToEmit(bytes));
+                  return;
+                });
+                return;
+              }
+              this.emit(event, this.getDataToEmit(bytes));
+            }
+            getDataToEmit(bytes) {
+              let raw = Object(utf8["decode"])(bytes);
+              try {
+                return JSON.parse(raw);
+              } catch (_a) {
+                return raw;
+              }
+            }
+          }
+          class connection_manager_ConnectionManager extends dispatcher_Dispatcher {
+            constructor(key, options) {
+              super();
+              this.state = "initialized";
+              this.connection = null;
+              this.key = key;
+              this.options = options;
+              this.timeline = this.options.timeline;
+              this.usingTLS = this.options.useTLS;
+              this.errorCallbacks = this.buildErrorCallbacks();
+              this.connectionCallbacks = this.buildConnectionCallbacks(this.errorCallbacks);
+              this.handshakeCallbacks = this.buildHandshakeCallbacks(this.errorCallbacks);
+              var Network = runtime.getNetwork();
+              Network.bind("online", () => {
+                this.timeline.info({ netinfo: "online" });
+                if (this.state === "connecting" || this.state === "unavailable") {
+                  this.retryIn(0);
+                }
+              });
+              Network.bind("offline", () => {
+                this.timeline.info({ netinfo: "offline" });
+                if (this.connection) {
+                  this.sendActivityCheck();
+                }
+              });
+              this.updateStrategy();
+            }
+            switchCluster(key) {
+              this.key = key;
+              this.updateStrategy();
+              this.retryIn(0);
+            }
+            connect() {
+              if (this.connection || this.runner) {
+                return;
+              }
+              if (!this.strategy.isSupported()) {
+                this.updateState("failed");
+                return;
+              }
+              this.updateState("connecting");
+              this.startConnecting();
+              this.setUnavailableTimer();
+            }
+            send(data) {
+              if (this.connection) {
+                return this.connection.send(data);
+              } else {
+                return false;
+              }
+            }
+            send_event(name2, data, channel) {
+              if (this.connection) {
+                return this.connection.send_event(name2, data, channel);
+              } else {
+                return false;
+              }
+            }
+            disconnect() {
+              this.disconnectInternally();
+              this.updateState("disconnected");
+            }
+            isUsingTLS() {
+              return this.usingTLS;
+            }
+            startConnecting() {
+              var callback = (error, handshake) => {
+                if (error) {
+                  this.runner = this.strategy.connect(0, callback);
+                } else {
+                  if (handshake.action === "error") {
+                    this.emit("error", {
+                      type: "HandshakeError",
+                      error: handshake.error
+                    });
+                    this.timeline.error({ handshakeError: handshake.error });
+                  } else {
+                    this.abortConnecting();
+                    this.handshakeCallbacks[handshake.action](handshake);
+                  }
+                }
+              };
+              this.runner = this.strategy.connect(0, callback);
+            }
+            abortConnecting() {
+              if (this.runner) {
+                this.runner.abort();
+                this.runner = null;
+              }
+            }
+            disconnectInternally() {
+              this.abortConnecting();
+              this.clearRetryTimer();
+              this.clearUnavailableTimer();
+              if (this.connection) {
+                var connection = this.abandonConnection();
+                connection.close();
+              }
+            }
+            updateStrategy() {
+              this.strategy = this.options.getStrategy({
+                key: this.key,
+                timeline: this.timeline,
+                useTLS: this.usingTLS
+              });
+            }
+            retryIn(delay) {
+              this.timeline.info({ action: "retry", delay });
+              if (delay > 0) {
+                this.emit("connecting_in", Math.round(delay / 1e3));
+              }
+              this.retryTimer = new timers_OneOffTimer(delay || 0, () => {
+                this.disconnectInternally();
+                this.connect();
+              });
+            }
+            clearRetryTimer() {
+              if (this.retryTimer) {
+                this.retryTimer.ensureAborted();
+                this.retryTimer = null;
+              }
+            }
+            setUnavailableTimer() {
+              this.unavailableTimer = new timers_OneOffTimer(this.options.unavailableTimeout, () => {
+                this.updateState("unavailable");
+              });
+            }
+            clearUnavailableTimer() {
+              if (this.unavailableTimer) {
+                this.unavailableTimer.ensureAborted();
+              }
+            }
+            sendActivityCheck() {
+              this.stopActivityCheck();
+              this.connection.ping();
+              this.activityTimer = new timers_OneOffTimer(this.options.pongTimeout, () => {
+                this.timeline.error({ pong_timed_out: this.options.pongTimeout });
+                this.retryIn(0);
+              });
+            }
+            resetActivityCheck() {
+              this.stopActivityCheck();
+              if (this.connection && !this.connection.handlesActivityChecks()) {
+                this.activityTimer = new timers_OneOffTimer(this.activityTimeout, () => {
+                  this.sendActivityCheck();
+                });
+              }
+            }
+            stopActivityCheck() {
+              if (this.activityTimer) {
+                this.activityTimer.ensureAborted();
+              }
+            }
+            buildConnectionCallbacks(errorCallbacks) {
+              return extend2({}, errorCallbacks, {
+                message: (message) => {
+                  this.resetActivityCheck();
+                  this.emit("message", message);
+                },
+                ping: () => {
+                  this.send_event("pusher:pong", {});
+                },
+                activity: () => {
+                  this.resetActivityCheck();
+                },
+                error: (error) => {
+                  this.emit("error", error);
+                },
+                closed: () => {
+                  this.abandonConnection();
+                  if (this.shouldRetry()) {
+                    this.retryIn(1e3);
+                  }
+                }
+              });
+            }
+            buildHandshakeCallbacks(errorCallbacks) {
+              return extend2({}, errorCallbacks, {
+                connected: (handshake) => {
+                  this.activityTimeout = Math.min(this.options.activityTimeout, handshake.activityTimeout, handshake.connection.activityTimeout || Infinity);
+                  this.clearUnavailableTimer();
+                  this.setConnection(handshake.connection);
+                  this.socket_id = this.connection.id;
+                  this.updateState("connected", { socket_id: this.socket_id });
+                }
+              });
+            }
+            buildErrorCallbacks() {
+              let withErrorEmitted = (callback) => {
+                return (result) => {
+                  if (result.error) {
+                    this.emit("error", { type: "WebSocketError", error: result.error });
+                  }
+                  callback(result);
+                };
+              };
+              return {
+                tls_only: withErrorEmitted(() => {
+                  this.usingTLS = true;
+                  this.updateStrategy();
+                  this.retryIn(0);
+                }),
+                refused: withErrorEmitted(() => {
+                  this.disconnect();
+                }),
+                backoff: withErrorEmitted(() => {
+                  this.retryIn(1e3);
+                }),
+                retry: withErrorEmitted(() => {
+                  this.retryIn(0);
+                })
+              };
+            }
+            setConnection(connection) {
+              this.connection = connection;
+              for (var event in this.connectionCallbacks) {
+                this.connection.bind(event, this.connectionCallbacks[event]);
+              }
+              this.resetActivityCheck();
+            }
+            abandonConnection() {
+              if (!this.connection) {
+                return;
+              }
+              this.stopActivityCheck();
+              for (var event in this.connectionCallbacks) {
+                this.connection.unbind(event, this.connectionCallbacks[event]);
+              }
+              var connection = this.connection;
+              this.connection = null;
+              return connection;
+            }
+            updateState(newState, data) {
+              var previousState = this.state;
+              this.state = newState;
+              if (previousState !== newState) {
+                var newStateDescription = newState;
+                if (newStateDescription === "connected") {
+                  newStateDescription += " with new socket ID " + data.socket_id;
+                }
+                logger.debug("State changed", previousState + " -> " + newStateDescription);
+                this.timeline.info({ state: newState, params: data });
+                this.emit("state_change", { previous: previousState, current: newState });
+                this.emit(newState, data);
+              }
+            }
+            shouldRetry() {
+              return this.state === "connecting" || this.state === "connected";
+            }
+          }
+          class channels_Channels {
+            constructor() {
+              this.channels = {};
+            }
+            add(name2, pusher2) {
+              if (!this.channels[name2]) {
+                this.channels[name2] = createChannel(name2, pusher2);
+              }
+              return this.channels[name2];
+            }
+            all() {
+              return values(this.channels);
+            }
+            find(name2) {
+              return this.channels[name2];
+            }
+            remove(name2) {
+              var channel = this.channels[name2];
+              delete this.channels[name2];
+              return channel;
+            }
+            disconnect() {
+              objectApply(this.channels, function(channel) {
+                channel.disconnect();
+              });
+            }
+          }
+          function createChannel(name2, pusher2) {
+            if (name2.indexOf("private-encrypted-") === 0) {
+              if (pusher2.config.nacl) {
+                return factory.createEncryptedChannel(name2, pusher2, pusher2.config.nacl);
+              }
+              let errMsg = "Tried to subscribe to a private-encrypted- channel but no nacl implementation available";
+              let suffix = url_store.buildLogSuffix("encryptedChannelSupport");
+              throw new UnsupportedFeature(`${errMsg}. ${suffix}`);
+            } else if (name2.indexOf("private-") === 0) {
+              return factory.createPrivateChannel(name2, pusher2);
+            } else if (name2.indexOf("presence-") === 0) {
+              return factory.createPresenceChannel(name2, pusher2);
+            } else if (name2.indexOf("#") === 0) {
+              throw new BadChannelName('Cannot create a channel with name "' + name2 + '".');
+            } else {
+              return factory.createChannel(name2, pusher2);
+            }
+          }
+          var Factory = {
+            createChannels() {
+              return new channels_Channels();
+            },
+            createConnectionManager(key, options) {
+              return new connection_manager_ConnectionManager(key, options);
+            },
+            createChannel(name2, pusher2) {
+              return new channel_Channel(name2, pusher2);
+            },
+            createPrivateChannel(name2, pusher2) {
+              return new private_channel_PrivateChannel(name2, pusher2);
+            },
+            createPresenceChannel(name2, pusher2) {
+              return new presence_channel_PresenceChannel(name2, pusher2);
+            },
+            createEncryptedChannel(name2, pusher2, nacl) {
+              return new encrypted_channel_EncryptedChannel(name2, pusher2, nacl);
+            },
+            createTimelineSender(timeline, options) {
+              return new timeline_sender_TimelineSender(timeline, options);
+            },
+            createHandshake(transport, callback) {
+              return new handshake_Handshake(transport, callback);
+            },
+            createAssistantToTheTransportManager(manager, transport, options) {
+              return new assistant_to_the_transport_manager_AssistantToTheTransportManager(manager, transport, options);
+            }
+          };
+          var factory = Factory;
+          class transport_manager_TransportManager {
+            constructor(options) {
+              this.options = options || {};
+              this.livesLeft = this.options.lives || Infinity;
+            }
+            getAssistant(transport) {
+              return factory.createAssistantToTheTransportManager(this, transport, {
+                minPingDelay: this.options.minPingDelay,
+                maxPingDelay: this.options.maxPingDelay
+              });
+            }
+            isAlive() {
+              return this.livesLeft > 0;
+            }
+            reportDeath() {
+              this.livesLeft -= 1;
+            }
+          }
+          class sequential_strategy_SequentialStrategy {
+            constructor(strategies, options) {
+              this.strategies = strategies;
+              this.loop = Boolean(options.loop);
+              this.failFast = Boolean(options.failFast);
+              this.timeout = options.timeout;
+              this.timeoutLimit = options.timeoutLimit;
+            }
+            isSupported() {
+              return any(this.strategies, util.method("isSupported"));
+            }
+            connect(minPriority, callback) {
+              var strategies = this.strategies;
+              var current = 0;
+              var timeout = this.timeout;
+              var runner = null;
+              var tryNextStrategy = (error, handshake) => {
+                if (handshake) {
+                  callback(null, handshake);
+                } else {
+                  current = current + 1;
+                  if (this.loop) {
+                    current = current % strategies.length;
+                  }
+                  if (current < strategies.length) {
+                    if (timeout) {
+                      timeout = timeout * 2;
+                      if (this.timeoutLimit) {
+                        timeout = Math.min(timeout, this.timeoutLimit);
+                      }
+                    }
+                    runner = this.tryStrategy(strategies[current], minPriority, { timeout, failFast: this.failFast }, tryNextStrategy);
+                  } else {
+                    callback(true);
+                  }
+                }
+              };
+              runner = this.tryStrategy(strategies[current], minPriority, { timeout, failFast: this.failFast }, tryNextStrategy);
+              return {
+                abort: function() {
+                  runner.abort();
+                },
+                forceMinPriority: function(p2) {
+                  minPriority = p2;
+                  if (runner) {
+                    runner.forceMinPriority(p2);
+                  }
+                }
+              };
+            }
+            tryStrategy(strategy, minPriority, options, callback) {
+              var timer = null;
+              var runner = null;
+              if (options.timeout > 0) {
+                timer = new timers_OneOffTimer(options.timeout, function() {
+                  runner.abort();
+                  callback(true);
+                });
+              }
+              runner = strategy.connect(minPriority, function(error, handshake) {
+                if (error && timer && timer.isRunning() && !options.failFast) {
+                  return;
+                }
+                if (timer) {
+                  timer.ensureAborted();
+                }
+                callback(error, handshake);
+              });
+              return {
+                abort: function() {
+                  if (timer) {
+                    timer.ensureAborted();
+                  }
+                  runner.abort();
+                },
+                forceMinPriority: function(p2) {
+                  runner.forceMinPriority(p2);
+                }
+              };
+            }
+          }
+          class best_connected_ever_strategy_BestConnectedEverStrategy {
+            constructor(strategies) {
+              this.strategies = strategies;
+            }
+            isSupported() {
+              return any(this.strategies, util.method("isSupported"));
+            }
+            connect(minPriority, callback) {
+              return connect(this.strategies, minPriority, function(i2, runners) {
+                return function(error, handshake) {
+                  runners[i2].error = error;
+                  if (error) {
+                    if (allRunnersFailed(runners)) {
+                      callback(true);
+                    }
+                    return;
+                  }
+                  apply(runners, function(runner) {
+                    runner.forceMinPriority(handshake.transport.priority);
+                  });
+                  callback(null, handshake);
+                };
+              });
+            }
+          }
+          function connect(strategies, minPriority, callbackBuilder) {
+            var runners = map(strategies, function(strategy, i2, _, rs) {
+              return strategy.connect(minPriority, callbackBuilder(i2, rs));
+            });
+            return {
+              abort: function() {
+                apply(runners, abortRunner);
+              },
+              forceMinPriority: function(p2) {
+                apply(runners, function(runner) {
+                  runner.forceMinPriority(p2);
+                });
+              }
+            };
+          }
+          function allRunnersFailed(runners) {
+            return collections_all(runners, function(runner) {
+              return Boolean(runner.error);
+            });
+          }
+          function abortRunner(runner) {
+            if (!runner.error && !runner.aborted) {
+              runner.abort();
+              runner.aborted = true;
+            }
+          }
+          class websocket_prioritized_cached_strategy_WebSocketPrioritizedCachedStrategy {
+            constructor(strategy, transports2, options) {
+              this.strategy = strategy;
+              this.transports = transports2;
+              this.ttl = options.ttl || 1800 * 1e3;
+              this.usingTLS = options.useTLS;
+              this.timeline = options.timeline;
+            }
+            isSupported() {
+              return this.strategy.isSupported();
+            }
+            connect(minPriority, callback) {
+              var usingTLS = this.usingTLS;
+              var info = fetchTransportCache(usingTLS);
+              var cacheSkipCount = info && info.cacheSkipCount ? info.cacheSkipCount : 0;
+              var strategies = [this.strategy];
+              if (info && info.timestamp + this.ttl >= util.now()) {
+                var transport = this.transports[info.transport];
+                if (transport) {
+                  if (["ws", "wss"].includes(info.transport) || cacheSkipCount > 3) {
+                    this.timeline.info({
+                      cached: true,
+                      transport: info.transport,
+                      latency: info.latency
+                    });
+                    strategies.push(new sequential_strategy_SequentialStrategy([transport], {
+                      timeout: info.latency * 2 + 1e3,
+                      failFast: true
+                    }));
+                  } else {
+                    cacheSkipCount++;
+                  }
+                }
+              }
+              var startTimestamp = util.now();
+              var runner = strategies.pop().connect(minPriority, function cb(error, handshake) {
+                if (error) {
+                  flushTransportCache(usingTLS);
+                  if (strategies.length > 0) {
+                    startTimestamp = util.now();
+                    runner = strategies.pop().connect(minPriority, cb);
+                  } else {
+                    callback(error);
+                  }
+                } else {
+                  storeTransportCache(usingTLS, handshake.transport.name, util.now() - startTimestamp, cacheSkipCount);
+                  callback(null, handshake);
+                }
+              });
+              return {
+                abort: function() {
+                  runner.abort();
+                },
+                forceMinPriority: function(p2) {
+                  minPriority = p2;
+                  if (runner) {
+                    runner.forceMinPriority(p2);
+                  }
+                }
+              };
+            }
+          }
+          function getTransportCacheKey(usingTLS) {
+            return "pusherTransport" + (usingTLS ? "TLS" : "NonTLS");
+          }
+          function fetchTransportCache(usingTLS) {
+            var storage = runtime.getLocalStorage();
+            if (storage) {
+              try {
+                var serializedCache = storage[getTransportCacheKey(usingTLS)];
+                if (serializedCache) {
+                  return JSON.parse(serializedCache);
+                }
+              } catch (e2) {
+                flushTransportCache(usingTLS);
+              }
+            }
+            return null;
+          }
+          function storeTransportCache(usingTLS, transport, latency, cacheSkipCount) {
+            var storage = runtime.getLocalStorage();
+            if (storage) {
+              try {
+                storage[getTransportCacheKey(usingTLS)] = safeJSONStringify({
+                  timestamp: util.now(),
+                  transport,
+                  latency,
+                  cacheSkipCount
+                });
+              } catch (e2) {
+              }
+            }
+          }
+          function flushTransportCache(usingTLS) {
+            var storage = runtime.getLocalStorage();
+            if (storage) {
+              try {
+                delete storage[getTransportCacheKey(usingTLS)];
+              } catch (e2) {
+              }
+            }
+          }
+          class delayed_strategy_DelayedStrategy {
+            constructor(strategy, { delay: number }) {
+              this.strategy = strategy;
+              this.options = { delay: number };
+            }
+            isSupported() {
+              return this.strategy.isSupported();
+            }
+            connect(minPriority, callback) {
+              var strategy = this.strategy;
+              var runner;
+              var timer = new timers_OneOffTimer(this.options.delay, function() {
+                runner = strategy.connect(minPriority, callback);
+              });
+              return {
+                abort: function() {
+                  timer.ensureAborted();
+                  if (runner) {
+                    runner.abort();
+                  }
+                },
+                forceMinPriority: function(p2) {
+                  minPriority = p2;
+                  if (runner) {
+                    runner.forceMinPriority(p2);
+                  }
+                }
+              };
+            }
+          }
+          class IfStrategy {
+            constructor(test2, trueBranch, falseBranch) {
+              this.test = test2;
+              this.trueBranch = trueBranch;
+              this.falseBranch = falseBranch;
+            }
+            isSupported() {
+              var branch = this.test() ? this.trueBranch : this.falseBranch;
+              return branch.isSupported();
+            }
+            connect(minPriority, callback) {
+              var branch = this.test() ? this.trueBranch : this.falseBranch;
+              return branch.connect(minPriority, callback);
+            }
+          }
+          class FirstConnectedStrategy {
+            constructor(strategy) {
+              this.strategy = strategy;
+            }
+            isSupported() {
+              return this.strategy.isSupported();
+            }
+            connect(minPriority, callback) {
+              var runner = this.strategy.connect(minPriority, function(error, handshake) {
+                if (handshake) {
+                  runner.abort();
+                }
+                callback(error, handshake);
+              });
+              return runner;
+            }
+          }
+          function testSupportsStrategy(strategy) {
+            return function() {
+              return strategy.isSupported();
+            };
+          }
+          var getDefaultStrategy = function(config, baseOptions, defineTransport) {
+            var definedTransports = {};
+            function defineTransportStrategy(name2, type2, priority, options, manager) {
+              var transport = defineTransport(config, name2, type2, priority, options, manager);
+              definedTransports[name2] = transport;
+              return transport;
+            }
+            var ws_options = Object.assign({}, baseOptions, {
+              hostNonTLS: config.wsHost + ":" + config.wsPort,
+              hostTLS: config.wsHost + ":" + config.wssPort,
+              httpPath: config.wsPath
+            });
+            var wss_options = Object.assign({}, ws_options, {
+              useTLS: true
+            });
+            var sockjs_options = Object.assign({}, baseOptions, {
+              hostNonTLS: config.httpHost + ":" + config.httpPort,
+              hostTLS: config.httpHost + ":" + config.httpsPort,
+              httpPath: config.httpPath
+            });
+            var timeouts = {
+              loop: true,
+              timeout: 15e3,
+              timeoutLimit: 6e4
+            };
+            var ws_manager = new transport_manager_TransportManager({
+              minPingDelay: 1e4,
+              maxPingDelay: config.activityTimeout
+            });
+            var streaming_manager = new transport_manager_TransportManager({
+              lives: 2,
+              minPingDelay: 1e4,
+              maxPingDelay: config.activityTimeout
+            });
+            var ws_transport = defineTransportStrategy("ws", "ws", 3, ws_options, ws_manager);
+            var wss_transport = defineTransportStrategy("wss", "ws", 3, wss_options, ws_manager);
+            var sockjs_transport = defineTransportStrategy("sockjs", "sockjs", 1, sockjs_options);
+            var xhr_streaming_transport = defineTransportStrategy("xhr_streaming", "xhr_streaming", 1, sockjs_options, streaming_manager);
+            var xdr_streaming_transport = defineTransportStrategy("xdr_streaming", "xdr_streaming", 1, sockjs_options, streaming_manager);
+            var xhr_polling_transport = defineTransportStrategy("xhr_polling", "xhr_polling", 1, sockjs_options);
+            var xdr_polling_transport = defineTransportStrategy("xdr_polling", "xdr_polling", 1, sockjs_options);
+            var ws_loop = new sequential_strategy_SequentialStrategy([ws_transport], timeouts);
+            var wss_loop = new sequential_strategy_SequentialStrategy([wss_transport], timeouts);
+            var sockjs_loop = new sequential_strategy_SequentialStrategy([sockjs_transport], timeouts);
+            var streaming_loop = new sequential_strategy_SequentialStrategy([
+              new IfStrategy(testSupportsStrategy(xhr_streaming_transport), xhr_streaming_transport, xdr_streaming_transport)
+            ], timeouts);
+            var polling_loop = new sequential_strategy_SequentialStrategy([
+              new IfStrategy(testSupportsStrategy(xhr_polling_transport), xhr_polling_transport, xdr_polling_transport)
+            ], timeouts);
+            var http_loop = new sequential_strategy_SequentialStrategy([
+              new IfStrategy(testSupportsStrategy(streaming_loop), new best_connected_ever_strategy_BestConnectedEverStrategy([
+                streaming_loop,
+                new delayed_strategy_DelayedStrategy(polling_loop, { delay: 4e3 })
+              ]), polling_loop)
+            ], timeouts);
+            var http_fallback_loop = new IfStrategy(testSupportsStrategy(http_loop), http_loop, sockjs_loop);
+            var wsStrategy;
+            if (baseOptions.useTLS) {
+              wsStrategy = new best_connected_ever_strategy_BestConnectedEverStrategy([
+                ws_loop,
+                new delayed_strategy_DelayedStrategy(http_fallback_loop, { delay: 2e3 })
+              ]);
+            } else {
+              wsStrategy = new best_connected_ever_strategy_BestConnectedEverStrategy([
+                ws_loop,
+                new delayed_strategy_DelayedStrategy(wss_loop, { delay: 2e3 }),
+                new delayed_strategy_DelayedStrategy(http_fallback_loop, { delay: 5e3 })
+              ]);
+            }
+            return new websocket_prioritized_cached_strategy_WebSocketPrioritizedCachedStrategy(new FirstConnectedStrategy(new IfStrategy(testSupportsStrategy(ws_transport), wsStrategy, http_fallback_loop)), definedTransports, {
+              ttl: 18e5,
+              timeline: baseOptions.timeline,
+              useTLS: baseOptions.useTLS
+            });
+          };
+          var default_strategy = getDefaultStrategy;
+          var transport_connection_initializer = function() {
+            var self2 = this;
+            self2.timeline.info(self2.buildTimelineMessage({
+              transport: self2.name + (self2.options.useTLS ? "s" : "")
+            }));
+            if (self2.hooks.isInitialized()) {
+              self2.changeState("initialized");
+            } else if (self2.hooks.file) {
+              self2.changeState("initializing");
+              Dependencies.load(self2.hooks.file, { useTLS: self2.options.useTLS }, function(error, callback) {
+                if (self2.hooks.isInitialized()) {
+                  self2.changeState("initialized");
+                  callback(true);
+                } else {
+                  if (error) {
+                    self2.onError(error);
+                  }
+                  self2.onClose();
+                  callback(false);
+                }
+              });
+            } else {
+              self2.onClose();
+            }
+          };
+          var http_xdomain_request_hooks = {
+            getRequest: function(socket) {
+              var xdr = new window.XDomainRequest();
+              xdr.ontimeout = function() {
+                socket.emit("error", new RequestTimedOut());
+                socket.close();
+              };
+              xdr.onerror = function(e2) {
+                socket.emit("error", e2);
+                socket.close();
+              };
+              xdr.onprogress = function() {
+                if (xdr.responseText && xdr.responseText.length > 0) {
+                  socket.onChunk(200, xdr.responseText);
+                }
+              };
+              xdr.onload = function() {
+                if (xdr.responseText && xdr.responseText.length > 0) {
+                  socket.onChunk(200, xdr.responseText);
+                }
+                socket.emit("finished", 200);
+                socket.close();
+              };
+              return xdr;
+            },
+            abortRequest: function(xdr) {
+              xdr.ontimeout = xdr.onerror = xdr.onprogress = xdr.onload = null;
+              xdr.abort();
+            }
+          };
+          var http_xdomain_request = http_xdomain_request_hooks;
+          const MAX_BUFFER_LENGTH = 256 * 1024;
+          class http_request_HTTPRequest extends dispatcher_Dispatcher {
+            constructor(hooks, method, url) {
+              super();
+              this.hooks = hooks;
+              this.method = method;
+              this.url = url;
+            }
+            start(payload) {
+              this.position = 0;
+              this.xhr = this.hooks.getRequest(this);
+              this.unloader = () => {
+                this.close();
+              };
+              runtime.addUnloadListener(this.unloader);
+              this.xhr.open(this.method, this.url, true);
+              if (this.xhr.setRequestHeader) {
+                this.xhr.setRequestHeader("Content-Type", "application/json");
+              }
+              this.xhr.send(payload);
+            }
+            close() {
+              if (this.unloader) {
+                runtime.removeUnloadListener(this.unloader);
+                this.unloader = null;
+              }
+              if (this.xhr) {
+                this.hooks.abortRequest(this.xhr);
+                this.xhr = null;
+              }
+            }
+            onChunk(status, data) {
+              while (true) {
+                var chunk = this.advanceBuffer(data);
+                if (chunk) {
+                  this.emit("chunk", { status, data: chunk });
+                } else {
+                  break;
+                }
+              }
+              if (this.isBufferTooLong(data)) {
+                this.emit("buffer_too_long");
+              }
+            }
+            advanceBuffer(buffer) {
+              var unreadData = buffer.slice(this.position);
+              var endOfLinePosition = unreadData.indexOf("\n");
+              if (endOfLinePosition !== -1) {
+                this.position += endOfLinePosition + 1;
+                return unreadData.slice(0, endOfLinePosition);
+              } else {
+                return null;
+              }
+            }
+            isBufferTooLong(buffer) {
+              return this.position === buffer.length && buffer.length > MAX_BUFFER_LENGTH;
+            }
+          }
+          var State;
+          (function(State2) {
+            State2[State2["CONNECTING"] = 0] = "CONNECTING";
+            State2[State2["OPEN"] = 1] = "OPEN";
+            State2[State2["CLOSED"] = 3] = "CLOSED";
+          })(State || (State = {}));
+          var state = State;
+          var autoIncrement = 1;
+          class http_socket_HTTPSocket {
+            constructor(hooks, url) {
+              this.hooks = hooks;
+              this.session = randomNumber(1e3) + "/" + randomString(8);
+              this.location = getLocation(url);
+              this.readyState = state.CONNECTING;
+              this.openStream();
+            }
+            send(payload) {
+              return this.sendRaw(JSON.stringify([payload]));
+            }
+            ping() {
+              this.hooks.sendHeartbeat(this);
+            }
+            close(code, reason) {
+              this.onClose(code, reason, true);
+            }
+            sendRaw(payload) {
+              if (this.readyState === state.OPEN) {
+                try {
+                  runtime.createSocketRequest("POST", getUniqueURL(getSendURL(this.location, this.session))).start(payload);
+                  return true;
+                } catch (e2) {
+                  return false;
+                }
+              } else {
+                return false;
+              }
+            }
+            reconnect() {
+              this.closeStream();
+              this.openStream();
+            }
+            onClose(code, reason, wasClean) {
+              this.closeStream();
+              this.readyState = state.CLOSED;
+              if (this.onclose) {
+                this.onclose({
+                  code,
+                  reason,
+                  wasClean
+                });
+              }
+            }
+            onChunk(chunk) {
+              if (chunk.status !== 200) {
+                return;
+              }
+              if (this.readyState === state.OPEN) {
+                this.onActivity();
+              }
+              var payload;
+              var type2 = chunk.data.slice(0, 1);
+              switch (type2) {
+                case "o":
+                  payload = JSON.parse(chunk.data.slice(1) || "{}");
+                  this.onOpen(payload);
+                  break;
+                case "a":
+                  payload = JSON.parse(chunk.data.slice(1) || "[]");
+                  for (var i2 = 0; i2 < payload.length; i2++) {
+                    this.onEvent(payload[i2]);
+                  }
+                  break;
+                case "m":
+                  payload = JSON.parse(chunk.data.slice(1) || "null");
+                  this.onEvent(payload);
+                  break;
+                case "h":
+                  this.hooks.onHeartbeat(this);
+                  break;
+                case "c":
+                  payload = JSON.parse(chunk.data.slice(1) || "[]");
+                  this.onClose(payload[0], payload[1], true);
+                  break;
+              }
+            }
+            onOpen(options) {
+              if (this.readyState === state.CONNECTING) {
+                if (options && options.hostname) {
+                  this.location.base = replaceHost(this.location.base, options.hostname);
+                }
+                this.readyState = state.OPEN;
+                if (this.onopen) {
+                  this.onopen();
+                }
+              } else {
+                this.onClose(1006, "Server lost session", true);
+              }
+            }
+            onEvent(event) {
+              if (this.readyState === state.OPEN && this.onmessage) {
+                this.onmessage({ data: event });
+              }
+            }
+            onActivity() {
+              if (this.onactivity) {
+                this.onactivity();
+              }
+            }
+            onError(error) {
+              if (this.onerror) {
+                this.onerror(error);
+              }
+            }
+            openStream() {
+              this.stream = runtime.createSocketRequest("POST", getUniqueURL(this.hooks.getReceiveURL(this.location, this.session)));
+              this.stream.bind("chunk", (chunk) => {
+                this.onChunk(chunk);
+              });
+              this.stream.bind("finished", (status) => {
+                this.hooks.onFinished(this, status);
+              });
+              this.stream.bind("buffer_too_long", () => {
+                this.reconnect();
+              });
+              try {
+                this.stream.start();
+              } catch (error) {
+                util.defer(() => {
+                  this.onError(error);
+                  this.onClose(1006, "Could not start streaming", false);
+                });
+              }
+            }
+            closeStream() {
+              if (this.stream) {
+                this.stream.unbind_all();
+                this.stream.close();
+                this.stream = null;
+              }
+            }
+          }
+          function getLocation(url) {
+            var parts = /([^\?]*)\/*(\??.*)/.exec(url);
+            return {
+              base: parts[1],
+              queryString: parts[2]
+            };
+          }
+          function getSendURL(url, session) {
+            return url.base + "/" + session + "/xhr_send";
+          }
+          function getUniqueURL(url) {
+            var separator = url.indexOf("?") === -1 ? "?" : "&";
+            return url + separator + "t=" + +/* @__PURE__ */ new Date() + "&n=" + autoIncrement++;
+          }
+          function replaceHost(url, hostname) {
+            var urlParts = /(https?:\/\/)([^\/:]+)((\/|:)?.*)/.exec(url);
+            return urlParts[1] + hostname + urlParts[3];
+          }
+          function randomNumber(max2) {
+            return runtime.randomInt(max2);
+          }
+          function randomString(length) {
+            var result = [];
+            for (var i2 = 0; i2 < length; i2++) {
+              result.push(randomNumber(32).toString(32));
+            }
+            return result.join("");
+          }
+          var http_socket = http_socket_HTTPSocket;
+          var http_streaming_socket_hooks = {
+            getReceiveURL: function(url, session) {
+              return url.base + "/" + session + "/xhr_streaming" + url.queryString;
+            },
+            onHeartbeat: function(socket) {
+              socket.sendRaw("[]");
+            },
+            sendHeartbeat: function(socket) {
+              socket.sendRaw("[]");
+            },
+            onFinished: function(socket, status) {
+              socket.onClose(1006, "Connection interrupted (" + status + ")", false);
+            }
+          };
+          var http_streaming_socket = http_streaming_socket_hooks;
+          var http_polling_socket_hooks = {
+            getReceiveURL: function(url, session) {
+              return url.base + "/" + session + "/xhr" + url.queryString;
+            },
+            onHeartbeat: function() {
+            },
+            sendHeartbeat: function(socket) {
+              socket.sendRaw("[]");
+            },
+            onFinished: function(socket, status) {
+              if (status === 200) {
+                socket.reconnect();
+              } else {
+                socket.onClose(1006, "Connection interrupted (" + status + ")", false);
+              }
+            }
+          };
+          var http_polling_socket = http_polling_socket_hooks;
+          var http_xhr_request_hooks = {
+            getRequest: function(socket) {
+              var Constructor = runtime.getXHRAPI();
+              var xhr2 = new Constructor();
+              xhr2.onreadystatechange = xhr2.onprogress = function() {
+                switch (xhr2.readyState) {
+                  case 3:
+                    if (xhr2.responseText && xhr2.responseText.length > 0) {
+                      socket.onChunk(xhr2.status, xhr2.responseText);
+                    }
+                    break;
+                  case 4:
+                    if (xhr2.responseText && xhr2.responseText.length > 0) {
+                      socket.onChunk(xhr2.status, xhr2.responseText);
+                    }
+                    socket.emit("finished", xhr2.status);
+                    socket.close();
+                    break;
+                }
+              };
+              return xhr2;
+            },
+            abortRequest: function(xhr2) {
+              xhr2.onreadystatechange = null;
+              xhr2.abort();
+            }
+          };
+          var http_xhr_request = http_xhr_request_hooks;
+          var HTTP = {
+            createStreamingSocket(url) {
+              return this.createSocket(http_streaming_socket, url);
+            },
+            createPollingSocket(url) {
+              return this.createSocket(http_polling_socket, url);
+            },
+            createSocket(hooks, url) {
+              return new http_socket(hooks, url);
+            },
+            createXHR(method, url) {
+              return this.createRequest(http_xhr_request, method, url);
+            },
+            createRequest(hooks, method, url) {
+              return new http_request_HTTPRequest(hooks, method, url);
+            }
+          };
+          var http_http = HTTP;
+          http_http.createXDR = function(method, url) {
+            return this.createRequest(http_xdomain_request, method, url);
+          };
+          var web_http_http = http_http;
+          var Runtime = {
+            nextAuthCallbackID: 1,
+            auth_callbacks: {},
+            ScriptReceivers,
+            DependenciesReceivers,
+            getDefaultStrategy: default_strategy,
+            Transports: transports_transports,
+            transportConnectionInitializer: transport_connection_initializer,
+            HTTPFactory: web_http_http,
+            TimelineTransport: jsonp_timeline,
+            getXHRAPI() {
+              return window.XMLHttpRequest;
+            },
+            getWebSocketAPI() {
+              return window.WebSocket || window.MozWebSocket;
+            },
+            setup(PusherClass) {
+              window.Pusher = PusherClass;
+              var initializeOnDocumentBody = () => {
+                this.onDocumentBody(PusherClass.ready);
+              };
+              if (!window.JSON) {
+                Dependencies.load("json2", {}, initializeOnDocumentBody);
+              } else {
+                initializeOnDocumentBody();
+              }
+            },
+            getDocument() {
+              return document;
+            },
+            getProtocol() {
+              return this.getDocument().location.protocol;
+            },
+            getAuthorizers() {
+              return { ajax: xhr_auth, jsonp: jsonp_auth };
+            },
+            onDocumentBody(callback) {
+              if (document.body) {
+                callback();
+              } else {
+                setTimeout(() => {
+                  this.onDocumentBody(callback);
+                }, 0);
+              }
+            },
+            createJSONPRequest(url, data) {
+              return new jsonp_request_JSONPRequest(url, data);
+            },
+            createScriptRequest(src) {
+              return new ScriptRequest(src);
+            },
+            getLocalStorage() {
+              try {
+                return window.localStorage;
+              } catch (e2) {
+                return void 0;
+              }
+            },
+            createXHR() {
+              if (this.getXHRAPI()) {
+                return this.createXMLHttpRequest();
+              } else {
+                return this.createMicrosoftXHR();
+              }
+            },
+            createXMLHttpRequest() {
+              var Constructor = this.getXHRAPI();
+              return new Constructor();
+            },
+            createMicrosoftXHR() {
+              return new ActiveXObject("Microsoft.XMLHTTP");
+            },
+            getNetwork() {
+              return net_info_Network;
+            },
+            createWebSocket(url) {
+              var Constructor = this.getWebSocketAPI();
+              return new Constructor(url);
+            },
+            createSocketRequest(method, url) {
+              if (this.isXHRSupported()) {
+                return this.HTTPFactory.createXHR(method, url);
+              } else if (this.isXDRSupported(url.indexOf("https:") === 0)) {
+                return this.HTTPFactory.createXDR(method, url);
+              } else {
+                throw "Cross-origin HTTP requests are not supported";
+              }
+            },
+            isXHRSupported() {
+              var Constructor = this.getXHRAPI();
+              return Boolean(Constructor) && new Constructor().withCredentials !== void 0;
+            },
+            isXDRSupported(useTLS) {
+              var protocol = useTLS ? "https:" : "http:";
+              var documentProtocol = this.getProtocol();
+              return Boolean(window["XDomainRequest"]) && documentProtocol === protocol;
+            },
+            addUnloadListener(listener) {
+              if (window.addEventListener !== void 0) {
+                window.addEventListener("unload", listener, false);
+              } else if (window.attachEvent !== void 0) {
+                window.attachEvent("onunload", listener);
+              }
+            },
+            removeUnloadListener(listener) {
+              if (window.addEventListener !== void 0) {
+                window.removeEventListener("unload", listener, false);
+              } else if (window.detachEvent !== void 0) {
+                window.detachEvent("onunload", listener);
+              }
+            },
+            randomInt(max2) {
+              const random = function() {
+                const crypto = window.crypto || window["msCrypto"];
+                const random2 = crypto.getRandomValues(new Uint32Array(1))[0];
+                return random2 / Math.pow(2, 32);
+              };
+              return Math.floor(random() * max2);
+            }
+          };
+          var runtime = Runtime;
+          var TimelineLevel;
+          (function(TimelineLevel2) {
+            TimelineLevel2[TimelineLevel2["ERROR"] = 3] = "ERROR";
+            TimelineLevel2[TimelineLevel2["INFO"] = 6] = "INFO";
+            TimelineLevel2[TimelineLevel2["DEBUG"] = 7] = "DEBUG";
+          })(TimelineLevel || (TimelineLevel = {}));
+          var timeline_level = TimelineLevel;
+          class timeline_Timeline {
+            constructor(key, session, options) {
+              this.key = key;
+              this.session = session;
+              this.events = [];
+              this.options = options || {};
+              this.sent = 0;
+              this.uniqueID = 0;
+            }
+            log(level, event) {
+              if (level <= this.options.level) {
+                this.events.push(extend2({}, event, { timestamp: util.now() }));
+                if (this.options.limit && this.events.length > this.options.limit) {
+                  this.events.shift();
+                }
+              }
+            }
+            error(event) {
+              this.log(timeline_level.ERROR, event);
+            }
+            info(event) {
+              this.log(timeline_level.INFO, event);
+            }
+            debug(event) {
+              this.log(timeline_level.DEBUG, event);
+            }
+            isEmpty() {
+              return this.events.length === 0;
+            }
+            send(sendfn, callback) {
+              var data = extend2({
+                session: this.session,
+                bundle: this.sent + 1,
+                key: this.key,
+                lib: "js",
+                version: this.options.version,
+                cluster: this.options.cluster,
+                features: this.options.features,
+                timeline: this.events
+              }, this.options.params);
+              this.events = [];
+              sendfn(data, (error, result) => {
+                if (!error) {
+                  this.sent++;
+                }
+                if (callback) {
+                  callback(error, result);
+                }
+              });
+              return true;
+            }
+            generateUniqueID() {
+              this.uniqueID++;
+              return this.uniqueID;
+            }
+          }
+          class transport_strategy_TransportStrategy {
+            constructor(name2, priority, transport, options) {
+              this.name = name2;
+              this.priority = priority;
+              this.transport = transport;
+              this.options = options || {};
+            }
+            isSupported() {
+              return this.transport.isSupported({
+                useTLS: this.options.useTLS
+              });
+            }
+            connect(minPriority, callback) {
+              if (!this.isSupported()) {
+                return failAttempt(new UnsupportedStrategy(), callback);
+              } else if (this.priority < minPriority) {
+                return failAttempt(new TransportPriorityTooLow(), callback);
+              }
+              var connected = false;
+              var transport = this.transport.createConnection(this.name, this.priority, this.options.key, this.options);
+              var handshake = null;
+              var onInitialized = function() {
+                transport.unbind("initialized", onInitialized);
+                transport.connect();
+              };
+              var onOpen = function() {
+                handshake = factory.createHandshake(transport, function(result) {
+                  connected = true;
+                  unbindListeners();
+                  callback(null, result);
+                });
+              };
+              var onError = function(error) {
+                unbindListeners();
+                callback(error);
+              };
+              var onClosed = function() {
+                unbindListeners();
+                var serializedTransport;
+                serializedTransport = safeJSONStringify(transport);
+                callback(new TransportClosed(serializedTransport));
+              };
+              var unbindListeners = function() {
+                transport.unbind("initialized", onInitialized);
+                transport.unbind("open", onOpen);
+                transport.unbind("error", onError);
+                transport.unbind("closed", onClosed);
+              };
+              transport.bind("initialized", onInitialized);
+              transport.bind("open", onOpen);
+              transport.bind("error", onError);
+              transport.bind("closed", onClosed);
+              transport.initialize();
+              return {
+                abort: () => {
+                  if (connected) {
+                    return;
+                  }
+                  unbindListeners();
+                  if (handshake) {
+                    handshake.close();
+                  } else {
+                    transport.close();
+                  }
+                },
+                forceMinPriority: (p2) => {
+                  if (connected) {
+                    return;
+                  }
+                  if (this.priority < p2) {
+                    if (handshake) {
+                      handshake.close();
+                    } else {
+                      transport.close();
+                    }
+                  }
+                }
+              };
+            }
+          }
+          function failAttempt(error, callback) {
+            util.defer(function() {
+              callback(error);
+            });
+            return {
+              abort: function() {
+              },
+              forceMinPriority: function() {
+              }
+            };
+          }
+          const { Transports: strategy_builder_Transports } = runtime;
+          var strategy_builder_defineTransport = function(config, name2, type2, priority, options, manager) {
+            var transportClass = strategy_builder_Transports[type2];
+            if (!transportClass) {
+              throw new UnsupportedTransport(type2);
+            }
+            var enabled = (!config.enabledTransports || arrayIndexOf(config.enabledTransports, name2) !== -1) && (!config.disabledTransports || arrayIndexOf(config.disabledTransports, name2) === -1);
+            var transport;
+            if (enabled) {
+              options = Object.assign({ ignoreNullOrigin: config.ignoreNullOrigin }, options);
+              transport = new transport_strategy_TransportStrategy(name2, priority, manager ? manager.getAssistant(transportClass) : transportClass, options);
+            } else {
+              transport = strategy_builder_UnsupportedStrategy;
+            }
+            return transport;
+          };
+          var strategy_builder_UnsupportedStrategy = {
+            isSupported: function() {
+              return false;
+            },
+            connect: function(_, callback) {
+              var deferred = util.defer(function() {
+                callback(new UnsupportedStrategy());
+              });
+              return {
+                abort: function() {
+                  deferred.ensureAborted();
+                },
+                forceMinPriority: function() {
+                }
+              };
+            }
+          };
+          function validateOptions(options) {
+            if (options == null) {
+              throw "You must pass an options object";
+            }
+            if (options.cluster == null) {
+              throw "Options object must provide a cluster";
+            }
+            if ("disableStats" in options) {
+              logger.warn("The disableStats option is deprecated in favor of enableStats");
+            }
+          }
+          const composeChannelQuery = (params, authOptions) => {
+            var query = "socket_id=" + encodeURIComponent(params.socketId);
+            for (var key in authOptions.params) {
+              query += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(authOptions.params[key]);
+            }
+            if (authOptions.paramsProvider != null) {
+              let dynamicParams = authOptions.paramsProvider();
+              for (var key in dynamicParams) {
+                query += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(dynamicParams[key]);
+              }
+            }
+            return query;
+          };
+          const UserAuthenticator = (authOptions) => {
+            if (typeof runtime.getAuthorizers()[authOptions.transport] === "undefined") {
+              throw `'${authOptions.transport}' is not a recognized auth transport`;
+            }
+            return (params, callback) => {
+              const query = composeChannelQuery(params, authOptions);
+              runtime.getAuthorizers()[authOptions.transport](runtime, query, authOptions, AuthRequestType.UserAuthentication, callback);
+            };
+          };
+          var user_authenticator = UserAuthenticator;
+          const channel_authorizer_composeChannelQuery = (params, authOptions) => {
+            var query = "socket_id=" + encodeURIComponent(params.socketId);
+            query += "&channel_name=" + encodeURIComponent(params.channelName);
+            for (var key in authOptions.params) {
+              query += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(authOptions.params[key]);
+            }
+            if (authOptions.paramsProvider != null) {
+              let dynamicParams = authOptions.paramsProvider();
+              for (var key in dynamicParams) {
+                query += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(dynamicParams[key]);
+              }
+            }
+            return query;
+          };
+          const ChannelAuthorizer = (authOptions) => {
+            if (typeof runtime.getAuthorizers()[authOptions.transport] === "undefined") {
+              throw `'${authOptions.transport}' is not a recognized auth transport`;
+            }
+            return (params, callback) => {
+              const query = channel_authorizer_composeChannelQuery(params, authOptions);
+              runtime.getAuthorizers()[authOptions.transport](runtime, query, authOptions, AuthRequestType.ChannelAuthorization, callback);
+            };
+          };
+          var channel_authorizer = ChannelAuthorizer;
+          const ChannelAuthorizerProxy = (pusher2, authOptions, channelAuthorizerGenerator) => {
+            const deprecatedAuthorizerOptions = {
+              authTransport: authOptions.transport,
+              authEndpoint: authOptions.endpoint,
+              auth: {
+                params: authOptions.params,
+                headers: authOptions.headers
+              }
+            };
+            return (params, callback) => {
+              const channel = pusher2.channel(params.channelName);
+              const channelAuthorizer = channelAuthorizerGenerator(channel, deprecatedAuthorizerOptions);
+              channelAuthorizer.authorize(params.socketId, callback);
+            };
+          };
+          function getConfig(opts, pusher2) {
+            let config = {
+              activityTimeout: opts.activityTimeout || defaults2.activityTimeout,
+              cluster: opts.cluster,
+              httpPath: opts.httpPath || defaults2.httpPath,
+              httpPort: opts.httpPort || defaults2.httpPort,
+              httpsPort: opts.httpsPort || defaults2.httpsPort,
+              pongTimeout: opts.pongTimeout || defaults2.pongTimeout,
+              statsHost: opts.statsHost || defaults2.stats_host,
+              unavailableTimeout: opts.unavailableTimeout || defaults2.unavailableTimeout,
+              wsPath: opts.wsPath || defaults2.wsPath,
+              wsPort: opts.wsPort || defaults2.wsPort,
+              wssPort: opts.wssPort || defaults2.wssPort,
+              enableStats: getEnableStatsConfig(opts),
+              httpHost: getHttpHost(opts),
+              useTLS: shouldUseTLS(opts),
+              wsHost: getWebsocketHost(opts),
+              userAuthenticator: buildUserAuthenticator(opts),
+              channelAuthorizer: buildChannelAuthorizer(opts, pusher2)
+            };
+            if ("disabledTransports" in opts)
+              config.disabledTransports = opts.disabledTransports;
+            if ("enabledTransports" in opts)
+              config.enabledTransports = opts.enabledTransports;
+            if ("ignoreNullOrigin" in opts)
+              config.ignoreNullOrigin = opts.ignoreNullOrigin;
+            if ("timelineParams" in opts)
+              config.timelineParams = opts.timelineParams;
+            if ("nacl" in opts) {
+              config.nacl = opts.nacl;
+            }
+            return config;
+          }
+          function getHttpHost(opts) {
+            if (opts.httpHost) {
+              return opts.httpHost;
+            }
+            if (opts.cluster) {
+              return `sockjs-${opts.cluster}.pusher.com`;
+            }
+            return defaults2.httpHost;
+          }
+          function getWebsocketHost(opts) {
+            if (opts.wsHost) {
+              return opts.wsHost;
+            }
+            return getWebsocketHostFromCluster(opts.cluster);
+          }
+          function getWebsocketHostFromCluster(cluster) {
+            return `ws-${cluster}.pusher.com`;
+          }
+          function shouldUseTLS(opts) {
+            if (runtime.getProtocol() === "https:") {
+              return true;
+            } else if (opts.forceTLS === false) {
+              return false;
+            }
+            return true;
+          }
+          function getEnableStatsConfig(opts) {
+            if ("enableStats" in opts) {
+              return opts.enableStats;
+            }
+            if ("disableStats" in opts) {
+              return !opts.disableStats;
+            }
+            return false;
+          }
+          const hasCustomHandler = (auth) => {
+            return "customHandler" in auth && auth["customHandler"] != null;
+          };
+          function buildUserAuthenticator(opts) {
+            const userAuthentication = Object.assign(Object.assign({}, defaults2.userAuthentication), opts.userAuthentication);
+            if (hasCustomHandler(userAuthentication)) {
+              return userAuthentication["customHandler"];
+            }
+            return user_authenticator(userAuthentication);
+          }
+          function buildChannelAuth(opts, pusher2) {
+            let channelAuthorization;
+            if ("channelAuthorization" in opts) {
+              channelAuthorization = Object.assign(Object.assign({}, defaults2.channelAuthorization), opts.channelAuthorization);
+            } else {
+              channelAuthorization = {
+                transport: opts.authTransport || defaults2.authTransport,
+                endpoint: opts.authEndpoint || defaults2.authEndpoint
+              };
+              if ("auth" in opts) {
+                if ("params" in opts.auth)
+                  channelAuthorization.params = opts.auth.params;
+                if ("headers" in opts.auth)
+                  channelAuthorization.headers = opts.auth.headers;
+              }
+              if ("authorizer" in opts) {
+                return {
+                  customHandler: ChannelAuthorizerProxy(pusher2, channelAuthorization, opts.authorizer)
+                };
+              }
+            }
+            return channelAuthorization;
+          }
+          function buildChannelAuthorizer(opts, pusher2) {
+            const channelAuthorization = buildChannelAuth(opts, pusher2);
+            if (hasCustomHandler(channelAuthorization)) {
+              return channelAuthorization["customHandler"];
+            }
+            return channel_authorizer(channelAuthorization);
+          }
+          class watchlist_WatchlistFacade extends dispatcher_Dispatcher {
+            constructor(pusher2) {
+              super(function(eventName, data) {
+                logger.debug(`No callbacks on watchlist events for ${eventName}`);
+              });
+              this.pusher = pusher2;
+              this.bindWatchlistInternalEvent();
+            }
+            handleEvent(pusherEvent) {
+              pusherEvent.data.events.forEach((watchlistEvent) => {
+                this.emit(watchlistEvent.name, watchlistEvent);
+              });
+            }
+            bindWatchlistInternalEvent() {
+              this.pusher.connection.bind("message", (pusherEvent) => {
+                var eventName = pusherEvent.event;
+                if (eventName === "pusher_internal:watchlist_events") {
+                  this.handleEvent(pusherEvent);
+                }
+              });
+            }
+          }
+          function flatPromise() {
+            let resolve2, reject;
+            const promise = new Promise((res, rej) => {
+              resolve2 = res;
+              reject = rej;
+            });
+            return { promise, resolve: resolve2, reject };
+          }
+          var flat_promise = flatPromise;
+          class user_UserFacade extends dispatcher_Dispatcher {
+            constructor(pusher2) {
+              super(function(eventName, data) {
+                logger.debug("No callbacks on user for " + eventName);
+              });
+              this.signin_requested = false;
+              this.user_data = null;
+              this.serverToUserChannel = null;
+              this.signinDonePromise = null;
+              this._signinDoneResolve = null;
+              this._onAuthorize = (err, authData) => {
+                if (err) {
+                  logger.warn(`Error during signin: ${err}`);
+                  this._cleanup();
+                  return;
+                }
+                this.pusher.send_event("pusher:signin", {
+                  auth: authData.auth,
+                  user_data: authData.user_data
+                });
+              };
+              this.pusher = pusher2;
+              this.pusher.connection.bind("state_change", ({ previous, current }) => {
+                if (previous !== "connected" && current === "connected") {
+                  this._signin();
+                }
+                if (previous === "connected" && current !== "connected") {
+                  this._cleanup();
+                  this._newSigninPromiseIfNeeded();
+                }
+              });
+              this.watchlist = new watchlist_WatchlistFacade(pusher2);
+              this.pusher.connection.bind("message", (event) => {
+                var eventName = event.event;
+                if (eventName === "pusher:signin_success") {
+                  this._onSigninSuccess(event.data);
+                }
+                if (this.serverToUserChannel && this.serverToUserChannel.name === event.channel) {
+                  this.serverToUserChannel.handleEvent(event);
+                }
+              });
+            }
+            signin() {
+              if (this.signin_requested) {
+                return;
+              }
+              this.signin_requested = true;
+              this._signin();
+            }
+            _signin() {
+              if (!this.signin_requested) {
+                return;
+              }
+              this._newSigninPromiseIfNeeded();
+              if (this.pusher.connection.state !== "connected") {
+                return;
+              }
+              this.pusher.config.userAuthenticator({
+                socketId: this.pusher.connection.socket_id
+              }, this._onAuthorize);
+            }
+            _onSigninSuccess(data) {
+              try {
+                this.user_data = JSON.parse(data.user_data);
+              } catch (e2) {
+                logger.error(`Failed parsing user data after signin: ${data.user_data}`);
+                this._cleanup();
+                return;
+              }
+              if (typeof this.user_data.id !== "string" || this.user_data.id === "") {
+                logger.error(`user_data doesn't contain an id. user_data: ${this.user_data}`);
+                this._cleanup();
+                return;
+              }
+              this._signinDoneResolve();
+              this._subscribeChannels();
+            }
+            _subscribeChannels() {
+              const ensure_subscribed = (channel) => {
+                if (channel.subscriptionPending && channel.subscriptionCancelled) {
+                  channel.reinstateSubscription();
+                } else if (!channel.subscriptionPending && this.pusher.connection.state === "connected") {
+                  channel.subscribe();
+                }
+              };
+              this.serverToUserChannel = new channel_Channel(`#server-to-user-${this.user_data.id}`, this.pusher);
+              this.serverToUserChannel.bind_global((eventName, data) => {
+                if (eventName.indexOf("pusher_internal:") === 0 || eventName.indexOf("pusher:") === 0) {
+                  return;
+                }
+                this.emit(eventName, data);
+              });
+              ensure_subscribed(this.serverToUserChannel);
+            }
+            _cleanup() {
+              this.user_data = null;
+              if (this.serverToUserChannel) {
+                this.serverToUserChannel.unbind_all();
+                this.serverToUserChannel.disconnect();
+                this.serverToUserChannel = null;
+              }
+              if (this.signin_requested) {
+                this._signinDoneResolve();
+              }
+            }
+            _newSigninPromiseIfNeeded() {
+              if (!this.signin_requested) {
+                return;
+              }
+              if (this.signinDonePromise && !this.signinDonePromise.done) {
+                return;
+              }
+              const { promise, resolve: resolve2, reject: _ } = flat_promise();
+              promise.done = false;
+              const setDone = () => {
+                promise.done = true;
+              };
+              promise.then(setDone).catch(setDone);
+              this.signinDonePromise = promise;
+              this._signinDoneResolve = resolve2;
+            }
+          }
+          class pusher_Pusher {
+            static ready() {
+              pusher_Pusher.isReady = true;
+              for (var i2 = 0, l2 = pusher_Pusher.instances.length; i2 < l2; i2++) {
+                pusher_Pusher.instances[i2].connect();
+              }
+            }
+            static getClientFeatures() {
+              return keys(filterObject({ ws: runtime.Transports.ws }, function(t4) {
+                return t4.isSupported({});
+              }));
+            }
+            constructor(app_key, options) {
+              checkAppKey(app_key);
+              validateOptions(options);
+              this.key = app_key;
+              this.options = options;
+              this.config = getConfig(this.options, this);
+              this.channels = factory.createChannels();
+              this.global_emitter = new dispatcher_Dispatcher();
+              this.sessionID = runtime.randomInt(1e9);
+              this.timeline = new timeline_Timeline(this.key, this.sessionID, {
+                cluster: this.config.cluster,
+                features: pusher_Pusher.getClientFeatures(),
+                params: this.config.timelineParams || {},
+                limit: 50,
+                level: timeline_level.INFO,
+                version: defaults2.VERSION
+              });
+              if (this.config.enableStats) {
+                this.timelineSender = factory.createTimelineSender(this.timeline, {
+                  host: this.config.statsHost,
+                  path: "/timeline/v2/" + runtime.TimelineTransport.name
+                });
+              }
+              var getStrategy = (options2) => {
+                return runtime.getDefaultStrategy(this.config, options2, strategy_builder_defineTransport);
+              };
+              this.connection = factory.createConnectionManager(this.key, {
+                getStrategy,
+                timeline: this.timeline,
+                activityTimeout: this.config.activityTimeout,
+                pongTimeout: this.config.pongTimeout,
+                unavailableTimeout: this.config.unavailableTimeout,
+                useTLS: Boolean(this.config.useTLS)
+              });
+              this.connection.bind("connected", () => {
+                this.subscribeAll();
+                if (this.timelineSender) {
+                  this.timelineSender.send(this.connection.isUsingTLS());
+                }
+              });
+              this.connection.bind("message", (event) => {
+                var eventName = event.event;
+                var internal = eventName.indexOf("pusher_internal:") === 0;
+                if (event.channel) {
+                  var channel = this.channel(event.channel);
+                  if (channel) {
+                    channel.handleEvent(event);
+                  }
+                }
+                if (!internal) {
+                  this.global_emitter.emit(event.event, event.data);
+                }
+              });
+              this.connection.bind("connecting", () => {
+                this.channels.disconnect();
+              });
+              this.connection.bind("disconnected", () => {
+                this.channels.disconnect();
+              });
+              this.connection.bind("error", (err) => {
+                logger.warn(err);
+              });
+              pusher_Pusher.instances.push(this);
+              this.timeline.info({ instances: pusher_Pusher.instances.length });
+              this.user = new user_UserFacade(this);
+              if (pusher_Pusher.isReady) {
+                this.connect();
+              }
+            }
+            switchCluster(options) {
+              const { appKey, cluster } = options;
+              this.key = appKey;
+              this.options = Object.assign(Object.assign({}, this.options), { cluster });
+              this.config = getConfig(this.options, this);
+              this.connection.switchCluster(this.key);
+            }
+            channel(name2) {
+              return this.channels.find(name2);
+            }
+            allChannels() {
+              return this.channels.all();
+            }
+            connect() {
+              this.connection.connect();
+              if (this.timelineSender) {
+                if (!this.timelineSenderTimer) {
+                  var usingTLS = this.connection.isUsingTLS();
+                  var timelineSender = this.timelineSender;
+                  this.timelineSenderTimer = new timers_PeriodicTimer(6e4, function() {
+                    timelineSender.send(usingTLS);
+                  });
+                }
+              }
+            }
+            disconnect() {
+              this.connection.disconnect();
+              if (this.timelineSenderTimer) {
+                this.timelineSenderTimer.ensureAborted();
+                this.timelineSenderTimer = null;
+              }
+            }
+            bind(event_name, callback, context) {
+              this.global_emitter.bind(event_name, callback, context);
+              return this;
+            }
+            unbind(event_name, callback, context) {
+              this.global_emitter.unbind(event_name, callback, context);
+              return this;
+            }
+            bind_global(callback) {
+              this.global_emitter.bind_global(callback);
+              return this;
+            }
+            unbind_global(callback) {
+              this.global_emitter.unbind_global(callback);
+              return this;
+            }
+            unbind_all(callback) {
+              this.global_emitter.unbind_all();
+              return this;
+            }
+            subscribeAll() {
+              var channelName;
+              for (channelName in this.channels.channels) {
+                if (this.channels.channels.hasOwnProperty(channelName)) {
+                  this.subscribe(channelName);
+                }
+              }
+            }
+            subscribe(channel_name) {
+              var channel = this.channels.add(channel_name, this);
+              if (channel.subscriptionPending && channel.subscriptionCancelled) {
+                channel.reinstateSubscription();
+              } else if (!channel.subscriptionPending && this.connection.state === "connected") {
+                channel.subscribe();
+              }
+              return channel;
+            }
+            unsubscribe(channel_name) {
+              var channel = this.channels.find(channel_name);
+              if (channel && channel.subscriptionPending) {
+                channel.cancelSubscription();
+              } else {
+                channel = this.channels.remove(channel_name);
+                if (channel && channel.subscribed) {
+                  channel.unsubscribe();
+                }
+              }
+            }
+            send_event(event_name, data, channel) {
+              return this.connection.send_event(event_name, data, channel);
+            }
+            shouldUseTLS() {
+              return this.config.useTLS;
+            }
+            signin() {
+              this.user.signin();
+            }
+          }
+          pusher_Pusher.instances = [];
+          pusher_Pusher.isReady = false;
+          pusher_Pusher.logToConsole = false;
+          pusher_Pusher.Runtime = runtime;
+          pusher_Pusher.ScriptReceivers = runtime.ScriptReceivers;
+          pusher_Pusher.DependenciesReceivers = runtime.DependenciesReceivers;
+          pusher_Pusher.auth_callbacks = runtime.auth_callbacks;
+          var core_pusher = __webpack_exports__["default"] = pusher_Pusher;
+          function checkAppKey(key) {
+            if (key === null || key === void 0) {
+              throw "You must pass your app key when you instantiate Pusher.";
+            }
+          }
+          runtime.setup(pusher_Pusher);
+        }
+        /******/
+      ])
+    );
+  });
+})(pusher);
+var pusherExports = pusher.exports;
+const Pusher$1 = /* @__PURE__ */ getDefaultExportFromCjs(pusherExports);
+const _sfc_main$9 = {
+  setup() {
+    const { reload } = Q();
+    onMounted(() => {
+      console.log("JobListener component mounted");
+      window.Pusher = Pusher$1;
+      window.Echo = new Echo({
+        broadcaster: "pusher",
+        key: void 0,
+        cluster: void 0,
+        encrypted: true
+      });
+      console.log("Echo instance initialized");
+      window.Echo.channel("job-pinned-finished").listen("JobPinnedFinished", (e2) => {
+        console.log("Job pinned finished for listing ID:", e2.listingId);
+        reload();
+      });
+    });
+    return {};
+  }
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div");
+}
+const JobListener = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render], ["__scopeId", "data-v-32aeb01f"]]);
+const _withScopeId$1 = (n2) => (pushScopeId("data-v-871f298a"), n2 = n2(), popScopeId(), n2);
+const _hoisted_1$7 = { class: "grid grid-cols-6 gap-2" };
 const _hoisted_2$7 = { class: "col-span-2" };
-const _hoisted_3$7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Beds", -1));
+const _hoisted_3$7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Title", -1));
 const _hoisted_4$7 = { class: "col-span-2" };
-const _hoisted_5$7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Baths", -1));
+const _hoisted_5$7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Description", -1));
 const _hoisted_6$4 = { class: "col-span-2" };
-const _hoisted_7$4 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Area", -1));
-const _hoisted_8$3 = { class: "col-span-4" };
-const _hoisted_9$3 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "City", -1));
+const _hoisted_7$4 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Category", -1));
+const _hoisted_8$3 = ["value"];
+const _hoisted_9$3 = { class: "grid grid-cols-6 gap-4" };
 const _hoisted_10$3 = { class: "col-span-2" };
-const _hoisted_11$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Post Code", -1));
-const _hoisted_12$2 = { class: "col-span-4" };
-const _hoisted_13$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street", -1));
+const _hoisted_11$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Beds", -1));
+const _hoisted_12$2 = { class: "col-span-2" };
+const _hoisted_13$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Baths1", -1));
 const _hoisted_14$2 = { class: "col-span-2" };
-const _hoisted_15$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street Nr", -1));
-const _hoisted_16$2 = { class: "col-span-6" };
-const _hoisted_17$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Price", -1));
-const _hoisted_18$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-span-6 text-center" }, [
+const _hoisted_15$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Area", -1));
+const _hoisted_16$2 = { class: "col-span-4" };
+const _hoisted_17$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "City", -1));
+const _hoisted_18$2 = { class: "col-span-2" };
+const _hoisted_19$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Post Code 1", -1));
+const _hoisted_20$2 = { class: "col-span-4" };
+const _hoisted_21$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street", -1));
+const _hoisted_22$2 = { class: "col-span-2" };
+const _hoisted_23$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street Nr", -1));
+const _hoisted_24$2 = { class: "col-span-6" };
+const _hoisted_25$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Price", -1));
+const _hoisted_26$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-span-6 text-center" }, [
   /* @__PURE__ */ createBaseVNode("button", {
     type: "submit",
     class: "btn-primary"
@@ -20578,8 +25922,14 @@ const _hoisted_18$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ creat
 ], -1));
 const _sfc_main$8 = {
   __name: "Create",
+  props: {
+    categories: Array
+  },
   setup(__props) {
     const form = T$1({
+      title: null,
+      description: null,
+      category_id: 1,
       beds: 0,
       baths: 0,
       area: 0,
@@ -20591,169 +25941,237 @@ const _sfc_main$8 = {
     });
     const create2 = () => form.post(route("realtor.listing.store"));
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("form", {
-        onSubmit: withModifiers(create2, ["prevent"])
-      }, [
-        createBaseVNode("div", _hoisted_1$7, [
-          createBaseVNode("div", _hoisted_2$7, [
-            _hoisted_3$7,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => unref(form).beds = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [
-                vModelText,
-                unref(form).beds,
-                void 0,
-                { number: true }
-              ]
+      return openBlock(), createElementBlock(Fragment, null, [
+        createVNode(JobListener),
+        createBaseVNode("form", {
+          onSubmit: withModifiers(create2, ["prevent"])
+        }, [
+          createBaseVNode("div", _hoisted_1$7, [
+            createBaseVNode("div", _hoisted_2$7, [
+              _hoisted_3$7,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => unref(form).title = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).title,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.title
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.beds
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_4$7, [
-            _hoisted_5$7,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => unref(form).baths = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [
-                vModelText,
-                unref(form).baths,
-                void 0,
-                { number: true }
-              ]
+            createBaseVNode("div", _hoisted_4$7, [
+              _hoisted_5$7,
+              withDirectives(createBaseVNode("textarea", {
+                "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => unref(form).description = $event),
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).description,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.description
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.baths
-            }, null, 8, ["errorMsg"])
+            createBaseVNode("div", _hoisted_6$4, [
+              _hoisted_7$4,
+              withDirectives(createBaseVNode("select", {
+                name: "category_id",
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => unref(form).category_id = $event),
+                class: "input",
+                required: ""
+              }, [
+                (openBlock(true), createElementBlock(Fragment, null, renderList(__props.categories, (category) => {
+                  return openBlock(), createElementBlock("option", {
+                    value: category.id
+                  }, toDisplayString(category.name), 9, _hoisted_8$3);
+                }), 256))
+              ], 512), [
+                [vModelSelect, unref(form).category_id]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.category_id
+              }, null, 8, ["errorMsg"])
+            ])
           ]),
-          createBaseVNode("div", _hoisted_6$4, [
-            _hoisted_7$4,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => unref(form).area = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [
-                vModelText,
-                unref(form).area,
-                void 0,
-                { number: true }
-              ]
+          createBaseVNode("div", _hoisted_9$3, [
+            createBaseVNode("div", _hoisted_10$3, [
+              _hoisted_11$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => unref(form).beds = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).beds,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.beds
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.area
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_8$3, [
-            _hoisted_9$3,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => unref(form).city = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [vModelText, unref(form).city]
+            createBaseVNode("div", _hoisted_12$2, [
+              _hoisted_13$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(form).baths = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).baths,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.baths
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.city
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_10$3, [
-            _hoisted_11$2,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(form).code = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [vModelText, unref(form).code]
+            createBaseVNode("div", _hoisted_14$2, [
+              _hoisted_15$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(form).area = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).area,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.area
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.code
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_12$2, [
-            _hoisted_13$2,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(form).street = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [vModelText, unref(form).street]
+            createBaseVNode("div", _hoisted_16$2, [
+              _hoisted_17$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(form).city = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [vModelText, unref(form).city]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.city
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.street
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_14$2, [
-            _hoisted_15$2,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(form).street_nr = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [
-                vModelText,
-                unref(form).street_nr,
-                void 0,
-                { number: true }
-              ]
+            createBaseVNode("div", _hoisted_18$2, [
+              _hoisted_19$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(form).code = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [vModelText, unref(form).code]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.code
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.street_nr
-            }, null, 8, ["errorMsg"])
-          ]),
-          createBaseVNode("div", _hoisted_16$2, [
-            _hoisted_17$2,
-            withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(form).price = $event),
-              type: "text",
-              class: "input"
-            }, null, 512), [
-              [
-                vModelText,
-                unref(form).price,
-                void 0,
-                { number: true }
-              ]
+            createBaseVNode("div", _hoisted_20$2, [
+              _hoisted_21$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => unref(form).street = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [vModelText, unref(form).street]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.street
+              }, null, 8, ["errorMsg"])
             ]),
-            createVNode(_sfc_main$9, {
-              errorMsg: unref(form).errors.price
-            }, null, 8, ["errorMsg"])
-          ]),
-          _hoisted_18$2
-        ])
-      ], 32);
+            createBaseVNode("div", _hoisted_22$2, [
+              _hoisted_23$2,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => unref(form).street_nr = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).street_nr,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.street_nr
+              }, null, 8, ["errorMsg"])
+            ]),
+            createBaseVNode("div", _hoisted_24$2, [
+              _hoisted_25$1,
+              withDirectives(createBaseVNode("input", {
+                "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => unref(form).price = $event),
+                type: "text",
+                class: "input"
+              }, null, 512), [
+                [
+                  vModelText,
+                  unref(form).price,
+                  void 0,
+                  { number: true }
+                ]
+              ]),
+              createVNode(_sfc_main$a, {
+                errorMsg: unref(form).errors.price
+              }, null, 8, ["errorMsg"])
+            ]),
+            _hoisted_26$1
+          ])
+        ], 32)
+      ], 64);
     };
   }
 };
-const Create = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-40fd86d5"]]);
+const Create = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-871f298a"]]);
 const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Create
 }, Symbol.toStringTag, { value: "Module" }));
-const _withScopeId = (n2) => (pushScopeId("data-v-1eb9ac10"), n2 = n2(), popScopeId(), n2);
-const _hoisted_1$6 = { class: "grid grid-cols-6 gap-4" };
+const _withScopeId = (n2) => (pushScopeId("data-v-43f373d9"), n2 = n2(), popScopeId(), n2);
+const _hoisted_1$6 = { class: "grid grid-cols-6 gap-2" };
 const _hoisted_2$6 = { class: "col-span-2" };
-const _hoisted_3$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Beds", -1));
+const _hoisted_3$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Title", -1));
 const _hoisted_4$6 = { class: "col-span-2" };
-const _hoisted_5$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Baths", -1));
+const _hoisted_5$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Description", -1));
 const _hoisted_6$3 = { class: "col-span-2" };
-const _hoisted_7$3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Area", -1));
-const _hoisted_8$2 = { class: "col-span-4" };
-const _hoisted_9$2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "City", -1));
+const _hoisted_7$3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Category", -1));
+const _hoisted_8$2 = ["textContent"];
+const _hoisted_9$2 = { class: "grid grid-cols-6 gap-4" };
 const _hoisted_10$2 = { class: "col-span-2" };
-const _hoisted_11$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Post Code", -1));
-const _hoisted_12$1 = { class: "col-span-4" };
-const _hoisted_13$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street", -1));
+const _hoisted_11$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Beds", -1));
+const _hoisted_12$1 = { class: "col-span-2" };
+const _hoisted_13$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Baths", -1));
 const _hoisted_14$1 = { class: "col-span-2" };
-const _hoisted_15$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street Nr", -1));
-const _hoisted_16$1 = { class: "col-span-6" };
-const _hoisted_17$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Price", -1));
-const _hoisted_18$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-span-6 text-center" }, [
+const _hoisted_15$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Area", -1));
+const _hoisted_16$1 = { class: "col-span-4" };
+const _hoisted_17$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "City", -1));
+const _hoisted_18$1 = { class: "col-span-2" };
+const _hoisted_19$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Post Code", -1));
+const _hoisted_20$1 = { class: "col-span-4" };
+const _hoisted_21$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street", -1));
+const _hoisted_22$1 = { class: "col-span-2" };
+const _hoisted_23$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Street Nr", -1));
+const _hoisted_24$1 = { class: "col-span-6" };
+const _hoisted_25 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", { class: "label" }, "Price", -1));
+const _hoisted_26 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-span-6 text-center" }, [
   /* @__PURE__ */ createBaseVNode("button", {
     type: "submit",
     class: "btn-primary"
@@ -20767,6 +26185,8 @@ const _sfc_main$7 = {
   setup(__props) {
     const props = __props;
     const form = T$1({
+      title: props.listing.title || "",
+      description: props.listing.description || "",
       beds: props.listing.beds,
       baths: props.listing.baths,
       area: props.listing.area,
@@ -20776,7 +26196,7 @@ const _sfc_main$7 = {
       street_nr: props.listing.street_nr,
       price: props.listing.price
     });
-    const update = () => form.put(route("realtor.listing.update", { listing: props.listing.id }));
+    const update = () => form.put(route("realtor.listing.update", { listing: props.listing.slug }));
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("form", {
         onSubmit: withModifiers(update, ["prevent"])
@@ -20785,7 +26205,52 @@ const _sfc_main$7 = {
           createBaseVNode("div", _hoisted_2$6, [
             _hoisted_3$6,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => unref(form).beds = $event),
+              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => unref(form).title = $event),
+              type: "text",
+              class: "input"
+            }, null, 512), [
+              [
+                vModelText,
+                unref(form).title,
+                void 0,
+                { number: true }
+              ]
+            ]),
+            createVNode(_sfc_main$a, {
+              errorMsg: unref(form).errors.title
+            }, null, 8, ["errorMsg"])
+          ]),
+          createBaseVNode("div", _hoisted_4$6, [
+            _hoisted_5$6,
+            withDirectives(createBaseVNode("textarea", {
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => unref(form).description = $event),
+              class: "input"
+            }, null, 512), [
+              [
+                vModelText,
+                unref(form).description,
+                void 0,
+                { number: true }
+              ]
+            ]),
+            createVNode(_sfc_main$a, {
+              errorMsg: unref(form).errors.description
+            }, null, 8, ["errorMsg"])
+          ]),
+          createBaseVNode("div", _hoisted_6$3, [
+            _hoisted_7$3,
+            createBaseVNode("p", {
+              type: "text",
+              class: "input",
+              textContent: toDisplayString(__props.listing.category.name)
+            }, null, 8, _hoisted_8$2)
+          ])
+        ]),
+        createBaseVNode("div", _hoisted_9$2, [
+          createBaseVNode("div", _hoisted_10$2, [
+            _hoisted_11$1,
+            withDirectives(createBaseVNode("input", {
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => unref(form).beds = $event),
               type: "text",
               class: "input"
             }, null, 512), [
@@ -20796,14 +26261,14 @@ const _sfc_main$7 = {
                 { number: true }
               ]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.beds
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_4$6, [
-            _hoisted_5$6,
+          createBaseVNode("div", _hoisted_12$1, [
+            _hoisted_13$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => unref(form).baths = $event),
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => unref(form).baths = $event),
               type: "text",
               class: "input"
             }, null, 512), [
@@ -20814,14 +26279,14 @@ const _sfc_main$7 = {
                 { number: true }
               ]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.baths
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_6$3, [
-            _hoisted_7$3,
+          createBaseVNode("div", _hoisted_14$1, [
+            _hoisted_15$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => unref(form).area = $event),
+              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(form).area = $event),
               type: "text",
               class: "input"
             }, null, 512), [
@@ -20832,53 +26297,53 @@ const _sfc_main$7 = {
                 { number: true }
               ]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.area
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_8$2, [
-            _hoisted_9$2,
+          createBaseVNode("div", _hoisted_16$1, [
+            _hoisted_17$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => unref(form).city = $event),
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(form).city = $event),
               type: "text",
               class: "input"
             }, null, 512), [
               [vModelText, unref(form).city]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.city
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_10$2, [
-            _hoisted_11$1,
+          createBaseVNode("div", _hoisted_18$1, [
+            _hoisted_19$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => unref(form).code = $event),
+              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(form).code = $event),
               type: "text",
               class: "input"
             }, null, 512), [
               [vModelText, unref(form).code]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.code
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_12$1, [
-            _hoisted_13$1,
+          createBaseVNode("div", _hoisted_20$1, [
+            _hoisted_21$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => unref(form).street = $event),
+              "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(form).street = $event),
               type: "text",
               class: "input"
             }, null, 512), [
               [vModelText, unref(form).street]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.street
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_14$1, [
-            _hoisted_15$1,
+          createBaseVNode("div", _hoisted_22$1, [
+            _hoisted_23$1,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => unref(form).street_nr = $event),
+              "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => unref(form).street_nr = $event),
               type: "text",
               class: "input"
             }, null, 512), [
@@ -20889,14 +26354,14 @@ const _sfc_main$7 = {
                 { number: true }
               ]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.street_nr
             }, null, 8, ["errorMsg"])
           ]),
-          createBaseVNode("div", _hoisted_16$1, [
-            _hoisted_17$1,
+          createBaseVNode("div", _hoisted_24$1, [
+            _hoisted_25,
             withDirectives(createBaseVNode("input", {
-              "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => unref(form).price = $event),
+              "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => unref(form).price = $event),
               type: "text",
               class: "input"
             }, null, 512), [
@@ -20907,17 +26372,17 @@ const _sfc_main$7 = {
                 { number: true }
               ]
             ]),
-            createVNode(_sfc_main$9, {
+            createVNode(_sfc_main$a, {
               errorMsg: unref(form).errors.price
             }, null, 8, ["errorMsg"])
           ]),
-          _hoisted_18$1
+          _hoisted_26
         ])
       ], 32);
     };
   }
 };
-const Edit = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-1eb9ac10"]]);
+const Edit = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-43f373d9"]]);
 const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Edit
@@ -21069,24 +26534,24 @@ const _sfc_main$5 = {
                   }, [
                     listing.sold_at ? (openBlock(), createElementBlock("div", _hoisted_4$4, "sold")) : createCommentVNode("", true),
                     createBaseVNode("div", _hoisted_5$4, [
-                      createVNode(_sfc_main$n, {
+                      createVNode(_sfc_main$o, {
                         price: listing.price,
                         class: "text-2xl font-medium"
                       }, null, 8, ["price"]),
-                      createVNode(_sfc_main$o, { listing }, null, 8, ["listing"])
+                      createVNode(_sfc_main$p, { listing }, null, 8, ["listing"])
                     ]),
-                    createVNode(_sfc_main$p, { listing }, null, 8, ["listing"])
+                    createVNode(_sfc_main$q, { listing }, null, 8, ["listing"])
                   ], 2),
                   createBaseVNode("section", null, [
                     createBaseVNode("div", _hoisted_6$1, [
                       createBaseVNode("a", {
                         class: "btn-outline text-xs font-medium",
-                        href: _ctx.route("listing.show", { listing: listing.id }),
+                        href: _ctx.route("listing.show", { listing: listing.slug }),
                         target: "_blank"
                       }, "Preview", 8, _hoisted_7$1),
                       createVNode(unref(ie), {
                         class: "btn-outline text-xs font-medium",
-                        href: _ctx.route("realtor.listing.edit", { listing: listing.id })
+                        href: _ctx.route("realtor.listing.edit", { listing: listing.slug })
                       }, {
                         default: withCtx(() => [
                           createTextVNode(" Edit ")
@@ -21096,7 +26561,7 @@ const _sfc_main$5 = {
                       !listing.deleted_at ? (openBlock(), createBlock(unref(ie), {
                         key: 0,
                         class: "btn-outline text-xs font-medium",
-                        href: _ctx.route("realtor.listing.destroy", { listing: listing.id }),
+                        href: _ctx.route("realtor.listing.destroy", { listing: listing.slug }),
                         as: "button",
                         method: "delete"
                       }, {
@@ -21107,7 +26572,7 @@ const _sfc_main$5 = {
                       }, 1032, ["href"])) : (openBlock(), createBlock(unref(ie), {
                         key: 1,
                         class: "btn-outline text-xs font-medium",
-                        href: _ctx.route("realtor.listing.restore", { listing: listing.id }),
+                        href: _ctx.route("realtor.listing.restore", { listing: listing.slug }),
                         as: "button",
                         method: "put"
                       }, {
@@ -21119,7 +26584,7 @@ const _sfc_main$5 = {
                     ]),
                     createBaseVNode("div", _hoisted_8$1, [
                       createVNode(unref(ie), {
-                        href: _ctx.route("realtor.listing.image.create", { listing: listing.id }),
+                        href: _ctx.route("realtor.listing.image.create", { listing: listing.slug }),
                         class: "block w-full btn-outline text-xs font-medium text-center"
                       }, {
                         default: withCtx(() => [
@@ -21130,7 +26595,7 @@ const _sfc_main$5 = {
                     ]),
                     createBaseVNode("div", _hoisted_9$1, [
                       createVNode(unref(ie), {
-                        href: _ctx.route("realtor.listing.show", { listing: listing.id }),
+                        href: _ctx.route("realtor.listing.show", { listing: listing.slug }),
                         class: "block w-full btn-outline text-xs font-medium text-center"
                       }, {
                         default: withCtx(() => [
@@ -21145,14 +26610,14 @@ const _sfc_main$5 = {
               _: 2
             }, 1032, ["class"]);
           }), 128))
-        ])) : (openBlock(), createBlock(_sfc_main$c, { key: 1 }, {
+        ])) : (openBlock(), createBlock(_sfc_main$d, { key: 1 }, {
           default: withCtx(() => [
             createTextVNode("No listings found")
           ]),
           _: 1
         })),
         __props.listings.data.length ? (openBlock(), createElementBlock("section", _hoisted_10$1, [
-          createVNode(_sfc_main$k, {
+          createVNode(_sfc_main$l, {
             links: __props.listings.links
           }, null, 8, ["links"])
         ])) : createCommentVNode("", true)
@@ -21165,7 +26630,7 @@ const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   default: _sfc_main$5
 }, Symbol.toStringTag, { value: "Module" }));
 var dist = {};
-var axios$2 = { exports: {} };
+var axios$3 = { exports: {} };
 var bind$2 = function bind2(fn, thisArg) {
   return function wrap() {
     var args = new Array(arguments.length);
@@ -22395,28 +27860,28 @@ function createInstance(defaultConfig) {
   utils.extend(instance, context);
   return instance;
 }
-var axios$1 = createInstance(defaults);
-axios$1.Axios = Axios2;
-axios$1.create = function create(instanceConfig) {
-  return createInstance(mergeConfig2(axios$1.defaults, instanceConfig));
+var axios$2 = createInstance(defaults);
+axios$2.Axios = Axios2;
+axios$2.create = function create(instanceConfig) {
+  return createInstance(mergeConfig2(axios$2.defaults, instanceConfig));
 };
-axios$1.Cancel = requireCancel();
-axios$1.CancelToken = requireCancelToken();
-axios$1.isCancel = requireIsCancel();
-axios$1.all = function all2(promises) {
+axios$2.Cancel = requireCancel();
+axios$2.CancelToken = requireCancelToken();
+axios$2.isCancel = requireIsCancel();
+axios$2.all = function all2(promises) {
   return Promise.all(promises);
 };
-axios$1.spread = requireSpread();
-axios$1.isAxiosError = requireIsAxiosError();
-axios$2.exports = axios$1;
-axios$2.exports.default = axios$1;
-var axiosExports = axios$2.exports;
-var axios = axiosExports;
+axios$2.spread = requireSpread();
+axios$2.isAxiosError = requireIsAxiosError();
+axios$3.exports = axios$2;
+axios$3.exports.default = axios$2;
+var axiosExports = axios$3.exports;
+var axios$1 = axiosExports;
 (function(exports) {
   function e2(e3) {
     return e3 && "object" == typeof e3 && "default" in e3 ? e3.default : e3;
   }
-  var t4 = e2(axios), n2 = lib, i2 = e2(cjs);
+  var t4 = e2(axios$1), n2 = lib, i2 = e2(cjs);
   function r2() {
     return (r2 = Object.assign ? Object.assign.bind() : function(e3) {
       for (var t5 = 1; t5 < arguments.length; t5++) {
@@ -23320,7 +28785,7 @@ var uploadCid = async (config, cid, options) => {
 var axiosModule;
 async function getAxios() {
   if (!axiosModule) {
-    axiosModule = await __vitePreload(() => import("./index-DNjH6L17.js"), true ? __vite__mapDeps([0,1]) : void 0);
+    axiosModule = await __vitePreload(() => import("./index-imSD9FR_.js"), true ? __vite__mapDeps([0,1]) : void 0);
   }
   return axiosModule.default;
 }
@@ -25801,7 +31266,7 @@ const _sfc_main$4 = {
     const canUpload = computed(() => form.images.length);
     const upload = () => {
       form.post(
-        route("realtor.listing.image.store", { listing: props.listing.id }),
+        route("realtor.listing.image.store", { listing: props.listing.slug }),
         {
           onSuccess: () => form.reset("images")
         }
@@ -25948,13 +31413,13 @@ const _sfc_main$3 = {
             createBaseVNode("div", {
               class: normalizeClass({ "opacity-25": __props.offer.rejected_at })
             }, [
-              createVNode(_sfc_main$n, {
+              createVNode(_sfc_main$o, {
                 price: __props.offer.amount,
                 class: "text-xl p-2"
               }, null, 8, ["price"]),
               createBaseVNode("div", _hoisted_3$2, [
                 createTextVNode(" Difference "),
-                createVNode(_sfc_main$n, { price: difference.value }, null, 8, ["price"])
+                createVNode(_sfc_main$o, { price: difference.value }, null, 8, ["price"])
               ]),
               createBaseVNode("div", _hoisted_4$2, " Made by " + toDisplayString(__props.offer.bidder.name), 1),
               createBaseVNode("div", _hoisted_5$2, " Made on " + toDisplayString(madeOn.value), 1)
@@ -26041,11 +31506,11 @@ const _sfc_main$2 = {
                 createTextVNode("Basic info")
               ]),
               default: withCtx(() => [
-                createVNode(_sfc_main$n, {
+                createVNode(_sfc_main$o, {
                   price: __props.listing.price,
                   class: "text-2xl font-bold"
                 }, null, 8, ["price"]),
-                createVNode(_sfc_main$o, {
+                createVNode(_sfc_main$p, {
                   listing: __props.listing,
                   class: "text-lg"
                 }, null, 8, ["listing"]),
@@ -26626,5 +32091,5 @@ j$1({
   }
 });
 export {
-  axios$3 as a
+  axios$4 as a
 };
