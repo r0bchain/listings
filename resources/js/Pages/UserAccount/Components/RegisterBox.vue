@@ -76,7 +76,7 @@ const props = defineProps({
     
 })
 
-const imageUpdated = ref(props.randomImage)
+const imageUpdated = ref(props.Image)
 
 const form = useForm({
     name: null,

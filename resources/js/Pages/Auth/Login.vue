@@ -1,18 +1,23 @@
 <template>
-    <div><LoginBox :randomImage="randomImage"/></div>
+    <div><LoginBox :randomImage="topicImage"/></div>
 
 </template>
 
 <script setup>
-import { Link, usePage } from '@inertiajs/vue3'
+import { usePage } from '@inertiajs/vue3'
 import LoginBox from '@/Pages/Auth/Components/LoginBox.vue';
-import {ref} from 'vue'
+import {ref, onMounted} from 'vue'
 import { randomImages } from '@/Composables/randomImages';
+import { searchIPFSImage } from '@/Composables/searchIPFSImage'
 
 const page = usePage()
 const imageUrl = ref('https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800')
 
 const topics = page.props.site.TOPICS_IMAGE
+
+const topic = page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.props.site.TOPICS_IMAGE.length)]
+const topicImage = ref(null)
+
 
 // Fetch the image URL on component mount
 const { randomImage, location } = randomImages(
@@ -22,6 +27,14 @@ const { randomImage, location } = randomImages(
     {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
 )
 
-console.log('randomImage',  randomImage)
+onMounted(async () => {
+    try {
+        const result = await searchIPFSImage(topic, page.props.config.PINATA_SECRET_JWT, page.props.config.PINATA_GATEWAY);
+        console.log('result', result);
+        topicImage.value = result;
+    } catch (error) {
+        console.log('error', error);
+    }
+});
 
 </script>

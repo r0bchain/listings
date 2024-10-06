@@ -1,10 +1,10 @@
 <!-- component -->
  <template>
     <form @submit.prevent="login">
-        <div class="topic-title ">{{ imageUpdated.query }}</div> 
+        <div class="topic-title ">{{ imageUpdated }}</div> 
 
         <div 
-        :style="{ backgroundImage: `url(${imageUpdated.imageUrl})` }"
+        :style="{ backgroundImage: `url(${imageUpdated})` }"
          class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
 
             <div class="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -47,8 +47,8 @@
 
  <script setup>
 import { useForm } from '@inertiajs/vue3'
-
 import {ref} from 'vue'
+
 const form = useForm({
     email: 'test@example.com',
     password: ''
@@ -68,7 +68,8 @@ const props = defineProps({
 
 })
 
-const imageUpdated = ref(props.randomImage)
 
+const imageUpdated = ref(props.randomImage)
+console.log('imageUpdated', props.randomImage)
 
 </script>
