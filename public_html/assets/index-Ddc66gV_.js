@@ -1,4 +1,4 @@
-import { a as axios } from "./app-CdrUmGpg.js";
+import { a as axios } from "./app-wXBUEfls.js";
 /* empty css             */
 const {
   Axios,

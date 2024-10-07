@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-D0QC4qpR.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-Ddc66gV_.js","assets/app-C4DH_WoA.css"])))=>i.map(i=>d[i]);
 /* empty css             */
 /**
 * @vue/shared v3.4.32
@@ -12941,7 +12941,7 @@ Please specify a more appropriate element using the "as" attribute. For example:
     } }, o2);
   };
 } }), ie = se;
-const _hoisted_1$r = { class: "topic-title" };
+const _hoisted_1$r = ["textContent"];
 const _hoisted_2$k = { class: "relative py-3 sm:max-w-xl sm:mx-auto" };
 const _hoisted_3$i = /* @__PURE__ */ createBaseVNode("div", { class: "absolute text-gray-600 inset-0 bg-gradient-to-r from-blue-300 to-red-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl" }, null, -1);
 const _hoisted_4$h = { class: "relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20" };
@@ -12981,8 +12981,7 @@ const _sfc_main$w = {
     },
     topic: {
       type: String,
-      Required: false,
-      default: "Thailand"
+      Required: false
     }
   },
   setup(__props) {
@@ -12997,7 +12996,10 @@ const _sfc_main$w = {
       return openBlock(), createElementBlock("form", {
         onSubmit: withModifiers(login, ["prevent"])
       }, [
-        createBaseVNode("div", _hoisted_1$r, toDisplayString(__props.topic), 1),
+        createBaseVNode("div", {
+          class: "topic-title",
+          textContent: toDisplayString(__props.topic)
+        }, null, 8, _hoisted_1$r),
         createBaseVNode("div", {
           style: normalizeStyle({ backgroundImage: `url(${__props.randomImage})` }),
           class: "min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
@@ -14248,7 +14250,7 @@ var uploadCid = async (config, cid, options) => {
 var axiosModule;
 async function getAxios() {
   if (!axiosModule) {
-    axiosModule = await __vitePreload(() => import("./index-D0QC4qpR.js"), true ? __vite__mapDeps([0,1]) : void 0);
+    axiosModule = await __vitePreload(() => import("./index-Ddc66gV_.js"), true ? __vite__mapDeps([0,1]) : void 0);
   }
   return axiosModule.default;
 }
@@ -16718,8 +16720,8 @@ const searchIPFSImage = async (topic, PINATA_SECRET_JWT, PINATA_GATEWAY) => {
     "Bangkok": "QmWG7sbksCUmADPSWre6kbnK8BBoSDVyhhCMviGURUsKog",
     "Chiang Mai": "QmdDp3cSZh1gTMXRrtxFYXm9DTay821JBEbx6e5VN6quWo"
   };
-  if (images[topic]) {
-    return `https://${PINATA_GATEWAY}/ipfs/${images[topic]}`;
+  if (images[topic.trim()]) {
+    return `https://${PINATA_GATEWAY}/ipfs/${images[topic.trim()]}`;
   }
   return "https://cyan-acceptable-bovid-702.mypinata.cloud/ipfs/QmekUWbmguH8zNwP1yk3Ep4yWQC6CuekK43oBAh8RGbsVb";
 };
@@ -16727,16 +16729,10 @@ const _sfc_main$v = {
   __name: "Login",
   setup(__props) {
     const page = Q();
-    const imageUrl = ref$1("https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800");
+    ref$1("https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800");
     const topicImage = ref$1(null);
-    const topics = page.props.site.TOPICS_IMAGE;
+    page.props.site.TOPICS_IMAGE;
     const topic = ref$1(page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.props.site.TOPICS_IMAGE.length)]);
-    randomImages(
-      imageUrl,
-      page.props.site.RANDOM_IMAGE_KEY,
-      topics,
-      { per_page: 1, size: "small", locale: "en-US", orientation: "landscape" }
-    );
     onMounted(async () => {
       try {
         const result = await searchIPFSImage(topic.value.trim(), page.props.config.PINATA_SECRET_JWT, page.props.config.PINATA_GATEWAY);
@@ -31573,7 +31569,7 @@ const __vite_glob_0_18 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const _hoisted_1 = { class: "topic-title" };
+const _hoisted_1 = ["textContent"];
 const _hoisted_2 = { class: "relative py-3 sm:max-w-xl sm:mx-auto" };
 const _hoisted_3 = /* @__PURE__ */ createBaseVNode("div", { class: "absolute inset-0 bg-gradient-to-r from-blue-300 to-red-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl" }, null, -1);
 const _hoisted_4 = { class: "relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20" };
@@ -31630,14 +31626,19 @@ const _sfc_main$1 = {
   __name: "RegisterBox",
   props: {
     randomImage: {
-      type: Object,
+      type: String,
       Required: true
+    },
+    topic: {
+      type: String,
+      Required: false,
+      default: "Thailand"
     }
   },
   setup(__props) {
     const page = Q();
     const props = __props;
-    const imageUpdated = ref$1(props.Image);
+    ref$1(props.Image);
     const form = T$1({
       name: null,
       email: null,
@@ -31654,9 +31655,12 @@ const _sfc_main$1 = {
       return openBlock(), createElementBlock("form", {
         onSubmit: withModifiers(register, ["prevent"])
       }, [
-        createBaseVNode("div", _hoisted_1, toDisplayString(imageUpdated.value.query), 1),
         createBaseVNode("div", {
-          style: normalizeStyle({ backgroundImage: `url(${imageUpdated.value.imageUrl})` }),
+          class: "topic-title",
+          textContent: toDisplayString(__props.topic)
+        }, null, 8, _hoisted_1),
+        createBaseVNode("div", {
+          style: normalizeStyle({ backgroundImage: `url(${__props.randomImage})` }),
           class: "min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
         }, [
           createBaseVNode("div", _hoisted_2, [
@@ -31754,24 +31758,22 @@ const _sfc_main = {
   props: { listing: Object },
   setup(__props) {
     const page = Q();
-    const imageUrl = ref$1("https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800");
-    const topics = page.props.site.TOPICS_IMAGE;
-    searchIPFSImage(
-      topics[0],
-      page.props.config.PINATA_SECRET_JWT,
-      page.props.config.PINATA_GATEWAY
-    );
-    const { randomImage, location: location2 } = randomImages(
-      imageUrl,
-      page.props.site.RANDOM_IMAGE_KEY,
-      topics,
-      { per_page: 1, size: "small", locale: "en-US", orientation: "landscape" }
-    );
+    const topicImage = ref$1(null);
+    const topic = ref$1(page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.props.site.TOPICS_IMAGE.length)]);
+    onMounted(async () => {
+      try {
+        const result = await searchIPFSImage(topic.value.trim(), page.props.config.PINATA_SECRET_JWT, page.props.config.PINATA_GATEWAY);
+        console.log("result", result);
+        topicImage.value = result;
+      } catch (error) {
+        console.log("error", error);
+      }
+    });
     return (_ctx, _cache) => {
       return openBlock(), createBlock(_sfc_main$1, {
-        randomImage: unref(randomImage),
-        location: unref(randomImage)
-      }, null, 8, ["randomImage", "location"]);
+        randomImage: topicImage.value,
+        topic: topic.value
+      }, null, 8, ["randomImage", "topic"]);
     };
   }
 };
