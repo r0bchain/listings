@@ -1,5 +1,5 @@
 <template>
-    <div><LoginBox :randomImage="topicImage"/></div>
+    <div><LoginBox :randomImage="topicImage" :topic="topic"/></div>
 
 </template>
 
@@ -12,11 +12,12 @@ import { searchIPFSImage } from '@/Composables/searchIPFSImage'
 
 const page = usePage()
 const imageUrl = ref('https://images.pexels.com/photos/2956618/pexels-photo-2956618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800')
+const topicImage = ref(null)
 
 const topics = page.props.site.TOPICS_IMAGE
 
-const topic = page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.props.site.TOPICS_IMAGE.length)]
-const topicImage = ref(null)
+// Get a random topic
+const topic = ref(page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.props.site.TOPICS_IMAGE.length)])
 
 
 // Fetch the image URL on component mount
@@ -29,7 +30,7 @@ const { randomImage, location } = randomImages(
 
 onMounted(async () => {
     try {
-        const result = await searchIPFSImage(topic, page.props.config.PINATA_SECRET_JWT, page.props.config.PINATA_GATEWAY);
+        const result = await searchIPFSImage(topic.value.trim(), page.props.config.PINATA_SECRET_JWT, page.props.config.PINATA_GATEWAY);
         console.log('result', result);
         topicImage.value = result;
     } catch (error) {

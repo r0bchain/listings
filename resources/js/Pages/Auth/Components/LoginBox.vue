@@ -1,10 +1,10 @@
 <!-- component -->
  <template>
     <form @submit.prevent="login">
-        <div class="topic-title ">{{ imageUpdated }}</div> 
+        <div class="topic-title ">{{ topic }}</div> 
 
         <div 
-        :style="{ backgroundImage: `url(${imageUpdated})` }"
+        :style="{ backgroundImage: `url(${randomImage})` }"
          class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
 
             <div class="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -59,17 +59,20 @@ const login = () => {
     form.post(route('login'))
 }
 
-
 const props = defineProps({
     randomImage: {
-        type: Object,
+        type: String,
         Required: true
-    }
+    },
 
+    topic: {
+        type: String,
+        Required: false,
+        default: 'Thailand'
+    }
 })
 
-
-const imageUpdated = ref(props.randomImage)
-console.log('imageUpdated', props.randomImage)
+// const imageUpdated = ref(props.randomImage)
+// console.log('imageUpdated', props.randomImage)
 
 </script>
