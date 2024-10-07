@@ -1,7 +1,7 @@
 <!-- component -->
  <template>
     <form @submit.prevent="login">
-        <div class="topic-title ">{{ topic }}</div> 
+        <div class="topic-title" v-text="topic"></div> 
 
         <div 
         :style="{ backgroundImage: `url(${randomImage})` }"
@@ -67,8 +67,8 @@ const props = defineProps({
 
     topic: {
         type: String,
-        Required: false,
-        default: 'Thailand'
+        Required: false
+      
     }
 })
 

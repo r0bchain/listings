@@ -21,12 +21,12 @@ const topic = ref(page.props.site.TOPICS_IMAGE[Math.floor(Math.random() * page.p
 
 
 // Fetch the image URL on component mount
-const { randomImage, location } = randomImages(
-    imageUrl,
-    page.props.site.RANDOM_IMAGE_KEY, 
-    topics,
-    {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
-)
+// const { randomImage, location } = randomImages(
+//     imageUrl,
+//     page.props.site.RANDOM_IMAGE_KEY, 
+//     topics,
+//     {per_page: 1, size: 'small', locale: 'en-US', orientation: 'landscape' }
+// )
 
 onMounted(async () => {
     try {

@@ -27,8 +27,8 @@ export const searchIPFSImage = async (topic, PINATA_SECRET_JWT, PINATA_GATEWAY) 
 
     };
    
-    if(images[topic]) {
-        return `https://${PINATA_GATEWAY}/ipfs/${images[topic]}`;
+    if(images[topic.trim()]) {
+        return `https://${PINATA_GATEWAY}/ipfs/${images[topic.trim()]}`;
     }  
 
     // Default image
